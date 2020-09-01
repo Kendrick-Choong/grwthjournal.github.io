@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Test Page for Grwth</title>
+    <link href="./css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--Still Header: H1 with Grwth anchored text X4 for navigation buttons-->\
+    <header class="header">
+
+        <h1 onclick='location.href="index.html"'>Grwth</h1>
+
+        <nav>
+            <ul>
+                <li onclick='location.href="newPage.html"'>About</li>
+                <li id="extend" onclick='location.href="promptTemplate.html"'>Free Write</li>
+                <li onclick='location.href="newPage.html"'>Contact</li>
+                <li onclick='location.href="login.html"'>Log In</li>
+              </ul>
+
+        </nav>
+
+    </header>
+
+<!--The first section: The logo to the left, a description of the product to the right-->
+
+    <Section1>
+        <!--Eventually the goal would be to replace the image with an interactable logo, where it moves when hovered over,
+            starting as a small plant and growing into a larger one when hovered over/ clicked on.-->
+        <img class="logo" src="./media/images/plant.png" alt="The growth logo, a simple plant growing out of a book"/>
+        <p class="description">
+            Grwth is not a journal, but a companion.
+            A companion that grows with you, and changes as you change.
+            One that’s fully customized to you, and always will be.
+            Grwth is <em>your journal</em>, <em>your friend</em>.
+        </p>
+
+
+    </Section1>
+
+    <div class="spacer"></div>
+
+    <!--This is the second section: animation on the right and further explanation on the left, both on what growth is-->
+    <Section2>
+
+
+        <video src="./media/videos/test.mp4" audio="off">
+            Video not supported
+        </video>
+        <p class="description" id="middle">
+            Grwth uses machine learning algorithms to analyze your journal entries,
+            and creates custom prompts to best fit your current situation.
+            <br>
+            No human eyes will ever come into contact with what you write, we respect your privacy to the highest degree.
+            The model is created soley for you, based on the feedback of real psychologists and therapists
+            and will continuosly update for what most positivly influences your mental health and achievements.
+        </p>
+
+    </Section2>
+
+    <div class="spacer"></div>
+
+    <!--This is a test section to try making symbols that line up below text-->
+    <Section3>
+
+        <ul>
+            <li class="list">Machine Learning</li>
+            <li class="list">Progress Tracking</li>
+            <li class="list">Goal Tracking</li>
+            <li class="list">Fully Secure</li>
+        </ul>
+
+        <ul>
+            <img class="img" src="./media/images/plant.png"/>
+            <img class="img" src="./media/images/plant.png"/>
+            <img class="img" src="./media/images/plant.png"/>
+            <img class="img" src="./media/images/plant.png"/>
+          </ul>
+
+    </Section3>
+
+    <!--The Survey Section: Constains the 1st survey question-->
+    <!--The presurvey isn't actually a survey, but a color picker to the survey-->
+    <PreSurvey>
+        <p>Choose which color you like best :) </p>
+        <br>
+        <ul class="survey">
+            <li class="colorbutton" id="red" onclick='location.href="survey2.html"'></li>
+            <li class="colorbutton" id="blue" onclick='location.href="survey2.html"'></li>
+            <li class="colorbutton" id="green" onclick='location.href="survey2.html"'></li>
+            <li class="colorbutton" id="yellow" onclick='location.href="survey2.html"'></li>
+            <li class="colorbutton" id="gray" onclick='location.href="survey2.html"'></li>
+        </ul>
+        <br>
+        <p class="poke">Go ahead, give one a little poke</p>
+    </PreSurvey>
+
+
+
+    <Survey>
+      <form method = "Post" action = "GrwthInsert.php">
+        <section class = "Text">
+          <span>What type of journaling do you like?</span>
+          <br>
+          <input type = "text" name = "journal_type_like">
+          <br>
+          <br>
+        </section>
+
+        <section class = "Radio">
+          <span>How often do you journal?</span>
+          <br>
+
+          <input type = "radio" name = "freq_journal" value = " Frequently" id = "Frequently">
+          <label for = "Frequently">Frequently</label>
+
+          <input type = "radio" name = "freq_journal" value = " Often" id = "Often">
+          <label for = "Often">Often</label>
+
+          <input type = "radio" name = "freq_journal" value = " Little to none" id = "Little to none">
+          <label for = "Little to none">Little to none</label>
+
+          <br>
+          <br>
+        </section>
+
+        <section class = "Checkbox">
+          <span>What types of journals do you have experience with?</span>
+          <br>
+
+      <input type = "checkbox" name = "journaltype[]" value = "Bullet">
+          <label for = "Bullet">Bullet journaling</label>
+          <br>
+
+          <input type = "checkbox" name = "journaltype[]"  value = "Dream">
+          <label for = "Dream">Dream journaling</label>
+          <br>
+
+          <input type = "checkbox" name = "journaltype[]"  value = "Travel">
+          <label for = "Travel">Travel journaling</label>
+          <br>
+
+          <input type = "checkbox" name = "journaltype[]"  value = "Freeform">
+          <label for = "Freeform">Freeform journaling</label>
+          <br>
+          <br>
+        </section>
+
+        <section class = "Number">
+          <label for = "Journal number">How many journals have you done before?</label>
+          <br>
+
+          <input type = "number" name = "journal_number" id = "Journal number">
+          <!--This is going to need some validation to make sure they can't enter a negative number or something absurdly high.-->
+          <br>
+          <br>
+        </section>
+
+        <section class = "Range">
+          <label for = "comfort_level">How comfortable are you with journaling?</label>
+          <br>
+
+          <span>Super uncomfortable</span>
+          <input type = "range" name = "comfort_level" id = "Comfort level"  value = "5" min = "0" max = "10" step = "1">
+          <span>Super comfortable</span>
+          <br>
+          <br>
+        </section>
+
+        <section class = "Range2">
+          <label for = "comfort_level2">How comfortable are you with journaling?</label>
+          <br>
+
+          <span>Super uncomfortable</span>
+          <input type = "range" name = "comfort_level2" id = "Comfort level2"  list = "tickmarks" value = "5" min = "0" max = "10" step = "1">
+
+          <datalist id = "tickmarks">
+            <option value = "0" label = "0"></option>
+            <option value = "1" label = "1"></option>
+            <option value = "2" label = "2"></option>
+            <option value = "3" label = "3"></option>
+            <option value = "4" label = "4"></option>
+            <option value = "5" label = "5"></option>
+            <option value = "6" label = "6"></option>
+            <option value = "7" label = "7"></option>
+            <option value = "8" label = "8"></option>
+            <option value = "9" label = "9"></option>
+            <option value = "10" label = "10"></option>
+          </datalist>
+
+          <span>Super comfortable</span>
+          <br>
+          <br>
+        </section>
+
+        <section class = "Textarea">
+          <label for = "additional_comments">Please list any additional comments down here:</label>
+          <br>
+
+          <textarea id = "Additional comments" name = "additional_comments" rows = "5" cols = "50" maxlength = "500" placeholder = "Insert comments here"></textarea>
+          <br>
+          <br>
+        </section>
+
+        <section class = "Submit">
+          <input type = "submit" name = "submit" value = "submit">
+        </section>
+
+      </form>
+
+
+
+
+        <!--
+        <form method="post" action="survey2.html">
+
+            <p>What Few Words Describe Something You're Excited About Today?</p>
+            <input type="text" name="Excited About Today" value="I'm Excited About...">
+            <br>
+            <br>
+            <p>How are You Feeling Today?</p>
+            <select name="How are you feeling today?">
+                <option value="Great">Great!</option>
+                <option value="Good">Good</option>
+                <option value="Eh">Eh</option>
+                <option value="Not Good">Not Fantastic</option>
+                <option value="Bad">Like a ball of sh*t</option>
+            </select>
+
+            <br>
+            <br>
+            <input type="submit" value="Next Page">
+        </form>
+        -->
+    </Survey>
+
+    </div>
+
+    <footer>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Plans</li>
+          <li>Log In</li>
+        </ul>
+    </footer>
+
+</body>

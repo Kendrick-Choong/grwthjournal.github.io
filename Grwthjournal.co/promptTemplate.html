@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Prompt Template Page</title>
+    <link href="./css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Still Header: H1 with Grwth anchored text X4 for navigation buttons-->\
+    <header class="header + promptbody">
+
+        <h1 onclick='location.href="index.html"'>Grwth</h1>
+
+        <nav>
+            <ul>
+                <li onclick='location.href="newPage.html"'>About</li>
+                <li id="extend" onclick='location.href="promptTemplate.html"'>Free Write</li>
+                <li onclick='location.href="newPage.html"'>Contact</li>
+                <li onclick='location.href="login.html"'>Log In</li>
+              </ul>
+
+        </nav>
+
+    </header>
+
+    <!--This section holds the prompt for the page-->
+    <Prompt class="promptbody">
+        <form method = "Post" action = newPage.html>
+
+            <section class = "prompttext">
+                <span>What Adventure Will You Someday Go On?</span>
+                <br>
+                <textarea rows="15" cols="40" name="promptresponse"></textarea>
+                <br>
+                <br>
+            </section>
+
+            <input type="submit" value="Save Entry">
+    
+        </form>
+
+        <div class="spacer">
+            
+        </div>
+
+    </Prompt>
+</body>
