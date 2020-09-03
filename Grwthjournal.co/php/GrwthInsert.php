@@ -2,11 +2,11 @@
 /*  Application: Grwth Insert File
  *  Script Name: GrwthInsert.php
  *  Description: inserts basic form data into a SQL database.
- *  Last Change/Update: 08/26/2020
+ *  Last Change/Update: 09/02/2020
 */
 
  // Try and test the SQL to see if it will insert since the inputs may not all be simple number or text boxes. They could be a bunch of radio buttons. Also look into using the isset function to validate any empty radio button thingies like freq_journal or journal_type. //
-  $con = mysqli_connect('127.0.0.1','root','');
+  $con = mysqli_connect('localhost:3306','aismarth_inonly','INonlyPassword');
   if(!$con){
     echo "Not connected to server";
   }
@@ -60,6 +60,6 @@
 
 // '<script>alert("Not Inserted")</script>';
 // '<script>alert("Inserted")</script>';
-  header("refresh:2; url = index.html");
+  header("refresh:2; url = grwthjournal.co");
   mysqli_close($con);
 ?>
