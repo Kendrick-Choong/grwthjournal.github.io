@@ -5,7 +5,7 @@
  *  Last Change/Update: 08/26/2020
 */
 
-  $con = mysqli_connect('127.0.0.1','root','');
+  $con = mysqli_connect('localhost:3306','root','');
 
   if(!$con){
     echo "Not connected to server";
