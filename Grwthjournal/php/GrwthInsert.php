@@ -2,10 +2,14 @@
 /*  Application: Grwth Insert File
  *  Script Name: GrwthInsert.php
  *  Description: inserts basic form data into a SQL database.
- *  Last Change/Update: 09/02/2020
+ *  Last Change/Update: 09/6/2020
 */
 
- // Try and test the SQL to see if it will insert since the inputs may not all be simple number or text boxes. They could be a bunch of radio buttons. Also look into using the isset function to validate any empty radio button thingies like freq_journal or journal_type. //
+// Start session
+session_start();
+
+// Load Functions
+// This is where function to connect to the database will be included
   $con = mysqli_connect('localhost:3306','aismarth_inonly','INonlyPassword');
   if(!$con){
     echo "Not connected to server";
@@ -15,50 +19,102 @@
     echo "Database not selected";
   }
 
+// Set script variables
+$we_have_input = false;
+$journal_type = "";
 
+// Handle POST data
+// This is where we deal with the input from the form
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+  if(isset($_POST['submit'])){
 
-
+    // check journal type they like (Good)
+    if(!empty($_POST['journal_type_like'])){
       $journal_type_like = $_POST['journal_type_like'];
-      $freq_journal = $_POST['freq_journal'];
-      $checkbox = $_POST['journaltype'];
-      $journal_number = $_POST['journal_number'];
-      $comfort_level = $_POST['comfort_level'];
-      $comfort_level2 = $_POST['comfort_level2'];
-      $additional_comments = $_POST['additional_comments'];
-      $journal_type = "";
+    } else {
+      $journal_type_like = "None";
+    }
 
-      if(isset($_POST['submit'])){
-        foreach($checkbox as $checkboxresult){
-          $journal_type.=$checkboxresult.",";
-        }
+    // check frequency of journaling (Good)
+    if(isset($_POST['freq_journal'])){
+      $freq_journal = $_POST['freq_journal'];
+    } else {
+      $freq_journal = "Little to none";
+    }
+
+    // check types of journal experience (Good)
+    if(isset($_POST['journaltype'])){
+      $checkbox = $_POST['journaltype'];
+      foreach($checkbox as $checkboxresult){
+        $journal_type.=$checkboxresult.",";
+      }
+    } else {
+      $journal_type = "None";
+    }
+
+    // check the number of journals they have done before (Good)
+    if(!empty($_POST['journal_number'])){
+      $journal_number = $_POST['journal_number'];
+    } else {
+      $journal_number = 0;
+    }
+
+    // check the comfort level of journaling
+    if(isset($_POST['comfort_level'])){
+      $comfort_level = $_POST['comfort_level'];
+    }
+
+    // check the comfort level of journaling with tickmarks
+    if(isset($_POST['comfort_level2'])){
+      $comfort_level2 = $_POST['comfort_level2'];
+    }
+
+    // check if there are any additional comments
+    if(!empty($_POST['additional_comments'])){
+      $additional_comments = $_POST['additional_comments'];
+    } else {
+      $additional_comments = "No comment";
+    }
+
+    $we_have_input = true;
+
+    //whether ip is from share internet
+    if (!empty($_SERVER['HTTP_CLIENT_IP']))
+      {
+        $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+      }
+    //whether ip is from proxy
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+      {
+        $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+      }
+    //whether ip is from remote address
+    else
+      {
+        $ip_address = $_SERVER['REMOTE_ADDR'];
       }
 
-      //whether ip is from share internet
-      if (!empty($_SERVER['HTTP_CLIENT_IP']))
-        {
-          $ip_address = $_SERVER['HTTP_CLIENT_IP'];
-        }
-      //whether ip is from proxy
-      elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-        {
-          $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        }
-      //whether ip is from remote address
-      else
-        {
-          $ip_address = $_SERVER['REMOTE_ADDR'];
-        }
+    // In this area you would:
+    // Check/test/verify the user input
+    // Prepare it to be written to the database
 
-      $sql = "INSERT INTO grwth_survey(journal_type_like,freq_journal,journal_type_exp,prev_journal_num,comfort_with_journal,comfort_with_journal_v2,comments, ip_address)
+    // Write it to the database
+    if($we_have_input == true){
+      $sql = "INSERT INTO grwth_test(journal_type_like,freq_journal,journal_type_exp,prev_journal_num,comfort_with_journal,comfort_with_journal_v2,comments, ip_address)
               VALUES ('$journal_type_like','$freq_journal','$journal_type','$journal_number','$comfort_level','$comfort_level2','$additional_comments','$ip_address')";
-
       if(!mysqli_query($con,$sql)){
         echo 'Not Inserted';
       } else {
         echo 'Inserted';
       }
+    } else {
+      echo 'Please add input to the form.';
+    }
+  }
+} else {
+  echo '<script>alert("Please change the survey method to POST.")</script>';
+}
 
-
-  header("refresh:2; url = grwthjournal.co");
-  mysqli_close($con);
+header("refresh:2; url = index.html");
+mysqli_close($con);
 ?>
