@@ -32,14 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if(!empty($_POST['journal_type_like'])){
       $journal_type_like = $_POST['journal_type_like'];
     } else {
-      $journal_type_like = "None";
+      $journal_type_like = "";
     }
 
     // check frequency of journaling (Good)
     if(isset($_POST['freq_journal'])){
       $freq_journal = $_POST['freq_journal'];
     } else {
-      $freq_journal = "Little to none";
+      $freq_journal = "";
     }
 
     // check types of journal experience (Good)
@@ -49,14 +49,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $journal_type.=$checkboxresult.",";
       }
     } else {
-      $journal_type = "None";
+      $journal_type = "";
     }
 
     // check the number of journals they have done before (Good)
     if(!empty($_POST['journal_number'])){
       $journal_number = $_POST['journal_number'];
     } else {
-      $journal_number = 0;
+      $journal_number = "";
     }
 
     // check the comfort level of journaling
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if(!empty($_POST['additional_comments'])){
       $additional_comments = $_POST['additional_comments'];
     } else {
-      $additional_comments = "No comment";
+      $additional_comments = "";
     }
 
     $we_have_input = true;
