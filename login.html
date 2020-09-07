@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="./css/logstyles.css">
+</head>
+
+<body>
+
+	<!--Still Header: H1 with Grwth anchored text X4 for navigation buttons-->\
+	<header class="header">
+
+		<h1 onclick='location.href="index.html"'>Grwth</h1>
+
+		<nav>
+			<ul>
+				<li onclick='location.href="newPage.html"'>About</li>
+				<li id="extend" onclick='location.href="promptTemplate.html"'>Free Write</li>
+				<li onclick='location.href="newPage.html"'>Contact</li>
+				<li onclick='location.href="login.html"'>Log In</li>
+			</ul>
+
+		</nav>
+
+	</header>
+
+	<div class="loginbox">
+		<img src="./media/images/plant.png" class="plant">
+		<h2>Login</h2>
+		<form method = POST action = ./php/GrwthLoginInsert.php>
+			<p>Username</p>
+			<input type="text" name="username" placeholder="Enter Username">
+			<p>Password</p>
+			<input type="password" name="password" placeholder="Enter Password">
+			<input type="submit" name="submit" value="Login"> <br>
+			<a href="#">Lost Your Password?</a><br>
+			<a href="#">Sign Up</a>
+		</form>
+
+
+	</div>
+</body>
+</html>
