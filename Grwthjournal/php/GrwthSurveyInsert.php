@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // check the number of journals they have done before (Good)
-    if(!empty($_POST['journal_number'])){
+    if(isset($_POST['journal_number'])){
       $journal_number = $_POST['journal_number'];
     } else {
       $journal_number = "";
