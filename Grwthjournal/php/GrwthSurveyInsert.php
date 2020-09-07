@@ -115,6 +115,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   echo '<script>alert("Please change the survey method to POST.")</script>';
 }
 
-header("refresh:2; url = index.html");
+header("refresh:2; url = grwthjournal.co");
 mysqli_close($con);
 ?>
