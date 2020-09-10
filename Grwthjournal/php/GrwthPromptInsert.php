@@ -4,14 +4,7 @@
  *  Description: Inserts prompt data into a SQL database.
  *  Last Change/Update: 9/4/2020
 */
-$con = mysqli_connect('localhost:3306','aismarth_login','grwthlogin');
-if(!$con){
-  echo "Not connected to server";
-}
-
-if(!mysqli_select_db($con,'aismarth_grwth')){
-  echo "Database not selected";
-}
+require_once "configInsert.php";
 
 $promptresponse = $_POST['promptresponse'];
 

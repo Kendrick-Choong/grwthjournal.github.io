@@ -17,14 +17,7 @@ function test_input($data) {
 }
 
 // This is where function to connect to the database will be included
-  $con = mysqli_connect('localhost:3306','aismarth_inonly','INonlyPassword');
-  if(!$con){
-    echo "Not connected to server";
-  }
-
-  if(!mysqli_select_db($con,'aismarth_grwth')){
-    echo "Database not selected";
-  }
+require_once "configInsert.php";
 
 // Set script variables
 $we_have_input = false;
