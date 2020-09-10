@@ -9,6 +9,13 @@
 session_start();
 
 // Load Functions
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
 // This is where function to connect to the database will be included
   $con = mysqli_connect('localhost:3306','aismarth_inonly','INonlyPassword');
   if(!$con){
@@ -30,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // check journal type they like (Good)
     if(!empty($_POST['journal_type_like'])){
-      $journal_type_like = $_POST['journal_type_like'];
+      $journal_type_like = test_input($_POST['journal_type_like']);
     } else {
       $journal_type_like = "";
     }
@@ -71,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // check if there are any additional comments
     if(!empty($_POST['additional_comments'])){
-      $additional_comments = $_POST['additional_comments'];
+      $additional_comments = test_input($_POST['additional_comments']);
     } else {
       $additional_comments = "";
     }
