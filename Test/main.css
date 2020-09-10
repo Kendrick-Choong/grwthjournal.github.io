@@ -2909,6 +2909,20 @@ body.is-menu-visible #menu {
     padding: 1rem 3rem;
 }
 
+.signupbox {
+    width: 45%;
+    height: 75%;
+    background-color: whitesmoke;
+    color: black;
+    border: solid 2px grey;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+}
+
     .plant{
         width: 18%;
         height: 10%;
