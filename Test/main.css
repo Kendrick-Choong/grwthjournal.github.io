@@ -1,9 +1,11 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
 /*
-	Industrious by TEMPLATED
+	Most css created for Industrious by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+    Additional css
 */
 /* Basic */
 @-ms-viewport {
@@ -136,7 +138,7 @@ header.special {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2rem;
-
+  
   }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2250,7 +2252,6 @@ Survey label{
 
 #q4 #Journalnumber{
   color: black;
-  border-radius: 10;
 }
 
 #q5{
@@ -2555,34 +2556,36 @@ body {
     min-width: 320px; } }
 /* Heading */
 #heading {
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  background-color: #111111;
-  color: rgba(255, 255, 255, 0.5);
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/banner.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top: 0;
-  display: -ms-flexbox;
-  height: 15rem !important;
-  min-height: 15rem;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%; }
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    background-color: #111111;
+    color: rgba(255, 255, 255, 0.5);
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25));
+    /*, url("../../images/banner.jpg")*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 0;
+    display: -ms-flexbox;
+    height: 15rem !important;
+    min-height: 15rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
   #heading input, #heading select, #heading textarea {
     color: #ffffff; }
   #heading a {
@@ -2910,17 +2913,13 @@ body.is-menu-visible #menu {
 }
 
 .signupbox {
-    width: 45%;
-    height: 75%;
-    background-color: whitesmoke;
+
+    background-color: white;
     color: black;
-    border: solid 2px grey;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 1rem 3rem;
+}
+
+#center{
+    align-self: center;
 }
 
     .plant{
@@ -2946,3 +2945,4 @@ body #loginBody{
     z-index: 0;
     opacity: .2;
 }
+
