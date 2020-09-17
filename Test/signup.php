@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(filter_var($email, FILTER_VALIDATE_EMAIL)){
               $param_email = $email;
             } else {
-              echo "$email is not a valid email address";
+              $email_err = "Not a valid email address";
             }
           }
 
@@ -247,7 +247,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 							<div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-								<label>Username</label>
+								<label>Email</label>
 								<input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
 								<span class="help-block"><?php echo $email_err; ?></span>
 							</div>
