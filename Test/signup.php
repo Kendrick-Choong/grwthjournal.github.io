@@ -1,5 +1,8 @@
 <?php
 //THIS IS A WORKING SIGN-UP PAGE.
+// Start session
+session_start();
+
 // Include config file
 require_once "config.php";
 
@@ -120,7 +123,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
+                <label>Email</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
                 <span class="help-block"><?php echo $email_err; ?></span>
             </div>
@@ -201,7 +204,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 						<!--<img src="./images/plant.png" class="plant">-->
 						<h1>Create An Account</h1>
-						
+
 						<!--<form>
 							<p>
 								Email
@@ -377,7 +380,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 </body>
 </html>
-
-
-
-
