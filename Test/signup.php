@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(filter_var($email, FILTER_VALIDATE_EMAIL)){
               $param_email = $email;
             } else {
-              $email_err = "Not a valid email address";
+              $email_err = "Not a valid email address.";
             }
           }
 
