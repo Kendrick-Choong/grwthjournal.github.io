@@ -187,37 +187,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<div class="content">
-				<section>
-					<h3>Accumsan montes viverra</h3>
-					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-				</section>
-				<section>
-					<h4>Sem turpis amet semper</h4>
-					<ul class="alt">
-						<li><a href="#">Dolor pulvinar sed etiam.</a></li>
-						<li><a href="#">Etiam vel lorem sed amet.</a></li>
-						<li><a href="#">Felis enim feugiat viverra.</a></li>
-						<li><a href="#">Dolor pulvinar magna etiam.</a></li>
-					</ul>
-				</section>
-				<section>
-					<h4>Magna sed ipsum</h4>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+					<section>
+						<h4>Navigation</h4>
+						<ul class="alt">
+							<li><a href="./../index.html">Home</a></li>
+							<li><a href="./../about.html">Privacy Policy</a></li>
+							<li><a href="login.php">Login</a></li>
+						</ul>
+					</section>
+					<!--<section>
+					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+					<h4>Follow Our Journey</h4>
 					<ul class="plain">
 						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
 						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
 						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-						<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					</ul>
-				</section>
+				</section> -->
+				</div>
+				<div class="copyright">
+					&copy; grwthLLC
+				</div>
 			</div>
-			<div class="copyright">
-				&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
-			</div>
-		</div>
-	</footer>
+		</footer>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
