@@ -103,7 +103,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./../assets/css/main.css" />
 	</head>
 	<body class="is-preload" id="loginBody">
 
@@ -118,8 +118,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		<!-- Nav -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
+				<li><a href="./../index.html">Home</a></li>
+				<li><a href="./../about.html">About</a></li>
 				<li><a href="signup.php">Sign Up</a></li>
 			</ul>
 		</nav>
@@ -173,10 +173,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					<section>
 						<h4>Navigation</h4>
 						<ul class="alt">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">Privacy Policy</a></li>
-							<li><a href="feedback.html">Take a Survey</a></li>
-							<li><a href="login.html">Login</a></li>
+							<li><a href="./../index.html">Home</a></li>
+							<li><a href="./../about.html">Privacy Policy</a></li>
+							<li><a href="signup.php">Login</a></li>
 						</ul>
 					</section>
 					<!--<section>
