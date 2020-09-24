@@ -29,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
+			<a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
 			<nav>
 				<a href="#menu">Menu</a>
 			</nav>
@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<!-- Nav -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="./../index.html">Home</a></li>
 				<li><a href="./php/feedback.php">Provide Feedback</a></li>
 				<li><a href="./php/logout.php">Logout</a></li>
 			</ul>
@@ -56,9 +56,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					<header>
 						<h2>Journal Entries</h2>
 					</header>
-					<a href="prompt.html"><p>Journal Prompt 1</p></a>
-					<a href="prompt.html"><p>Journal Prompt 2</p></a>
-					<a href="prompt.html"><p>Make a new prompt</p></a>
+					<a href="./../prompt.html"><p>Journal Prompt 1</p></a>
+					<a href="./../prompt.html"><p>Journal Prompt 2</p></a>
+					<a href="./../prompt.html"><p>Make a new prompt</p></a>
 					<hr />
 				</div>
 			</div>
@@ -75,8 +75,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					<section>
 						<h4>Navigation</h4>
 						<ul class="alt">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="progress.html">Privacy Policy</a></li>
+							<li><a href="./../index.html">Home</a></li>
+							<li><a href="./../progress.html">Privacy Policy</a></li>
 							<li><a href="./php/feedback.php">Take a Survey</a></li>
 							<li><a href="./php/login.php">Login</a></li>
 						</ul>
