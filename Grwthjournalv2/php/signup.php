@@ -104,53 +104,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Sign Up</h2>
-
-
-        <p>Please fill this form to create an account.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                <label>Email</label>
-                <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-                <span class="help-block"><?php echo $email_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
-            </div>
-            <div>
-                  <input type="submit" class="btn btn-primary" value="Submit">
-                  <input type="reset" class="btn btn-default" value="Reset">
-            </div>
-            <p>Already have an account? <a href="login.html">Login here</a>.</p>
-        </form>
-    </div>
-</body>
-</html> -->
-
-
-
-
-
 <!DOCTYPE HTML>
 <!--
 	Industrious by TEMPLATED
@@ -185,16 +138,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		</ul>
 	</nav>
 
-	<!-- Heading
-	<div id="heading" >
-		<h1>Login</h1>
-	</div> -->
+
 	<!-- Main -->
-
-
-
-
-
 	<section id="main" class="wrapper" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
 		<div class="inner" id="center">
 			<div>
@@ -204,46 +149,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 						<!--<img src="./images/plant.png" class="plant">-->
 						<h1>Create An Account</h1>
-
-						<!--<form>
-							<p>
-								Email
-								<input type="text" name="" placeholder="Enter Email" style="width: 100%;">
-							</p>
-							<br />
-							<p>
-								Preferred Name
-								<input type="text" name="" placeholder="Enter Preferred Name" style="width: 100%;">
-							</p>
-							<br />
-							<p>
-								Password
-								<input type="password" name="" placeholder="Enter Password" style="width: 100%;">
-							</p>
-							<br />
-							<p>
-								Confirm Password
-								<input type="password" name="" placeholder="Confirm Password" style="width: 100%;">
-							</p>
-							<br />
-							<p>
-								<input type="radio" name="" value="yes" id="yes">
-								<label for="yes"></label> I have read the <a href="#">Privacy Policy</a> and accept it
-							</p>
-							<p />
-							<br />
-
-							<input type="submit" name="" value="Sign Up"> <br>
-
-							<br />
-							<br />
-
-							<a href="#">Already have an account? Login</a><br>
-
-						</form> -->
-
-
-
 
 						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 							<div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
@@ -268,10 +173,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							<p>Already have an account? <a href="login.html">Login here</a>.</p>
 						</form>
 
-
-
-
-
 					</div>
 				</section>
 
@@ -280,64 +181,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	</section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!--<section class="wrapper">
-		<div class="inner">
-			<header class="special">
-
-
-				<div class="signupbox">
-					<!--<img src="./images/plant.png" class="plant">
-					<h1>Create An Account</h1>
-					<br />
-					<form>
-						<p>Email</p>
-						<input type="text" name="" placeholder="Enter Email">
-						<br />
-						<p>Username</p>
-						<input type="text" name="" placeholder="Enter Preferred Name">
-						<br />
-						<p>Password</p>
-						<input type="password" name="" placeholder="Enter Password">
-						<br />
-						<p>Confirm Password</p>
-						<input type="password" name="" placeholder="Confirm Password">
-						<br />
-						<p>
-							<input type="radio" name="" value="yes" id="yes">
-							<label for="yes"></label> I have read the <a href="#">Privacy Policy</a> and accept it
-						</p>
-						<p />
-						<br />
-
-						<input type="submit" name="" value="Sign Up"> <br>
-
-						<br />
-
-						<a href="#">Already have an account? Login</a><br>
-					</form>
-
-
-				</div>
-
-
-
-			</header>
-		</div>
-	</section> -->
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="inner">
