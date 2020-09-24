@@ -1,5 +1,10 @@
 <?php
-//THIS IS A WORKING SIGN-UP PAGE.
+/*  Application: Signup File
+ *  Script Name: signup.php
+ *  Description: This is the signup page where we will add new users to our database and check to see if they're already registered.
+ *  Last Change/Update: 09/24/2020
+*/
+
 // Start session
 session_start();
 

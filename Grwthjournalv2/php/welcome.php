@@ -1,4 +1,10 @@
 <?php
+/*  Application: Welcome Page File
+ *  Script Name: welcome.php
+ *  Description: This is the first page that users see after they login into our website.
+ *  Last Change/Update: 09/6/2020
+*/
+
 // Initialize the session
 session_start();
 
