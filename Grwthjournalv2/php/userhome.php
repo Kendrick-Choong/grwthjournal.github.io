@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -39,8 +39,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<nav id="menu">
 			<ul class="links">
 				<li><a href="./../index.html">Home</a></li>
-				<li><a href="./php/feedback.php">Provide Feedback</a></li>
-				<li><a href="./php/logout.php">Logout</a></li>
+				<li><a href="feedback.php">Provide Feedback</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
 
@@ -77,8 +77,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
 							<li><a href="./../progress.html">Privacy Policy</a></li>
-							<li><a href="./php/feedback.php">Take a Survey</a></li>
-							<li><a href="./php/login.php">Login</a></li>
+							<li><a href="feedback.php">Take a Survey</a></li>
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</section>
 					<!--<section>
