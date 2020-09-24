@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['submit'])) {
 
     // connecting to Database
-    require_once "config.php";
+    require_once "configInsert.php";
 
     //Functions
 
