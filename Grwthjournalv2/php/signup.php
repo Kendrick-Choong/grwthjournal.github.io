@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="./../assets/css/main.css" />
 </head>
 <body class="is-preload" id="loginBody">
 
@@ -137,8 +137,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<!-- Nav -->
 	<nav id="menu">
 		<ul class="links">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
+			<li><a href="./../index.html">Home</a></li>
+			<li><a href="./../about.html">About</a></li>
 			<li><a href="signup.php">Sign Up</a></li>
 		</ul>
 	</nav>
@@ -175,7 +175,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 								  <input type="submit" class="btn btn-primary" value="Submit">
 								  <input type="reset" class="btn btn-default" value="Reset">
 							</div>
-							<p>Already have an account? <a href="login.html">Login here</a>.</p>
+							<p>Already have an account? <a href="login.php">Login here</a>.</p>
 						</form>
 
 					</div>
