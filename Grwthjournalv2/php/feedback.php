@@ -26,9 +26,9 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="signup.html">Sign Up</a></li>
+					<li><a href="./../index.html">Home</a></li>
+					<li><a href="./../about.html">About</a></li>
+					<li><a href="userhome.php">User Dashboard</a></li>
 				</ul>
 			</nav>
 
@@ -247,10 +247,9 @@
 						<section>
 							<h4>Sem turpis amet semper</h4>
 							<ul class="alt">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="feedback.html">Take a Survey</a></li>
-								<li><a href="login.html">Login</a></li>
+								<li><a href="./../index.html">Home</a></li>
+								<li><a href="./../about.html">About</a></li>
+								<li><a href="userhome.php">User Dashboard</a></li>
 							</ul>
 						</section>
 						<section>
