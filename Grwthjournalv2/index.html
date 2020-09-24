@@ -1,0 +1,397 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Original Template: Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+	Edited by: Torin Johnson tajohnson@mymail.mines.edu
+	For the webdomain: grwthjournal.co
+-->
+<html>
+	<head>
+		<title>Grwth</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
+			<!--<img class="logo" src="./images/plant.png" alt="Grwth Logo Picture"/>
+		<a class="logo" href="index.html">Grwth</a> -->
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="about.html">About</a></li>
+				<li><a href="feedback.php">Provide Feedback</a></li>
+				<li><a href="signup.php">Sign Up</a></li>
+				<li><a href="login.php">Login</a></li>
+			</ul>
+		</nav>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<h1>Grwth</h1>
+				<p>It's not a journal, it's <em>your</em> journal</p>
+			</div>
+			<video autoplay loop muted speed=.1 playsinline src="./images/swirls.mp4"></video>
+		</section>
+
+		<!-- Highlights -->
+		<section class="wrapper">
+			<div class="inner">
+				<header class="special">
+					<h2>So Much More Than A Journal</h2>
+					<p>Using modern technology, your journal will respond to your needs, not just once, but always</p>
+				</header>
+				<div class="highlights">
+					<section>
+						<div class="content">
+							<header>
+								<a href="#" class="icon fa-code-fork"><span class="label">Icon</span></a>
+								<h3>Custom to the User</h3>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<header>
+								<a href="#" class="icon fa-lock"><span class="label">Icon</span></a>
+								<h3>Safe and Secure</h3>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<header>
+								<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+								<h3>Individual Data Trend Analysis</h3>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+						</div>
+					</section>
+					<!--<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+							<h3>Custom Recommendations</h3>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+							<h3>More than Journaling</h3>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<header>
+							<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
+							<h3>Accumsan viverra</h3>
+						</header>
+						<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+					</div>
+				</section>-->
+				</div>
+			</div>
+		</section>
+
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper">
+			<div class="inner">
+
+
+				<Survey>
+					<form method="Post" action="GrwthInsert.php">
+
+						<section class="Radio" id="q0">
+							<br>
+							<br>
+							<span>Ready to begin Your Adventure?</span>
+							<br>
+							<br>
+
+
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(0,1);">Begin</button>
+
+							<br>
+							<br>
+
+						</section>
+
+
+
+						<section class="Text" id="q1">
+
+							<span>What type of journaling do you like?</span>
+							<br>
+							<br>
+							<input type="text" name="journal_type_like">
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(1,2);">Next</button>
+
+							<br>
+
+						</section>
+
+						<section class="Radio" id="q2">
+							<span>How often do you journal?</span>
+							<br>
+							<br>
+
+							<input type="radio" name="freq_journal" value=" Frequently" id="Frequently">
+							<label for="Frequently">Frequently</label>
+
+							<input type="radio" name="freq_journal" value=" Often" id="Often">
+							<label for="Often">Often</label>
+
+							<input type="radio" name="freq_journal" value=" Little to none" id="Little to none">
+							<label for="Little to none">Little to none</label>
+
+							<br>
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(2,1);">Previous</button>
+							&nbsp
+							<button type="button" onclick="survChange(2,3);">Next</button>
+
+							<br>
+
+						</section>
+
+						<section class="Checkbox" id="q3">
+							<span>What types of journals do you have experience with?</span>
+							<br>
+							<br>
+
+							<input type="checkbox" name="journaltype[]" value="Bullet">
+							<label for="Bullet">Bullet journaling</label>
+
+							<input type="checkbox" name="journaltype[]" value="Dream">
+							<label for="Dream">Dream journaling</label>
+
+							<input type="checkbox" name="journaltype[]" value="Travel">
+							<label for="Travel">Travel journaling</label>
+
+							<input type="checkbox" name="journaltype[]" value="Freeform">
+							<label for="Freeform">Freeform journaling</label>
+							<br>
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(3,2);">Previous</button>
+							&nbsp
+							<button type="button" onclick="survChange(3,4);">Next</button>
+
+						</section>
+
+						<section class="Number" id="q4">
+							<label for="Journal number">How many journals have you done before?</label>
+							<br>
+
+							<input type="number" name="journal_number" id="Journalnumber">
+							<!--This is going to need some validation to make sure they can't enter a negative number or something absurdly high.-->
+							<br>
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(4,3);">Previous</button>
+							&nbsp
+							<button type="button" onclick="survChange(4,5);">Next</button>
+
+						</section>
+
+						<section class="Range" id="q5">
+							<label for="comfort_level">How comfortable are you with journaling?</label>
+							<br>
+
+							<span>Super uncomfortable</span>
+							<input type="range" name="comfort_level" id="Comfort level" value="5" min="0" max="10" step="1">
+							<span>Super comfortable</span>
+							<br>
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(5,4);">Previous</button>
+							&nbsp
+							<button type="button" onclick="survChange(5,6);">Next</button>
+
+						</section>
+
+						<section class="Range2" id="q6">
+							<label for="comfort_level2">How comfortable are you with journaling?</label>
+							<br>
+
+							<span>Super uncomfortable</span>
+							<input type="range" name="comfort_level2" id="Comfort level2" value="5" min="0" max="10" step="1">
+
+							<span>Super comfortable</span>
+							<br>
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(6,5);">Previous</button>
+							&nbsp
+							<button type="button" onclick="survChange(6,7);">Next</button>
+
+						</section>
+
+						<section class="Textarea" id="q7">
+							<label for="additional_comments">Please list any additional comments down here:</label>
+
+							<textarea id="Additional comments" name="additional_comments" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(7,6);">Previous</button>
+							&nbsp
+							<input type="submit" name="submit" value="submit">
+
+					</form>
+				</Survey>
+
+
+
+
+				<!-- Script for making the survey questions rotate-->
+				<script>
+
+					function survChange(curr, next) {
+						document.getElementById("q" + curr).style.display = "none";
+						document.getElementById("q" + next).style.display = "block";
+					}
+
+				</script>
+
+
+
+
+
+				<!--<h2>Curabitur ullamcorper ultricies</h2>
+			<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+			-->
+			</div>
+		</section>
+
+		<!-- Testimonials -->
+		<section class="wrapper">
+			<div class="inner">
+				<header class="special">
+					<h2>Faucibus consequat lorem</h2>
+					<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+				</header>
+				<!--<div class="testimonials">
+				<section>
+					<div class="content">
+						<blockquote>
+							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+						</blockquote>
+						<div class="author">
+							<div class="image">
+								<img src="images/pic01.jpg" alt="" />
+							</div>
+							<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<blockquote>
+							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+						</blockquote>
+						<div class="author">
+							<div class="image">
+								<img src="images/pic03.jpg" alt="" />
+							</div>
+							<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="content">
+						<blockquote>
+							<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+						</blockquote>
+						<div class="author">
+							<div class="image">
+								<img src="images/pic02.jpg" alt="" />
+							</div>
+							<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
+						</div>
+					</div>
+				</section>
+			</div>-->
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+					<section>
+						<h4>Navigation</h4>
+						<ul class="alt">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">Privacy Policy</a></li>
+							<li><a href="feedback.html">Take a Survey</a></li>
+							<li><a href="login.html">Login</a></li>
+						</ul>
+					</section>
+					<!--<section>
+					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+					<h4>Follow Our Journey</h4>
+					<ul class="plain">
+						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+					</ul>
+				</section> -->
+				</div>
+				<div class="copyright">
+					&copy; grwthLLC
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
