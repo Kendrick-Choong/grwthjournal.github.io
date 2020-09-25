@@ -109,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 		<!-- Header -->
 		<header id="header">
-			<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
+			<a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
 			<nav>
 				<a href="#menu">Menu</a>
 			</nav>

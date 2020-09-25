@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email_err = "Please enter a email.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM user WHERE email = ?";
+        $sql = "SELECT id FROM grwth_login WHERE email = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -128,7 +128,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	<!-- Header -->
 	<header id="header">
-		<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
+		<a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
 		<nav>
 			<a href="#menu">Menu</a>
 		</nav>
@@ -219,11 +219,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		</footer>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="./../assets/js/jquery.min.js"></script>
+	<script src="./../assets/js/browser.min.js"></script>
+	<script src="./../assets/js/breakpoints.min.js"></script>
+	<script src="./../assets/js/util.js"></script>
+	<script src="./../assets/js/main.js"></script>
 
 </body>
 </html>

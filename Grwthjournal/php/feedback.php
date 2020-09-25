@@ -17,7 +17,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
+				<a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
 				<nav>
 					<a href="#menu">Menu</a>
 				</nav>
@@ -269,11 +269,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="./../assets/js/jquery.min.js"></script>
+			<script src="./../assets/js/browser.min.js"></script>
+			<script src="./../assets/js/breakpoints.min.js"></script>
+			<script src="./../assets/js/util.js"></script>
+			<script src="./../assets/js/main.js"></script>
 
 	</body>
 </html>
