@@ -17,12 +17,6 @@ $db_password = 'INonlyPassword';
 $db_name = 'aismarth_grwth';
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
-if ($link) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
 
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
