@@ -11,7 +11,13 @@ session_start();
 // Include config file
 require_once "configInsert.php";
 
+$db_server = 'localhost:3306';
+$db_username = 'aismarth_inonly';
+$db_password = 'INonlyPassword';
+$db_name = 'aismarth_grwth';
+
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
+
 
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
