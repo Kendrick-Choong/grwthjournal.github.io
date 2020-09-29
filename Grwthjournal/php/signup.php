@@ -40,6 +40,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } else {
               $email_err = "Not a valid email address.";
             }
+          } else {
+            echo "The link or the sql failed.";
           }
 
 
