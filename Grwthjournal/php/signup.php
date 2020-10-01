@@ -9,12 +9,7 @@
 session_start();
 
 // Include config file
-require_once "configInsert.php";
-
-$db_server = 'localhost:3306';
-$db_username = 'aismarth_inonly';
-$db_password = 'INonlyPassword';
-$db_name = 'aismarth_grwth';
+require_once "configInsertAdmin.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
