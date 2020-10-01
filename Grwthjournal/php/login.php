@@ -15,7 +15,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 
 // Include config file
-require_once "configInsert.php";
+require_once "configInsertAdmin.php";
+
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
 // Define variables and initialize with empty values
