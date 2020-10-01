@@ -44,3 +44,106 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Feedback Survey</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload" id="loginBody">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
+			<nav>
+				<a href="index.html">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="userhome.html">User Dashboard</a></li>
+				<li><a href="./php/logout.php">Logout</a></li>
+			</ul>
+		</nav>
+
+		<!-- Heading
+		<div id="heading" >
+			<h1>Login</h1>
+		</div> -->
+		<!-- Main -->
+		<section id="cta" class="wrapper">
+			<div class="inner">
+
+					<p>Thank You For Your Feedback!</p>
+				
+					<a href="./../index.html">Home</a>
+
+
+
+
+
+				<!-- Script for making the survey questions rotate-->
+				<script>
+
+					function survChange(curr, next) {
+						document.getElementById("q" + curr).style.display = "none";
+						document.getElementById("q" + next).style.display = "block";
+					}
+
+				</script>
+			</div>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+					<section>
+						<h4>Navigation</h4>
+						<ul class="alt">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="progress.html">Privacy Policy</a></li>
+							<li><a href="userhome.html">User Dashboard</a></li>
+							<li><a href="./php/logout.php">Logout</a></li>
+						</ul>
+					</section>
+					<!--<section>
+					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+					<h4>Follow Our Journey</h4>
+					<ul class="plain">
+						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+					</ul>
+				</section> -->
+				</div>
+				<div class="copyright">
+					&copy; grwthLLC
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

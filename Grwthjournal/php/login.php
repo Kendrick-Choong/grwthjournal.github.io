@@ -149,12 +149,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <span class="help-block"><?php echo $password_err; ?></span>
                 </div>
                 <div class="form-group">
+				<br>
                     <input type="submit" class="btn btn-primary" value="Login">
                 </div>
                 <p>Don't have an account? <a href="signup.php">Sign up now</a>.</p>
 
-						<a href="resertpassword.php">Lost Your Password?</a><br>
-						<a href="signup.php">Sign Up</a>
+						<a href="./../progress.html">Lost Your Password?</a><br>
 					</form>
 
 
@@ -174,8 +174,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 						<h4>Navigation</h4>
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
-							<li><a href="./../about.html">Privacy Policy</a></li>
-							<li><a href="signup.php">Login</a></li>
+							<li><a href="./../progress.html">Privacy Policy</a></li>
+							<li><a href="signup.php">Signup</a></li>
 						</ul>
 					</section>
 					<!--<section>
