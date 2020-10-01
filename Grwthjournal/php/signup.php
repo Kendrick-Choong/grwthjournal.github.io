@@ -146,7 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		<ul class="links">
 			<li><a href="./../index.html">Home</a></li>
 			<li><a href="./../about.html">About</a></li>
-			<li><a href="signup.php">Sign Up</a></li>
+			<li><a href="login.php">Log In</a></li>
 		</ul>
 	</nav>
 
@@ -178,10 +178,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 								<input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
 								<span class="help-block"><?php echo $confirm_password_err; ?></span>
 							</div>
+							<br>
 							<div>
 								  <input type="submit" class="btn btn-primary" value="Submit">
 								  <input type="reset" class="btn btn-default" value="Reset">
 							</div>
+							<br>
 							<p>Already have an account? <a href="login.php">Login here</a>.</p>
 						</form>
 
@@ -205,7 +207,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 						<h4>Navigation</h4>
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
-							<li><a href="./../about.html">Privacy Policy</a></li>
+							<li><a href="./../progress.html">Privacy Policy</a></li>
 							<li><a href="login.php">Login</a></li>
 						</ul>
 					</section>

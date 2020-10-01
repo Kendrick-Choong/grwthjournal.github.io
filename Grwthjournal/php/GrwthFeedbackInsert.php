@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./../assets/css/main.css" />
 	</head>
 	<body class="is-preload" id="loginBody">
 
@@ -83,9 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<section id="cta" class="wrapper">
 			<div class="inner">
 
-					<p>Thank You For Your Feedback!</p>
+					<p style="font-size: 2rem;">Thank You For Your Feedback!</p>
 				
-					<a href="./../index.html">Home</a>
+					<a href="./../index.html" style="font-size: 2rem;">Home</a>
 
 
 
