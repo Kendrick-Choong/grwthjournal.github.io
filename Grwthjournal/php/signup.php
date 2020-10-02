@@ -17,7 +17,7 @@ $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    echo $_SERVER["REQUEST_METHOD"];
+    
     // Validate username
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter a email.";
