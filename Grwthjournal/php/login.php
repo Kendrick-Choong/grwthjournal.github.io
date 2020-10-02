@@ -23,7 +23,7 @@ $email_err = $password_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-  
+
     // Check if username is empty
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter your email.";
@@ -93,6 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 } else {
   echo "hi";
+  echo $_SERVER["REQUEST_METHOD"];
 }
 ?>
 
