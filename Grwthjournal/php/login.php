@@ -139,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					<h1>Login</h1>
 					<form>
             <p>Please fill in your credentials to login.</p>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
                     <label>Email</label>
                     <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
