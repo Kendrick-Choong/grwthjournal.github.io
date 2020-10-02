@@ -11,10 +11,7 @@ session_start();
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: userhome.php");
     exit;
-} else {
-  echo "hi";
 }
-  echo "hi";
 // Include config file
 require_once "configInsertAdmin.php";
 
@@ -23,7 +20,7 @@ $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 // Define variables and initialize with empty values
 $email = $password = "";
 $email_err = $password_err = "";
-
+echo "hi";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
