@@ -8,10 +8,10 @@
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-/*if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: userhome.php");
     exit;
-}*/
+}
 // Include config file
 require_once "configInsertAdmin.php";
 
@@ -135,7 +135,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 					<!--<img src="./images/plant.png" class="plant">-->
 					<h1>Login</h1>
-					<form>
             <p>Please fill in your credentials to login.</p>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
