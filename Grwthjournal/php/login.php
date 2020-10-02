@@ -14,7 +14,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 } else {
   echo "hi";
 }
-
+  echo "hi";
 // Include config file
 require_once "configInsertAdmin.php";
 
