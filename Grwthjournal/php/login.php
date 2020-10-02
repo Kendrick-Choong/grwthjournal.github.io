@@ -20,10 +20,10 @@ $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 // Define variables and initialize with empty values
 $email = $password = "";
 $email_err = $password_err = "";
-echo "hi";
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
+  echo "hi";
     // Check if username is empty
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter your email.";
