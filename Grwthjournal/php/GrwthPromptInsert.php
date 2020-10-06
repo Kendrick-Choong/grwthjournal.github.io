@@ -2,7 +2,7 @@
 /*  Application: Grwth Prompt Insert File
  *  Script Name: GrwthLoginInsert.php
  *  Description: Inserts prompt data into a SQL database.
- *  Last Change/Update: 9/24/2020
+ *  Last Change/Update: 10/6/2020
 */
 require_once "configInsert.php";
 

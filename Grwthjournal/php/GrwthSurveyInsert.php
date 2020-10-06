@@ -2,7 +2,7 @@
 /*  Application: Grwth Insert File
  *  Script Name: GrwthInsert.php
  *  Description: inserts basic form data into a SQL database.
- *  Last Change/Update: 09/24/2020
+ *  Last Change/Update: 10/6/2020
 */
 
 // Start session
@@ -77,22 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     $we_have_input = true;
-
-    //whether ip is from share internet
-    if (!empty($_SERVER['HTTP_CLIENT_IP']))
-      {
-        $ip_address = $_SERVER['HTTP_CLIENT_IP'];
-      }
-    //whether ip is from proxy
-    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-      {
-        $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-      }
-    //whether ip is from remote address
-    else
-      {
-        $ip_address = $_SERVER['REMOTE_ADDR'];
-      }
 
     // In this area you would:
     // Check/test/verify the user input
