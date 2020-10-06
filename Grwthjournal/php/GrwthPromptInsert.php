@@ -8,15 +8,6 @@ require_once "configInsert.php";
 
 $promptresponse = $_POST['promptresponse'];
 
-if (!empty($_SERVER['HTTP_CLIENT_IP']))
-  {
-    $ip_address = $_SERVER['HTTP_CLIENT_IP'];
-  }
-//whether ip is from proxy
-elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-  {
-    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-  }
 //whether ip is from remote address
 else
   {
@@ -31,6 +22,8 @@ if(!mysqli_query($con,$sql)){
 } else {
   echo 'Inserted';
 }
+
+header("Location: grwthjournal.co");
 
 mysqli_close($con);
 ?>
