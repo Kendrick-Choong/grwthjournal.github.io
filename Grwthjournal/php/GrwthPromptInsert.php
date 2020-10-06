@@ -19,7 +19,7 @@ if(!mysqli_query($con,$sql)){
   echo 'Inserted';
 }
 
-header("Location: grwthjournal.co");
+header("Location: http://grwthjournal.co/php/userhome.php");
 
 mysqli_close($con);
 ?>
