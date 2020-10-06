@@ -9,10 +9,6 @@ require_once "configInsert.php";
 $promptresponse = $_POST['promptresponse'];
 
 //whether ip is from remote address
-else
-  {
-    $ip_address = $_SERVER['REMOTE_ADDR'];
-  }
 
 $sql = "INSERT INTO grwth_prompt(promptresponse)
         VALUES ('$promptresponse')";
