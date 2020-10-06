@@ -23,8 +23,8 @@ else
     $ip_address = $_SERVER['REMOTE_ADDR'];
   }
 
-$sql = "INSERT INTO grwth_prompt(promptresponse,ip_address)
-        VALUES ('$promptresponse','$ip_address')";
+$sql = "INSERT INTO grwth_prompt(promptresponse)
+        VALUES ('$promptresponse')";
 
 if(!mysqli_query($con,$sql)){
   echo 'Not Inserted';

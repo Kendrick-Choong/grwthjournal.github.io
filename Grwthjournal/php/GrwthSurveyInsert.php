@@ -100,8 +100,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Write it to the database
     if($we_have_input == true){
-      $sql = "INSERT INTO grwth_survey(journal_type_like,freq_journal,journal_type_exp,prev_journal_num,comfort_with_journal,comfort_with_journal_v2,comments, ip_address)
-              VALUES ('$journal_type_like','$freq_journal','$journal_type','$journal_number','$comfort_level','$comfort_level2','$additional_comments','$ip_address')";
+      $sql = "INSERT INTO grwth_survey(journal_type_like,freq_journal,journal_type_exp,prev_journal_num,comfort_with_journal,comfort_with_journal_v2,comments)
+              VALUES ('$journal_type_like','$freq_journal','$journal_type','$journal_number','$comfort_level','$comfort_level2','$additional_comments')";
       if(!mysqli_query($con,$sql)){
         echo 'Not Inserted';
       } else {
