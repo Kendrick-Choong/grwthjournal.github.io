@@ -184,7 +184,36 @@
 
 						</section>
 
-						<section class="Checkbox" id="q3">
+
+						
+						<section class="Radio" id="q3">
+							<span>What journaling do you most enjoy?</span>
+							<br>
+							<br>
+
+							<input type="radio" name="freq_journal" value=" Frequently" id="Frequently">
+							<label for="Frequently">Frequently</label>
+
+							<input type="radio" name="freq_journal" value=" Often" id="Often">
+							<label for="Often">Often</label>
+
+							<input type="radio" name="freq_journal" value=" Little to none" id="Little to none">
+							<label for="Little to none">Little to none</label>
+
+							<br>
+							<br>
+							<br>
+
+							<!--Buttons that control this specific question-->
+							<button type="button" onclick="survChange(3,2);">Previous</button>
+							&nbsp
+							<button type="button" onclick="survChange(3,4);">Next</button>
+
+							<br>
+
+						</section>
+
+						<!--<section class="Checkbox" id="q3"> NOT WORKING
 							<span>What types of journals do you have experience with?</span>
 							<br>
 							<br>
@@ -204,12 +233,12 @@
 							<br>
 							<br>
 
-							<!--Buttons that control this specific question-->
+							<!--Buttons that control this specific question
 							<button type="button" onclick="survChange(3,2);">Previous</button>
 							&nbsp
 							<button type="button" onclick="survChange(3,4);">Next</button>
 
-						</section>
+						</section> -->
 
 						<section class="Number" id="q4">
 							<label for="Journal number">How many journals have you done before?</label>

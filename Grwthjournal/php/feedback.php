@@ -249,7 +249,7 @@
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
 							<li><a href="./../progress.html">Privacy Policy</a></li>
-							<li><a href="./../userhome.html">User Dashboard</a></li>
+							<li><a href="userhome.php">User Dashboard</a></li>
 							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</section>
