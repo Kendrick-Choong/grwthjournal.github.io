@@ -2238,8 +2238,8 @@ Survey label{
   display: none;
 }
 
-#q2 {
-    display: none;
+#q2{
+  display: none;
 }
 
 #q3{
@@ -2250,9 +2250,9 @@ Survey label{
   display: none;
 }
 
-#q4 #Journalnumber{
+/*#q4 #Journalnumber{
   color: black;
-}
+} */
 
 #q5{
   display: none;
@@ -5157,9 +5157,9 @@ Survey label{
   display: none;
 }
 
-#q4 #Journalnumber{
+/*#q4 #Journalnumber{
   color: black;
-}
+} */
 
 #q5{
   display: none;
