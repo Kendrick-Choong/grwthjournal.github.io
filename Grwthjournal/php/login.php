@@ -174,7 +174,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 						<h4>Navigation</h4>
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
-							<li><a href="./../progress.html">Privacy Policy</a></li>
+							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 							<li><a href="signup.php">Signup</a></li>
 						</ul>
 					</section>
