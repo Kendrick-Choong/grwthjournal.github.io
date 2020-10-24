@@ -24,8 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
       echo 'Inserted';
     }
-} else {
-  echo "It didn't insert properly.";
 }
 
 mysqli_close($con);
