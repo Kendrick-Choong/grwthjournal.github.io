@@ -37,8 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             while(mysqli_stmt_fetch($stmt)){
               echo $col1;
               echo "<br>";
-              } else {
-              echo "You have no responses.";
             }
           } else {
             echo "It didn't work Q.Q";
