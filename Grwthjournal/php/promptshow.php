@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
               echo "<br>";
               } else {
               echo "You have no responses.";
+            }
           } else {
             echo "It didn't work Q.Q";
           }
