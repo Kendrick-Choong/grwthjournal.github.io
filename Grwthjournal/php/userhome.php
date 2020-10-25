@@ -59,7 +59,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					<a href="prompt.php"><p>Journal Prompt 1</p></a>
 					<a href="prompt.php"><p>Journal Prompt 2</p></a>
 					<a href="prompt.php"><p>Make a new prompt</p></a>
-          <a href="promptshow.php"><p>Make a new prompt</p></a>
+          <a href="promptshow.php"><p>Get old prompts</p></a>
 					<hr />
 				</div>
 			</div>

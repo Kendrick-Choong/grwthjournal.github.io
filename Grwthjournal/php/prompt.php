@@ -92,8 +92,8 @@ mysqli_close($con);
               <h4>Navigation</h4>
               <ul class="alt">
                 <li><a href="./../index.html">Home</a></li>
-                <li><a href="./../feedback.html">Take a Survey</a></li>
-                <li><a href="./../userhome.html">User Dashboard</a></li>
+                <li><a href="feedback.php">Take a Survey</a></li>
+                <li><a href="userhome.php">User Dashboard</a></li>
                 <li><a href="logout.php">Logout</a></li>
               </ul>
             </section>
