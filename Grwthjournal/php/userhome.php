@@ -49,7 +49,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<h1><?php if(empty($_SESSION["preferred_name"])){
                     echo "Your";
                   } else {
-                    echo htmlspecialchars($_SESSION["preferred_name"])"'s";
+                    echo htmlspecialchars($_SESSION["preferred_name"])."'s";
                   } ?> Dashboard</h1>
 		</div>
 
