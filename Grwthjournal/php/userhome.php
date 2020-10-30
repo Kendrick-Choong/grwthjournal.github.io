@@ -46,7 +46,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 		<!-- Heading -->
 		<div id="heading" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
-			<h1><?php if(empty($_SESSION["preferred_name"])){
+			<h1><?php if(!empty($_SESSION["preferred_name"])){
                     echo "Your";
                   } else {
                     echo htmlspecialchars($_SESSION["preferred_name"]);
