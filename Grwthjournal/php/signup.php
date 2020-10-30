@@ -83,11 +83,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($email_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO grwth_login (email, password, preferred_name) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO grwth_login (email ,preferred_name ,password) VALUES (?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password, $param_preferred_name);
+            mysqli_stmt_bind_param($stmt, "sss", $param_email, $param_preferred_name, $param_password);
 
             // Set parameters
             $param_email = $email;
