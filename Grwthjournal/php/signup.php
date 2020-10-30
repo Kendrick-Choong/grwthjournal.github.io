@@ -59,12 +59,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Oops! Something went wrong. Please try again later.";
             }
           }
-    // Validate preferred name (making preferred name optional for now)
-  /*  if(empty(trim($_POST["preferred_name"]))){
-        $email_err = "Please enter a email.";
-    } else{ */
-        // Prepare a select statement
-        $preferred_name = trim($_POST["preferred_name"]);
 
     // Validate password
     if(empty(trim($_POST["password"]))){
@@ -89,15 +83,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($email_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO grwth_login (email, password) VALUES (?, ?)";
+        $sql = "INSERT INTO grwth_login (email, password, preferred_name) VALUES (?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password, $param_preferred_name);
 
             // Set parameters
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_preferred_name = trim($_POST["preferred_name"]); // Added preferred name to insert
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -172,7 +167,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <div class="form-group">
 								<label>Preferred Name</label>
 								<input type="text" name="preferred_name" class="form-control" value="<?php echo $preferred_name; ?>">
-								<span class="help-block"><?php echo $preferred_name; ?></span>
+								<span class="help-block"></span>
 							</div>
 							<div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
 								<label>Password</label>
