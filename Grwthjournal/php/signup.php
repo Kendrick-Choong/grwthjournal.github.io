@@ -13,17 +13,17 @@ require_once "configInsertAdmin.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
-$email = $password = $confirm_password = "";
+$email = $password = $confirm_password = $preferred_name = "";
 $email_err = $password_err = $confirm_password_err = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    // Validate username
+
+    // Validate email
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter a email.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM grwth_login WHERE email = ?";
+        $sql = "SELECT userID FROM grwth_login WHERE email = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -59,6 +59,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Oops! Something went wrong. Please try again later.";
             }
           }
+    // Validate preferred name (making preferred name optional for now)
+  /*  if(empty(trim($_POST["preferred_name"]))){
+        $email_err = "Please enter a email.";
+    } else{ */
+        // Prepare a select statement
+        $preferred_name = trim($_POST["preferred_name"]);
 
     // Validate password
     if(empty(trim($_POST["password"]))){
@@ -162,6 +168,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 								<label>Email</label>
 								<input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
 								<span class="help-block"><?php echo $email_err; ?></span>
+							</div>
+              <div class="form-group">
+								<label>Preferred Name</label>
+								<input type="text" name="preferred_name" class="form-control" value="<?php echo $preferred_name; ?>">
+								<span class="help-block"><?php echo $preferred_name; ?></span>
 							</div>
 							<div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
 								<label>Password</label>
