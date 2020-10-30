@@ -49,8 +49,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<h1><?php if($_SESSION["preferred_name"] = NULL){
                     echo "Your"
                   } else {
-                    echo htmlspecialchars($_SESSION["preferred_name"])
-                  }; ?>'s Dashboard</h1>
+                    echo htmlspecialchars($_SESSION["preferred_name"]);
+                  } ?>'s Dashboard</h1>
 		</div>
 
 		<!-- Main -->
