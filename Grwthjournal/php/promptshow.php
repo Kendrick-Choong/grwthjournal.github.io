@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
           //set up table
-          echo "<table><tr><th>Response</th><th>Time</th></tr>";
+          echo "<table class="styled-table"><tr><th>Response</th><th>Time</th></tr>";
           // Store result
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
