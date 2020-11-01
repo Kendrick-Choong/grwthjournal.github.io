@@ -27,7 +27,7 @@ $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 $promptresponse = '';
 $userID = '';
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userID = $_SESSION['userID'];
     $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
             FROM grwth_prompt
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
           //set up table
-          echo "<table class="styled-table"><tr><th>Response</th><th>Time</th></tr>";
+          echo "<table class='styled-table'><tr><th>Response</th><th>Time</th></tr>";
           // Store result
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
