@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prompt Show</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="./../assets/css/main.css" />
+	</head>
+
+
 <?php
 /*  Application: prompt File
  *  Script Name: promptshow.php
@@ -17,7 +29,7 @@ $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION['userID'];
-    $sql = "SELECT grwth_prompt.promptresponse
+    $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
@@ -32,15 +44,18 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
-            // Store result
-            mysqli_stmt_bind_result($stmt, $col1);
-            while(mysqli_stmt_fetch($stmt)){
-              echo $col1;
-              echo "<br>";
-            }
-          } else {
-            echo "It didn't work Q.Q";
+          //set up table
+          echo "<table><tr><th>Response</th><th>Time</th></tr>";
+          // Store result
+          mysqli_stmt_bind_result($stmt, $col1, $col2);
+          //output table data
+          while(mysqli_stmt_fetch($stmt)){
+            echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
           }
+          echo "</table>";
+        } else {
+          echo "0 results";
+        }
     // Close statement
     mysqli_stmt_close($stmt);
   } else {
@@ -50,3 +65,5 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
   echo "It's not working";
 }
 ?>
+
+</html>
