@@ -14,7 +14,7 @@
 /*  Application: prompt File
  *  Script Name: promptshow.php
  *  Description: Looks into the database and finds the user's journal responses.
- *  Last Change/Update: 10/12/2020
+ *  Last Change/Update: 11/1/2020
 */
 
 // Initialize the session
@@ -49,10 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           // Store result
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
+					echo "<tbody>";
           while(mysqli_stmt_fetch($stmt)){
-            echo "<tbody><tr><td>".$col1."</td><td>".$col2."</td></tr></tbody>";
+            echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
           }
-          echo "</table>";
+          echo "</tbody></table>";
         } else {
           echo "0 results";
         }
