@@ -22,8 +22,6 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
-$link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
-
 $promptresponse = '';
 $userID = '';
 
