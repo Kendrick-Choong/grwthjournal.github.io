@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
 					echo "<tbody>";
-					if(mysqli_stmt_fetch($stmt) = FALSE){
+					if(mysqli_stmt_fetch($stmt) == FALSE){
 						echo "It didn't work."
 					}
           while(mysqli_stmt_fetch_row($stmt)){
