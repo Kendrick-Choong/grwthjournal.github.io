@@ -34,9 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
             WHERE grwth_login.userID = ?";
-		if( $userID == NULL){
-			echo "UserID is the problem";
-		}
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
         mysqli_stmt_bind_param($stmt, "s", $param_userID);
