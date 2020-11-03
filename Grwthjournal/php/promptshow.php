@@ -18,6 +18,7 @@
 */
 
 // Initialize the session
+session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
             WHERE grwth_login.userID = ?";
-
+		echo $userID;
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
         mysqli_stmt_bind_param($stmt, "s", $param_userID);

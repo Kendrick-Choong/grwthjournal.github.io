@@ -5,7 +5,7 @@
  *  Last Change/Update: 10/8/2020
 */
 
-
+session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
