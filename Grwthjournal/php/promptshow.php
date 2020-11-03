@@ -47,13 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           //set up table
           echo "<table class='styled-table'><thead><tr><th>Response</th><th>Time</th></tr></thead>";
           // Store result
-          if(mysqli_stmt_bind_result($stmt, $col1, $col2) == FALSE){
-						echo "the bind result didn't work";
-					};
+          mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
 					echo "<tbody>";
 					if(mysqli_stmt_fetch($stmt) == FALSE){
-						echo "It didn't work.";
+						echo mysqli_error($link);
 					}
           while(mysqli_stmt_fetch($stmt)){
             echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
