@@ -1,4 +1,13 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prompt Show</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="./../assets/css/main.css" />
+	</head>
 
 
 <?php
@@ -9,7 +18,6 @@
 */
 
 // Initialize the session
-session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
@@ -58,14 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
   echo "It's not working";
 }
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Prompt Show</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="./../assets/css/main.css" />
-	</head>
+
 </html>
