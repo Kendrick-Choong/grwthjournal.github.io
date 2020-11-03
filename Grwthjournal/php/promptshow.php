@@ -25,10 +25,10 @@ require_once "configInsertAdmin.php";
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
 $promptresponse = '';
-$userID = '10';
+$userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    //$userID = $_SESSION['userID'];
+    $userID = $_SESSION['userID'];
     $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
@@ -67,3 +67,5 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
   echo "It's not working";
 }
 ?>
+
+</html>
