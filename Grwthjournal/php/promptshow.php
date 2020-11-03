@@ -28,7 +28,7 @@ $promptresponse = '';
 $userID = '10';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $userID = $_SESSION['userID'];
+    //$userID = $_SESSION['userID'];
     $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
