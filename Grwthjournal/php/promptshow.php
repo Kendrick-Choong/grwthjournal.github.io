@@ -14,7 +14,7 @@
 /*  Application: prompt File
  *  Script Name: promptshow.php
  *  Description: Looks into the database and finds the user's journal responses.
- *  Last Change/Update: 11/1/2020
+ *  Last Change/Update: 11/3/2020
 */
 
 // Initialize the session
