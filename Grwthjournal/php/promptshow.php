@@ -25,7 +25,7 @@ require_once "configInsertAdmin.php";
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
 $promptresponse = '';
-$userID = '';
+$userID = '10';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION['userID'];
