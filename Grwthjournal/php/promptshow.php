@@ -22,12 +22,13 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
+$link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
+
 $promptresponse = '';
 $userID = '';
-
+echo $_SESSION['userID'];
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION['userID'];
-		$link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
     $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
