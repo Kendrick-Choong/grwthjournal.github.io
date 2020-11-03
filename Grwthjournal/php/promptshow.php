@@ -1,3 +1,4 @@
+<?php start_session(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
