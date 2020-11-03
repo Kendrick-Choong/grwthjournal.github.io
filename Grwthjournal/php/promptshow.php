@@ -18,7 +18,7 @@
 */
 
 // Initialize the session
-if(session_start() == TRUE){
+if(session_start() == FALSE){
 	echo " Not the session variable.";
 };
 // Check if the user is already logged in, if yes then redirect him to welcome page
