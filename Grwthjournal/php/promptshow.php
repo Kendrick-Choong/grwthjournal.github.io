@@ -50,9 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
 					echo "<tbody>";
-					if(mysqli_stmt_fetch($stmt) == FALSE){
-						echo mysqli_errno($link);
-					}
+					echo $userID;
           while(mysqli_stmt_fetch($stmt)){
             echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
           }
