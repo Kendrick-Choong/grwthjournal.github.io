@@ -1,0 +1,18 @@
+<!--promptID for each button needs to be autofilled when the table is created. 
+This means we need to pull the prompt info and ID, and place the ID during the echo call -->
+
+<!--Column 3 during the creation ("View Entry")-->
+<button type="promptButton" onclick="promptDisp"([promptID])">View Entry</button>
+
+<!--Script sets the currPromptID (super global) to the entered promptID, and then sends the user to the currPromptDIsp page,
+which uses the currPromptID to know which prompt to display on that page-->
+
+<script>
+  function promptDisp(promptID){
+    <!-- I'm not actually sure how to reference a super global variable-->
+    superGlobal currPromptID = promptID;
+    location.href = "./currPromptDisp.php";
+    }
+</script>
+
+
