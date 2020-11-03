@@ -18,7 +18,9 @@
 */
 
 // Initialize the session
-session_start();
+if(session_start() == TRUE){
+	echo " Not the session variable.";
+};
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
