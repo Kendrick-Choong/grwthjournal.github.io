@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 					echo "<tbody>";
           while(mysqli_stmt_fetch($stmt)){
             echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
+						echo "why no work?";
           }
           echo "</tbody></table>";
         } else {
