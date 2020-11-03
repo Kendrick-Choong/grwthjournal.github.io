@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
             WHERE grwth_login.userID = ?";
+
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
         mysqli_stmt_bind_param($stmt, "s", $param_userID);
@@ -49,7 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
 					echo "<tbody>";
-					echo $userID;
           while(mysqli_stmt_fetch($stmt)){
             echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
           }
