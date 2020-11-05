@@ -70,12 +70,13 @@ require_once "configInsertAdmin.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
-$promptresponse = '';
+$prompt_response = '';
+$prompt_title = '';
 $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION["userID"];
-    $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
+    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
@@ -100,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 							</tr>
 						</thead>";
           // Store result
-          mysqli_stmt_bind_result($stmt, $col1, $col2);
+          mysqli_stmt_bind_result($stmt, $col1, $col2,$col3);
           //output table data
 					echo
 						"<tbody>";
@@ -109,6 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 						"<tr>
 							<td>".$col1."</td>
 							<td>".$col2."</td>
+              <td>".$col3."</td>
 						</tr>";
           }
           echo
