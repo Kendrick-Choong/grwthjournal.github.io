@@ -89,7 +89,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       if(!mysqli_query($con,$sql)){
         echo 'Not Inserted';
       } else {
-        echo 'Inserted';
+        header("Location: ./../index.php");
+        mysqli_close($con);
+        exit();
       }
     } else {
       echo 'Please add input to the form.';
@@ -98,7 +100,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 } else {
   echo '<script>alert("Please change the survey method to POST.")</script>';
 }
-header("refresh:2; Location: ./../index.php");
-exit();
 mysqli_close($con);
 ?>
