@@ -57,14 +57,75 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<section id="main" class="wrapper">
 			<div class="inner">
 				<div class="content">
-					<header>
-						<h2>Journal Entries</h2>
-					</header>
-					<a href="prompt.php"><p>Journal Prompt 1</p></a>
-					<a href="prompt.php"><p>Journal Prompt 2</p></a>
-					<a href="prompt.php"><p>Make a new prompt</p></a>
-          <a href="promptshow.php"><p>Get old prompts</p></a>
-					<hr />
+					<?php
+/*  Application: prompt File
+ *  Script Name: promptshow.php
+ *  Description: Looks into the database and finds the user's journal responses.
+ *  Last Change/Update: 11/3/2020
+*/
+
+// Initialize the session
+// Check if the user is already logged in, if yes then redirect him to welcome page
+require_once "configInsertAdmin.php";
+
+$link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
+
+$promptresponse = '';
+$userID = '';
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $userID = $_SESSION["userID"];
+    $sql = "SELECT grwth_prompt.promptresponse, grwth_prompt.submitted_at
+            FROM grwth_prompt
+            INNER JOIN grwth_login
+            ON grwth_prompt.userID = grwth_login.userID
+            WHERE grwth_login.userID = ?";
+
+    if($stmt = mysqli_prepare($link, $sql)){
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "s", $param_userID);
+
+        // Set parameters
+        $param_userID = $userID;
+
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+          //set up table
+          echo
+					"<table class='styled-table'>
+						<thead>
+							<tr>
+								<th>Response</th>
+								<th>Time</th>
+							</tr>
+						</thead>";
+          // Store result
+          mysqli_stmt_bind_result($stmt, $col1, $col2);
+          //output table data
+					echo
+						"<tbody>";
+          while(mysqli_stmt_fetch($stmt)){
+            echo
+						"<tr>
+							<td>".$col1."</td>
+							<td>".$col2."</td>
+						</tr>";
+          }
+          echo
+						"</tbody>
+					</table>";
+        } else {
+          echo "0 results";
+        }
+    // Close statement
+    mysqli_stmt_close($stmt);
+  } else {
+    echo "It didn't work.";
+  }
+} else {
+  echo "It's not working";
+}
+?>
 				</div>
 			</div>
 		</section>
