@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 } else {
   echo '<script>alert("Please change the survey method to POST.")</script>';
 }
-header("refresh:2; url = ./../index.php");
+header("refresh:2; Location: ./../index.php");
 exit();
 mysqli_close($con);
 ?>
