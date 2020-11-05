@@ -66,13 +66,12 @@ mysqli_close($con);
 		<section id="main" class="wrapper" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
 			<div class="inner">
 				<header>
-					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);">Prompt Goes Here</h1>
+					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);"><?php echo $prompt_title?></h1>
 				</header>
 				<div class="content" style="background-color: none; color: black; font-size:1.4rem; border-radius: 2rem;">
 
 					<form method="Post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 						<section>
-              <header><?php echo $prompt_title ?></header>
 							<textarea style="border:none; background-color: white; color: black; font-size:1.4rem; border-radius: 2rem;" name="promptresponse" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"></textarea>
 						</section>
 						<br />
