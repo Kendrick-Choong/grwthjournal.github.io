@@ -45,15 +45,29 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
           //set up table
-          echo "<table class='styled-table'><thead><tr><th>Response</th><th>Time</th></tr></thead>";
+          echo
+					"<table class='styled-table'>
+						<thead>
+							<tr>
+								<th>Response</th>
+								<th>Time</th>
+							</tr>
+						</thead>";
           // Store result
           mysqli_stmt_bind_result($stmt, $col1, $col2);
           //output table data
-					echo "<tbody>";
+					echo
+						"<tbody>";
           while(mysqli_stmt_fetch($stmt)){
-            echo "<tr><td>".$col1."</td><td>".$col2."</td></tr>";
+            echo
+						"<tr>
+							<td>".$col1."</td>
+							<td>".$col2."</td>
+						</tr>";
           }
-          echo "</tbody></table>";
+          echo
+						"</tbody>
+					</table>";
         } else {
           echo "0 results";
         }
