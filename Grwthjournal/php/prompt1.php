@@ -55,7 +55,7 @@ mysqli_close($con);
 			<ul class="links">
 				<li><a href="./../index.htmlindex.html">Home</a></li>
 				<li><a href="feedback.php">Provide Feedback</a></li>
-				<li><a href="./../userhome.html">User Dashboard</a></li>
+				<li><a href="./../userhome.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
