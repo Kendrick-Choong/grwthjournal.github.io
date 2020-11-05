@@ -56,6 +56,7 @@ mysqli_close($con);
 				<li><a href="./../index.htmlindex.html">Home</a></li>
         <li><a href="./../about.html">About</a></li>
 				<li><a href="feedback.php">Provide Feedback</a></li>
+        <li><a href="signup.php">Sign Up</a></li>
 				<li><a href="userhome.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>

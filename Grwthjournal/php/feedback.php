@@ -28,8 +28,8 @@
 				<ul class="links">
 					<li><a href="./../index.html">Home</a></li>
 					<li><a href="./../about.html">About</a></li>
-					<li><a href="login.php">Logout</a></li>
 					<li><a href="signup.php">Logout</a></li>
+					<li><a href="login.php">Logout</a></li>
 					<li><a href="userhome.php">User Dashboard</a></li>
 				</ul>
 			</nav>

@@ -40,6 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<ul class="links">
 				<li><a href="./../index.html">Home</a></li>
         <li><a href="./../about.html">About</a></li>
+        <li><a href="signup.php">Sign Up</a></li>
 				<li><a href="feedback.php">Provide Feedback</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>

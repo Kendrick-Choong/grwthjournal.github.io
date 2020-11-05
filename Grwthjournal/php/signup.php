@@ -144,6 +144,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			<li><a href="./../about.html">About</a></li>
 			<li><a href="login.php">Log In</a></li>
       <li><a href="userhome.php">User Dashboard</a></li>
+      <li><a href="logout.php">Sign Up</a></li>
 		</ul>
 	</nav>
 
