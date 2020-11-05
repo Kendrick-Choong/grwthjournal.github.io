@@ -5,18 +5,20 @@
  *  Last Change/Update: 10/8/2020
 */
 
+// Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
-$promptresponse = '';
+$prompt_title = 'What might a day of yours look like in 4 years?';
+$prompt_response = '';
 $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $promptresponse = $_POST['promptresponse'];
+    $prompt_response = $_POST['promptresponse'];
     $userID = $_SESSION['userID'];
-    $sql = "INSERT INTO grwth_prompt(userID,promptresponse)
-            VALUES ('$userID','$promptresponse')";
+    $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
+            VALUES ('$userID','$prompt_title','$prompt_response')";
 
     if(!mysqli_query($con,$sql)){
       echo 'Not Inserted';
@@ -53,7 +55,7 @@ mysqli_close($con);
 			<ul class="links">
 				<li><a href="./../index.htmlindex.html">Home</a></li>
 				<li><a href="feedback.php">Provide Feedback</a></li>
-				<li><a href="./../userhome.html">User Dashboard</a></li>
+				<li><a href="./../userhome.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
@@ -64,7 +66,7 @@ mysqli_close($con);
 		<section id="main" class="wrapper" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
 			<div class="inner">
 				<header>
-					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);">Prompt Goes Here</h1>
+					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);"><?php echo $prompt_title?></h1>
 				</header>
 				<div class="content" style="background-color: none; color: black; font-size:1.4rem; border-radius: 2rem;">
 
@@ -91,8 +93,8 @@ mysqli_close($con);
               <h4>Navigation</h4>
               <ul class="alt">
                 <li><a href="./../index.html">Home</a></li>
-                <li><a href="feedback.php">Take a Survey</a></li>
-                <li><a href="userhome.php">User Dashboard</a></li>
+                <li><a href="./../feedback.html">Take a Survey</a></li>
+                <li><a href="./../userhome.html">User Dashboard</a></li>
                 <li><a href="logout.php">Logout</a></li>
               </ul>
             </section>
