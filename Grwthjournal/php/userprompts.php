@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
-            WHERE grwth_login.userID = ?";
+            WHERE grwth_login.userID = ?"
 
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
