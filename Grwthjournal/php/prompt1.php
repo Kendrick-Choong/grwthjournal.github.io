@@ -5,18 +5,20 @@
  *  Last Change/Update: 10/8/2020
 */
 
+// Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
-$promptresponse = '';
+$prompt_title = 'What might a day of yours look like in 4 years?';
+$prompt_response = '';
 $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $promptresponse = $_POST['promptresponse'];
+    $prompt_response = $_POST['promptresponse'];
     $userID = $_SESSION['userID'];
-    $sql = "INSERT INTO grwth_prompt(userID,promptresponse)
-            VALUES ('$userID','$promptresponse')";
+    $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
+            VALUES ('$userID','$prompt_title','$prompt_response')";
 
     if(!mysqli_query($con,$sql)){
       echo 'Not Inserted';
@@ -70,6 +72,7 @@ mysqli_close($con);
 
 					<form method="Post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 						<section>
+              <header><?php echo $prompt_title ?></header>
 							<textarea style="border:none; background-color: white; color: black; font-size:1.4rem; border-radius: 2rem;" name="promptresponse" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"></textarea>
 						</section>
 						<br />
@@ -91,8 +94,8 @@ mysqli_close($con);
               <h4>Navigation</h4>
               <ul class="alt">
                 <li><a href="./../index.html">Home</a></li>
-                <li><a href="feedback.php">Take a Survey</a></li>
-                <li><a href="userhome.php">User Dashboard</a></li>
+                <li><a href="./../feedback.html">Take a Survey</a></li>
+                <li><a href="./../userhome.html">User Dashboard</a></li>
                 <li><a href="logout.php">Logout</a></li>
               </ul>
             </section>
