@@ -76,7 +76,7 @@ $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION["userID"];
-    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, DATE_FORMAT(grwth_prompt.submitted_at, "%M %d, %Y") AS 'submitted_at'
+    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
@@ -107,11 +107,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 					echo
 						"<tbody>";
           while(mysqli_stmt_fetch($stmt)){
+            $col3 = date_create($col3);
             echo
 						"<tr>
 							<td>".$col1."</td>
 							<td>".$col2."</td>
-              <td>".$col3."</td>
+              <td>".date_format($col3, "F d, Y")."</td>
 						</tr>";
           }
           echo
