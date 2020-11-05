@@ -59,15 +59,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<section id="main" class="wrapper">
 			<div class="inner">
 				<div class="content">
-					<?php
+<?php
 /*  Application: prompt File
  *  Script Name: promptshow.php
  *  Description: Looks into the database and finds the user's journal responses.
  *  Last Change/Update: 11/3/2020
 */
 
-// Initialize the session
-// Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
@@ -78,7 +76,7 @@ $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION["userID"];
-    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, DATE_FORMAT(grwth_prompt.submitted_at, "%M %d, %Y") AS submitted_at
+    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
@@ -104,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 							</tr>
 						</thead>";
           // Store result
-          mysqli_stmt_bind_result($stmt, $col1, $col2,$col3);
+          mysqli_stmt_bind_result($stmt, $col1, $col2, $col3);
           //output table data
 					echo
 						"<tbody>";
