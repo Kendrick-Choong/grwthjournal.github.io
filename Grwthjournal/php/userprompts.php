@@ -76,7 +76,7 @@ $userID = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userID = $_SESSION["userID"];
-    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
+    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, DATE_FORMAT(grwth_prompt.submitted_at, "%M %d, %Y") AS submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
@@ -96,6 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 					"<table class='styled-table'>
 						<thead>
 							<tr>
+                <th>Prompt</th>
 								<th>Response</th>
 								<th>Time</th>
 							</tr>
