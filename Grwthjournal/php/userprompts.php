@@ -150,9 +150,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 						<h4>Navigation</h4>
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
+              <li><a href="./../about.html">About</a></li>
+              <li><a href="signup.php">Logout</a></li>
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
-							<li><a href="feedback.php">Take a Survey</a></li>
-							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</section>
 					<!--<section>

@@ -252,9 +252,9 @@
 						<h4>Navigation</h4>
 						<ul class="alt">
 							<li><a href="./../index.html">Home</a></li>
-							<li><a href="./../progress.html">Privacy Policy</a></li>
-							<li><a href="userhome.php">User Dashboard</a></li>
-							<li><a href="logout.php">Logout</a></li>
+              <li><a href="./../about.html">About</a></li>
+              <li><a href="signup.php">Logout</a></li>
+							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
 					<!--<section>
