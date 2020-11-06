@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //check if inputs are empty
     if (empty($promptQuality) || empty($navigationQuality) || empty($understandOurProduct) || empty($comfortableWithProduct) || empty($enjoyProduct) || empty($productUseful) || empty($improveOn) || empty($wantAdded)) {
-      header("Location: ../edsa-Grwth/feedback.php?feedback=empty");
+      header("Location: http://grwthjournal.co/php/feedback.php?feedback=empty");
       exit();
     }
     $sql = "INSERT INTO grwth_feedback(promptQuality,navigationQuality,understandOurProduct,comfortableWithProduct,enjoyProduct,productUseful,improveOn, wantAdded)
