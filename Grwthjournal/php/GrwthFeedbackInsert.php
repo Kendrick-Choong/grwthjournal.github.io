@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<header id="header">
 			<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
 			<nav>
-				<a href="./../index.html">Menu</a>
+				<a href="#menu">Menu</a>
 			</nav>
 		</header>
 
