@@ -56,15 +56,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="./../assets/css/main.css" />
 	</head>
-	<body class="is-preload" id="loginBody">
+  <body class="is-preload">
 
-		<!-- Header -->
-		<header id="header">
-			<a href="#" class="logo icon fa-tree"><span class="label">Icon</span></a>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+    <!-- Header -->
+    <header id="header">
+      <a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="./../index.html">Home</a></li>
+        <li><a href="./../about.html">About</a></li>
+        <li><a href="feedback.php">Provide Feedback</a></li>
+        <li><a href="signup.php">Sign Up</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="userhome.php">User Dashboard</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </nav>
 
 		<!-- Nav -->
 		<nav id="menu">
