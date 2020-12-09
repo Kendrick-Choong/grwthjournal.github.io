@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prompt_response = $_POST['promptresponse'];
     $userID = $_SESSION['userID'];
     $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
-            VALUES ('$userID','$prompt_title','$prompt_respons')";
+            VALUES ('$userID','$prompt_title','$prompt_response')";
 
-    if(!mysqli_query($con,$sql)){
+    if(!mysqli_query($con,$sq)){
       echo 'There was an error submitting your response, please try again.';
     } else {
       header("Location: http://grwthjournal.co/php/userprompts.php");
