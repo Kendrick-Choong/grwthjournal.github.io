@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <?php if(!mysqli_query($con,$sql)){
                 echo '<p style="font-size: 2rem;">There was an error submitting your response, please try again.</p>';
               } else {
-                echo '	<p style="font-size: 2rem;">Thank You For Your Feedback!</p>'
+                echo '	<p style="font-size: 2rem;">Thank You For Your Feedback!</p>';
               } ?>
 					<a href="./../index.html" style="font-size: 2rem;">Home</a>
 
