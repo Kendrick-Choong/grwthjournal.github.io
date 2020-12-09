@@ -2,7 +2,7 @@
 /*  Application: Configuration for Inserting file
 *  Script Name: configInsert.php
 *  Description: inserts basic form data into a SQL database.
-*  Last Change/Update: 09/10/2020
+*  Last Change/Update: 12/9/2020
 */
 
 $db_server = 'localhost:3306';

@@ -2,7 +2,7 @@
 /*  Application: Grwth Feedback Insert File
 *  Script Name: GrwthFeedbackInsert.php
 *  Description: inserts feedback form data into a SQL database.
-*  Last Change/Update: 09/24/2020
+*  Last Change/Update: 12/9/2020
 */
 
 //Setting up variables

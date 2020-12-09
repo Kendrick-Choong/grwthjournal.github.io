@@ -70,7 +70,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
  *  Last Change/Update: 11/3/2020
 */
 
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 

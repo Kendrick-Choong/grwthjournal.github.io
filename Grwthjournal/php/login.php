@@ -2,7 +2,7 @@
 /*  Application: Login File
  *  Script Name: login.php
  *  Description: Serves as the login page for users and checks the database if the user exists.
- *  Last Change/Update: 09/24/2020
+ *  Last Change/Update: 12/9/2020
 */
 
 // Initialize the session
@@ -13,7 +13,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     exit;
 }
 // Include config file
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 

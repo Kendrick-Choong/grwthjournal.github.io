@@ -2,7 +2,7 @@
 /*  Application: Grwth Insert File
  *  Script Name: GrwthInsert.php
  *  Description: inserts basic form data into a SQL database.
- *  Last Change/Update: 10/6/2020
+ *  Last Change/Update: 12/9/2020
 */
 
 // Start session

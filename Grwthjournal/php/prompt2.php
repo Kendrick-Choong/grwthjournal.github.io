@@ -8,7 +8,7 @@
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 $prompt_title = "What is the number one thing bothering your right now and why?";
 $prompt_response = '';

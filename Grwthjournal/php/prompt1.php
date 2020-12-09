@@ -8,7 +8,7 @@
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 $prompt_title = 'What might a day of yours look like in 4 years?';
 $prompt_response = '';
