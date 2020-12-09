@@ -10,7 +10,7 @@
 
 // Start session
 session_start();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
   if (isset($_POST['submit'])) {
 
     // connecting to Database
@@ -36,9 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $sql = "INSERT INTO grwth_feedback(promptQuality,navigationQuality,understandOurProduct,comfortableWithProduct,enjoyProduct,productUseful,improveOn, wantAdded)
             VALUES ('$promptQuality','$navigationQuality','$understandOurProduct','$comfortableWithProduct','$enjoyProduct','$productUseful','$improveOn','$wantAdded')";
-    if(!mysqli_query($con,$sql)){
-      echo 'Not Inserted';
-    }
   }
 }
 ?>
