@@ -14,11 +14,11 @@ $prompt_title = 'What might a day of yours look like in 4 years?';
 $prompt_response = '';
 $userID = '';
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prompt_response = $_POST['promptresponse'];
     $userID = $_SESSION['userID'];
     $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
-            VALUES ('$userID','$prompt_title','$prompt_response')";
+            VALUES ('$userID','$prompt_title','$prompt_respons')";
 
     if(!mysqli_query($con,$sql)){
       echo 'There was an error submitting your response, please try again.';
