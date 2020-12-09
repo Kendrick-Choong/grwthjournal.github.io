@@ -38,8 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$promptQuality','$navigationQuality','$understandOurProduct','$comfortableWithProduct','$enjoyProduct','$productUseful','$improveOn','$wantAdded')";
     if(!mysqli_query($con,$sql)){
       echo 'Not Inserted';
-    } else {
-      echo 'Inserted';
     }
   }
 }
