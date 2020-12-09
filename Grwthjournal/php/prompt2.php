@@ -22,8 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(!mysqli_query($con,$sql)){
       echo 'Not Inserted';
-    } else {
-      echo 'Inserted';
     }
 }
 
