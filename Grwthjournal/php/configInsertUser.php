@@ -1,7 +1,7 @@
 <?php
 /*  Application: Configuration for Inserting file
 *  Script Name: configInsert.php
-*  Description: inserts basic form data into a SQL database.
+*  Description: This is the login information for the user when they need to do stuff regarding the database. Users are defined as people who already have an account with Grwth.
 *  Last Change/Update: 12/9/2020
 */
 
