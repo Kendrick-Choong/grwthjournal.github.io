@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(!mysqli_query($con,$sql)){
       echo 'Not Inserted';
     } else {
-      header("Location: http://grwthjournal.co/php/userprompts.php")
+      header("Location: http://grwthjournal.co/php/userprompts.php");
     }
 }
 
