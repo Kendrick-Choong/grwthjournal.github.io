@@ -13,6 +13,8 @@ $db_name = 'aismarth_grwth';
 $con = mysqli_connect($db_server,$db_username,$db_password);
 if(!$con){
   echo "Not connected to server";
+} else {
+  echo "Connected to server";
 }
 
 if(!mysqli_select_db($con,$db_name)){
