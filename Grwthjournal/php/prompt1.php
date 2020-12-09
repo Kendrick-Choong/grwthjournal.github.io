@@ -14,7 +14,7 @@ $prompt_title = 'What might a day of yours look like in 4 years?';
 $prompt_response = '';
 $userID = '';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $prompt_response = $_POST['promptresponse'];
     $userID = $_SESSION['userID'];
     $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
