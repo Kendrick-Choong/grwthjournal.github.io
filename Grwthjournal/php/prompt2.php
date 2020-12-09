@@ -21,7 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$userID','$prompt_title','$prompt_response')";
 
     if(!mysqli_query($con,$sql)){
-      echo 'Not Inserted';
+      echo 'There was an error submitting your response, please try again.';
+    } else {
+      header("Location: http://grwthjournal.co/php/userprompts.php");
     }
 }
 
