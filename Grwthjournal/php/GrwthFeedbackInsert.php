@@ -1,12 +1,10 @@
 <?php
 /*  Application: Grwth Feedback Insert File
 *  Script Name: GrwthFeedbackInsert.php
-*  Description: inserts feedback form data into a SQL database.
-*  Last Change/Update: 12/9/2020
+*  Description: This file inserts the feedback responses from our feedback form.
+*  Last Change/Update: 12/16/2020
+*  Author: Kenny Choong
 */
-
-//Setting up variables
-
 
 // Start session
 session_start();
@@ -16,26 +14,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // connecting to Database
     require_once "configInsert.php";
 
-    //Functions
-
-
     //Data from feedback form
-    $promptQuality = $_POST['promptQuality'];
-    $navigationQuality = $_POST['navigationQuality'];
-    $understandOurProduct = $_POST['understandOurProduct'];
-    $comfortableWithProduct = $_POST['comfortableWithProduct'];
-    $enjoyProduct = $_POST['enjoyProduct'];
-    $productUseful = $_POST['productUseful'];
-    $improveOn = $_POST['improveOn'];
-    $wantAdded = $_POST['wantAdded'];
+    $prompt_quality = $_POST["prompt_quality"];
+    $navigation_quality = $_POST["navigation_quality"];
+    $understand_our_product = $_POST["understand_our_product"];
+    $comfortable_with_product = $_POST["comfortable_with_product"];
+    $enjoy_product = $_POST["enjoy_product"];
+    $product_useful = $_POST["product_useful"];
+    $improve_on = $_POST["improve_on"];
+    $want_added = $_POST["want_added"];
 
     //check if inputs are empty
-    if (empty($promptQuality) || empty($navigationQuality) || empty($understandOurProduct) || empty($comfortableWithProduct) || empty($enjoyProduct) || empty($productUseful) || empty($improveOn) || empty($wantAdded)) {
+    if (empty($prompt_quality) || empty($navigation_quality) || empty($understand_our_product) || empty($comfortable_with_product) || empty($enjoy_product) || empty($product_useful) || empty($improve_on) || empty($want_added)) {
       header("Location: http://grwthjournal.co/php/feedback.php?feedback=empty");
       exit();
     }
+
+    //Insert the survey data into the database
     $sql = "INSERT INTO grwth_feedback(promptQuality,navigationQuality,understandOurProduct,comfortableWithProduct,enjoyProduct,productUseful,improveOn, wantAdded)
-            VALUES ('$promptQuality','$navigationQuality','$understandOurProduct','$comfortableWithProduct','$enjoyProduct','$productUseful','$improveOn','$wantAdded')";
+            VALUES ('$prompt_quality','$navigation_quality','$understand_our_product','$comfortable_with_product','$enjoy_product','$product_useful','$improve_on','$want_added')";
   }
 }
 ?>
@@ -80,9 +77,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
           <?php if(!mysqli_query($con,$sql)){
-                echo '<p style="font-size: 2rem;">There was an error submitting your response, please try again.</p>';
+                echo "<p style='font-size: 2rem;'>There was an error submitting your response, please try again.</p>";
               } else {
-                echo '	<p style="font-size: 2rem;">Thank You For Your Feedback!</p>';
+                echo "<p style='font-size: 2rem;'>Thank You For Your Feedback!</p>";
               } ?>
 					<a href="./../index.html" style="font-size: 2rem;">Home</a>
 
@@ -120,6 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
+          <!-- Icons for social media if we want to hyperlink our accounts -->
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>

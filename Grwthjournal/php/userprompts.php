@@ -1,15 +1,16 @@
 <?php
-/*  Application: Welcome Page File
- *  Script Name: welcome.php
+/*  Application: User Prompts File
+ *  Script Name: userprompts.php
  *  Description: This is the first page that users see after they login into our website.
- *  Last Change/Update: 09/6/2020
+ *  Last Change/Update: 12/16/2020
+ *  Author: Kenny Choong
 */
 
-// Initialize the session
+// Initialize the session (has to be at the very beginning of any script before HTML or PHP).
 session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     header("location: login.php");
     exit;
 }
@@ -63,30 +64,33 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<section id="main" class="wrapper">
 			<div class="inner">
 				<div class="content">
+
 <?php
-/*  Application: prompt File
- *  Script Name: promptshow.php
- *  Description: Looks into the database and finds the user's journal responses.
- *  Last Change/Update: 11/3/2020
-*/
 
 require_once "configInsertUser.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
-$prompt_response = '';
-$prompt_title = '';
-$userID = '';
+$prompt_response = "";
+$prompt_title = "";
+$userID = "";
 
+//Check to see if the survey method is GET
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $userID = $_SESSION["userID"];
+
+    //Set the user id
+    $user_id = $_SESSION["user_id"];
+
+    //Create an SQL statement
     $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.userID = grwth_login.userID
             WHERE grwth_login.userID = ?";
 
+    //Prepare the link and the sql, if they don't work, throw an error.
     if($stmt = mysqli_prepare($link, $sql)){
+
         // Bind variables to the prepared statement as parameters
         mysqli_stmt_bind_param($stmt, "s", $param_userID);
 
@@ -95,6 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
+
           //set up table
           echo
 					"<table class='styled-table'>
@@ -105,8 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 								<th>Time</th>
 							</tr>
 						</thead>";
+
           // Store result
           mysqli_stmt_bind_result($stmt, $col1, $col2, $col3);
+
           //output table data
 					echo
 						"<tbody>";
@@ -118,6 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 							<td>".$col2."</td>
               <td>".date_format($col3, "F d, Y")."</td>
 						</tr>";
+
           }
           echo
 						"</tbody>
@@ -125,8 +133,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         } else {
           echo "0 results";
         }
+
     // Close statement
     mysqli_stmt_close($stmt);
+
   } else {
     echo "It didn't work.";
   }
@@ -155,6 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
+					<!-- Icons for social media if we want to hyperlink our accounts -->
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>

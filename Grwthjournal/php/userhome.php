@@ -1,8 +1,9 @@
 <?php
-/*  Application: Welcome Page File
- *  Script Name: welcome.php
- *  Description: This is the first page that users see after they login into our website.
- *  Last Change/Update: 09/6/2020
+/*  Application: User Dahboard File
+ *  Script Name: userhome.php
+ *  Description: This is the first page that users see after they login into our website and serves as the user dashboard where they can see all of their stats.
+ *  Last Change/Update: 12/16/2020
+ *  Author: Kenny Choong
 */
 
 // Initialize the session
@@ -89,6 +90,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
+					<!-- Icons for social media if we want to hyperlink our accounts -->          
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>

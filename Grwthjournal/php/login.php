@@ -1,21 +1,20 @@
 <?php
-/*  Application: Login File
+/*  Application: User Login File
  *  Script Name: login.php
- *  Description: Serves as the login page for users and checks the database if the user exists.
- *  Last Change/Update: 12/9/2020
+ *  Description: This file serves as a login page for our users so they can use our product, see their dashboard, and edit their user data.
+ *  Last Change/Update: 12/16/2020
+ *  Author: Kenny Choong
 */
 
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
     header("location: userhome.php");
     exit;
 }
-// Include config file
+// Include config file ($link should already be in config file)
 require_once "configInsertUser.php";
-
-$link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
 // Define variables and initialize with empty values
 $email = $password = "";
@@ -40,10 +39,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validate credentials
     if(empty($email_err) && empty($password_err)){
+
         // Prepare a select statement
         $sql = "SELECT userID, email, preferred_name, password FROM grwth_login WHERE email = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
+
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_email);
 
@@ -52,34 +53,43 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
+
                 // Store result
                 mysqli_stmt_store_result($stmt);
 
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){
+
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $userID, $email, $preferred_name, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $user_id, $email, $preferred_name, $hashed_password);
+
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
+
                             // Password is correct, so start a new session
                             session_start();
 
                             // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["userID"] = $userID;
+                            $_SESSION["logged_in"] = true;
+                            $_SESSION["user_id"] = $user_id;
                             $_SESSION["email"] = $email;
                             $_SESSION["preferred_name"] = $preferred_name;
 
                             // Redirect user to welcome page
                             header("location: userhome.php");
+
                         } else{
+
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
+
                         }
                     }
                 } else{
+
                     // Display an error message if email doesn't exist
                     $email_err = "No account found with that email.";
+                    
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -184,6 +194,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
+					<!-- Icons for social media if we want to hyperlink our accounts -->
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>

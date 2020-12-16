@@ -1,40 +1,45 @@
 <?php
 /*  Application: Signup File
  *  Script Name: signup.php
- *  Description: This is the signup page where we will add new users to our database and check to see if they're already registered.
- *  Last Change/Update: 09/24/2020
+ *  Description: This is the signup page where we will add new users to our database and check to see if they're already registered. They may add a name if they so choose.
+ *  Last Change/Update: 12/16/2020
+ *  Author: Kenny Choong
 */
 
 // Start session
 session_start();
 
-// Include config file
+// Include config file ($link should already be in config file)
 require_once "configInsertUser.php";
 
-$link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
-
+//Define variables with empty values
 $email = $password = $confirm_password = $preferred_name = "";
 $email_err = $password_err = $confirm_password_err = "";
 
+//Check to see if the form method is POST
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validate email
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter a email.";
     } else{
+
         // Prepare a select statement
         $sql = "SELECT userID FROM grwth_login WHERE email = ?";
 
+        //Prepare the link and the sql, if it fails, throw an error.
         if($stmt = mysqli_prepare($link, $sql)){
+
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_email);
 
             // Set parameters and clean up email
             $email = trim($_POST["email"]);
-              //Removing illegal characters from email
+
+            //Removing illegal characters from email
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-              //Validating email
+            //Validating email... if it works, define the email variable, otherwise throw an error.
             if(filter_var($email, FILTER_VALIDATE_EMAIL)){
               $param_email = $email;
             } else {
@@ -45,11 +50,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           }
 
 
-            // Attempt to execute the prepared statement
+            // Attempt to execute the prepared statement, if it fails, throw an error
             if(mysqli_stmt_execute($stmt)){
+
                 /* store result */
                 mysqli_stmt_store_result($stmt);
 
+                //If the resulting sql shows 1 row of data, then the email is already in use, otherwise trim the email.
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     $email_err = "An account with this email is already taken.";
                 } else{
@@ -60,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
           }
 
-    // Validate password
+    // Validate password with at least 6 characters
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";
     } elseif(strlen(trim($_POST["password"])) < 6){
@@ -69,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password = trim($_POST["password"]);
     }
 
-    // Validate confirm password
+    // Validate confirm password to see if they're the same
     if(empty(trim($_POST["confirm_password"]))){
         $confirm_password_err = "Please confirm password.";
     } else{
@@ -85,7 +92,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare an insert statement
         $sql = "INSERT INTO grwth_login (email ,preferred_name ,password) VALUES (?, ?, ?)";
 
+        //Prepare the link and SQL, if it fails, throw an error.
         if($stmt = mysqli_prepare($link, $sql)){
+
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "sss", $param_email, $param_preferred_name, $param_password);
 
@@ -96,8 +105,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
+
                 // Redirect to login page
                 header("location: login.php");
+
             } else{
                 echo "Something went wrong. Please try again later.";
             }
@@ -113,11 +124,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 <!DOCTYPE HTML>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 <head>
 	<title>Sign Up</title>
@@ -218,6 +224,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
+					<!-- Icons for social media if we want to hyperlink our accounts -->          
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>

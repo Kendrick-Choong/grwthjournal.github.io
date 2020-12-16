@@ -1,8 +1,9 @@
 <?php
-/*  Application: prompt File
- *  Script Name: prompt.php
- *  Description: Serves as the login page for users and checks the database if the user exists.
- *  Last Change/Update: 10/8/2020
+/*  Application: Present prompt File
+ *  Script Name: prompt2.php
+ *  Description: This is a temporary static prompt page that displays the prompt "What is the number one thing bothering your right now and why?".
+ *  Last Change/Update: 12/16/2020
+ *  Author: Kenny Choong
 */
 
 // Initialize the session
@@ -11,22 +12,29 @@ session_start();
 require_once "configInsertUser.php";
 
 $prompt_title = "What is the number one thing bothering your right now and why?";
-$prompt_response = '';
-$userID = '';
+$prompt_response = "";
+$user_id = "";
 
+//Check to see if the form is sending via POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $prompt_response = $_POST['promptresponse'];
-    $userID = $_SESSION['userID'];
-    $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
-            VALUES ('$userID','$prompt_title','$prompt_response')";
 
+    //Set variables to be equal to survey responses
+    $prompt_response = $_POST["prompt_response"];
+    $user_id = $_SESSION["user_id"];
+
+    //Create an SQL statement to be injected into the database
+    $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
+            VALUES ('$user_id','$prompt_title','$prompt_response')";
+
+    //Check to see if the query can run, if it can't throw an error, if it can, redirect to the userprompts page.
     if(!mysqli_query($con,$sql)){
-      echo 'There was an error submitting your response, please try again.';
+      echo "There was an error submitting your response, please try again.";
     } else {
       header("Location: http://grwthjournal.co/php/userprompts.php");
     }
 }
 
+//Close the connection
 mysqli_close($con);
 ?>
 
@@ -101,6 +109,16 @@ mysqli_close($con);
   							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
               </ul>
             </section>
+            <!-- Icons for social media if we want to hyperlink our accounts -->
+  					<!--<section>
+  					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+  					<h4>Follow Our Journey</h4>
+  					<ul class="plain">
+  						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+  						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+  						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+  					</ul>
+  				</section> -->
             </div>
     				<div class="copyright">
     					&copy; grwthLLC

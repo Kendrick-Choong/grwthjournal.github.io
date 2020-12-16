@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+<!-- Application: Feedback Form for Grwth
+*  	 Script Name: feedback.php
+*  	 Description: This is a form that users can fill out to provide Grwth with product feedback.
+*  	 Last Change/Update: 12/16/2020
+*  	 Author: Kenny Choong / Torin Johnson -->
 <html>
 	<head>
 		<title>Feedback Survey</title>
@@ -59,7 +59,7 @@
 								<br>
 
 								<span>Bad</span>
-								<input type="range" name="promptQuality" id="Prompt level" value="5" min="0" max="10" step="1">
+								<input type="range" name="prompt_quality" id="Prompt level" value="5" min="0" max="10" step="1">
 								<span>Good</span>
 								<br>
 								<br>
@@ -82,7 +82,7 @@
 								<br>
 
 								<span>Hard</span>
-								<input type="range" name="navigationQuality" id="Site Nav" value="5" min="0" max="10" step="1">
+								<input type="range" name="navigation_quality" id="Site Nav" value="5" min="0" max="10" step="1">
 								<span>Easy</span>
 								<br>
 								<br>
@@ -102,10 +102,10 @@
 										<br>
 										<br>
 
-										<input type="radio" name="understandOurProduct" value= "Yes" id="Yes1">
+										<input type="radio" name="understand_our_product" value= "Yes" id="Yes1">
 										<label for="Yes1">Yes</label>
 
-										<input type="radio" name="understandOurProduct" value= "No" id="No1">
+										<input type="radio" name="understand_our_product" value= "No" id="No1">
 										<label for="No1">No</label>
 
 										<br>
@@ -127,10 +127,10 @@
 										<br>
 										<br>
 
-										<input type="radio" name="comfortableWithProduct" value= "Yes2" id="Yes2">
+										<input type="radio" name="comfortable_with_product" value= "Yes2" id="Yes2">
 										<label for="Yes2">Yes</label>
 
-										<input type="radio" name="comfortableWithProduct" value= "No2" id="No2">
+										<input type="radio" name="comfortable_with_product" value= "No2" id="No2">
 										<label for="No2">No</label>
 
 										<br>
@@ -152,7 +152,7 @@
 											<br>
 
 											<span>No Enjoyment</span>
-											<input type="range" name="enjoyProduct" id="Enjoy level" value="5" min="0" max="10" step="1">
+											<input type="range" name="enjoy_product" id="Enjoy level" value="5" min="0" max="10" step="1">
 											<span>Really Enjoy</span>
 											<br>
 											<br>
@@ -169,7 +169,7 @@
 										<section class="Textarea" id="q5">
 											<label for="useful">In what ways do you think the product is or is not useful?</label>
 
-											<textarea id="Useful" name="productUseful" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
+											<textarea id="Useful" name="product_useful" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
 											<br>
 
 												<!--Buttons that control this specific question-->
@@ -183,7 +183,7 @@
 											<section class="Textarea" id="q6">
 												<label for="improve_on">What can we improve on?</label>
 
-												<textarea id="Improve On" name="improveOn" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
+												<textarea id="Improve On" name="improve_on" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
 												<br>
 
 												<!--Buttons that control this specific question-->
@@ -197,7 +197,7 @@
 											<section class="Textarea" id="q7">
 												<label for="what_added">What would you like to see added?</label>
 
-												<textarea id="What Added" name="wantAdded" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
+												<textarea id="What Added" name="want_added" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
 												<br>
 
 												<!--Buttons that control this specific question-->
@@ -213,7 +213,7 @@
 											<br />
 
 						</form>
-						<!-- php stuff for error message -->
+						<!-- php stuff for the error message -->
 						<?php
 							$fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -257,6 +257,7 @@
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
+					<!-- Icons for social media if we want to hyperlink our accounts -->
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>
