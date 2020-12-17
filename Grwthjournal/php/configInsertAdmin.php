@@ -7,10 +7,10 @@
 */
 
 //Login Info
-$db_server = 'localhost:3306';
-$db_username = 'aismarth_admin';
-$db_password = '0xT1kSEJ**U)';
-$db_name = 'aismarth_grwth';
+$db_server = "localhost:3306";
+$db_username = "aismarth_admin";
+$db_password = "0xT1kSEJ**U)";
+$db_name = "aismarth_grwth";
 
 //Testing connection to server
 $con = mysqli_connect($db_server,$db_username,$db_password);

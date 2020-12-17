@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($email_err) && empty($password_err)){
 
         // Prepare a select statement
-        $sql = "SELECT userID, email, preferred_name, password FROM grwth_login WHERE email = ?";
+        $sql = "SELECT user_id, email, preferred_name, password FROM grwth_login WHERE email = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
 
@@ -89,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                     // Display an error message if email doesn't exist
                     $email_err = "No account found with that email.";
-                    
+
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";

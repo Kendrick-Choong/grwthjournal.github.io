@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
 
         // Prepare a select statement
-        $sql = "SELECT userID FROM grwth_login WHERE email = ?";
+        $sql = "SELECT user_id FROM grwth_login WHERE email = ?";
 
         //Prepare the link and the sql, if it fails, throw an error.
         if($stmt = mysqli_prepare($link, $sql)){
@@ -224,7 +224,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
-					<!-- Icons for social media if we want to hyperlink our accounts -->          
+					<!-- Icons for social media if we want to hyperlink our accounts -->
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>

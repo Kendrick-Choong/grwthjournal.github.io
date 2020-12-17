@@ -43,10 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // check types of journal experience (Good)
-    if(isset($_POST["journaltype"])){
-      $checkbox = $_POST["journaltype"];
-      foreach($checkbox as $checkboxresult){
-        $journal_type.=$checkboxresult.",";
+    if(isset($_POST["journal_type"])){
+      $check_box = $_POST["journal_type"];
+      foreach($check_box as $check_box_result){
+        $journal_type.=$check_box_result.",";
       }
     } else {
       $journal_type = "";

@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = $_SESSION["user_id"];
 
     //Create an SQL statement to be injected into the database
-    $sql = "INSERT INTO grwth_prompt(userID,prompt_title,prompt_response)
+    $sql = "INSERT INTO grwth_prompt(user_id,prompt_title,prompt_response)
             VALUES ('$user_id','$prompt_title','$prompt_response')";
 
     //Check to see if the query can run, if it can't throw an error, if it can, redirect to the userprompts page.

@@ -218,7 +218,7 @@
 							$fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 							if (strpos($fullURL, "feedback=empty") == true) {
-								echo '<script>alert("Please answer all questions.")</script>';
+								echo "<script>alert('Please answer all questions.')</script>";
 							}
 						?>
 					</Survey>

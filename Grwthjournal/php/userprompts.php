@@ -73,7 +73,7 @@ $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
 $prompt_response = "";
 $prompt_title = "";
-$userID = "";
+$user_id = "";
 
 //Check to see if the survey method is GET
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -85,17 +85,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
             FROM grwth_prompt
             INNER JOIN grwth_login
-            ON grwth_prompt.userID = grwth_login.userID
-            WHERE grwth_login.userID = ?";
+            ON grwth_prompt.user_id = grwth_login.user_id
+            WHERE grwth_login.user_id = ?";
 
     //Prepare the link and the sql, if they don't work, throw an error.
     if($stmt = mysqli_prepare($link, $sql)){
 
         // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "s", $param_userID);
+        mysqli_stmt_bind_param($stmt, "s", $param_user_id);
 
         // Set parameters
-        $param_userID = $userID;
+        $param_user_id = $user_id;
 
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){

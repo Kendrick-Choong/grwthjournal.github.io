@@ -9,7 +9,7 @@
 // Start session
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (isset($_POST['submit'])) {
+  if (isset($_POST["submit"])) {
 
     // connecting to Database
     require_once "configInsert.php";
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //Insert the survey data into the database
-    $sql = "INSERT INTO grwth_feedback(promptQuality,navigationQuality,understandOurProduct,comfortableWithProduct,enjoyProduct,productUseful,improveOn, wantAdded)
+    $sql = "INSERT INTO grwth_feedback(prompt_quality,navigation_quality,understand_our_product,comfortable_with_product,enjoy_product,product_useful,improve_on, want_added)
             VALUES ('$prompt_quality','$navigation_quality','$understand_our_product','$comfortable_with_product','$enjoy_product','$product_useful','$improve_on','$want_added')";
   }
 }

@@ -10,7 +10,7 @@
 session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     header("location: login.php");
     exit;
 }
@@ -90,7 +90,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
-					<!-- Icons for social media if we want to hyperlink our accounts -->          
+					<!-- Icons for social media if we want to hyperlink our accounts -->
 					<!--<section>
 					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
 					<h4>Follow Our Journey</h4>
