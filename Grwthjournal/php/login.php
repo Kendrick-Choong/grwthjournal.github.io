@@ -169,7 +169,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				<br>
                 <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
 
-						<a href="./../progress.html">Lost Your Password?</a><br>
+						<a href="resetPasswordEmail.php">Lost Your Password?</a><br>
 					</form>
 
 
