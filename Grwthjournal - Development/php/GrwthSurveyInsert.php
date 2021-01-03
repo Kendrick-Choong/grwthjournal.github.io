@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       if(!mysqli_query($con,$sql)){
         echo "Not Inserted";
       } else {
-        header("Location: http://grwthjournal.co/index.html");
+        header("Location: http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/index.html");
         mysqli_close($con);
         exit();
       }

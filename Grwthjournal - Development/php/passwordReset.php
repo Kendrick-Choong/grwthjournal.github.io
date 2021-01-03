@@ -33,7 +33,7 @@ if (isset($_GET["reset_key"]) && isset($_GET["email"]) && isset($_GET["action"])
          <p>The link is invalid/expired. Either you did not copy the correct link
          from the email, or you have already used the key in which case it is
          deactivated.</p>
-         <p><a href="http://grwthjournal.co/php/resetPasswordEmail.php">
+         <p><a href="http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/php/resetPasswordEmail.php">
          Click here</a> to reset password.</p>';
 
        } else {

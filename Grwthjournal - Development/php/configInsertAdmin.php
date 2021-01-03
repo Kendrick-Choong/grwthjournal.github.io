@@ -7,10 +7,10 @@
 */
 
 //Login Info
-$db_server = "localhost:3306";
-$db_username = "aismarth_admin";
-$db_password = "0xT1kSEJ**U)";
-$db_name = "aismarth_grwth";
+$db_server = "aa1e6yxzujg6rwt.cpm1bav9vi9r.us-west-2.rds.amazonaws.com";
+$db_username = "Grwth_Admin";
+$db_password = "ZD4LL2JpfbCYXvU";
+$db_name = "ebdb";
 
 //Testing connection to server
 $con = mysqli_connect($db_server,$db_username,$db_password);

@@ -109,9 +109,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $output='<p>Dear user,</p>';
         $output.='<p>Please click on the following link to reset your password.</p>';
         $output.='<p>-------------------------------------------------------------</p>';
-        $output.='<p><a href="http://grwthjournal.co/php/passwordReset.php?
+        $output.='<p><a href="http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/php/passwordReset.php?
         reset_key='.$reset_key.'&email='.$email.'&action=reset" target="_blank">
-        http://grwthjournal.co/php/passwordReset.php
+        http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/php/passwordReset.php
         ?reset_key='.$reset_key.'&email='.$email.'&action=reset</a></p>';
         $output.='<p>-------------------------------------------------------------</p>';
         $output.='<p>Please be sure to copy the entire link into your browser.

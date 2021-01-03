@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //check if inputs are empty
     if (empty($prompt_quality) || empty($navigation_quality) || empty($understand_our_product) || empty($comfortable_with_product) || empty($enjoy_product) || empty($product_useful) || empty($improve_on) || empty($want_added)) {
-      header("Location: http://grwthjournal.co/php/feedback.php?feedback=empty");
+      header("Location: http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/php/feedback.php?feedback=empty");
       exit();
     }
 

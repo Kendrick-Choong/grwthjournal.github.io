@@ -2,15 +2,15 @@
 /* Application: Configuration for Inserting Data File
 *  Script Name: configInsert.php
 *  Description: This script configures the database connection to just be insert only for people who don't have accounts with Grwth and are using our intiial surveys.
-*  Last Change/Update: 12/16/2020
-*  Authoer: Kenny Choong
+*  Last Change/Update: 1/3/2021
+*  Author: Kenny Choong
 */
 
 //Login Info
-$db_server = "localhost:3306";
-$db_username = "aismarth_inonly";
-$db_password = "INonlyPassword";
-$db_name = "aismarth_grwth";
+$db_server = "aa1e6yxzujg6rwt.cpm1bav9vi9r.us-west-2.rds.amazonaws.com";
+$db_username = "Grwth_Insert_Only";
+$db_password = "6o&21QXx^fhm1Zo";
+$db_name = "ebdb";
 
 //Testing connection to server
 $con = mysqli_connect($db_server,$db_username,$db_password);
