@@ -84,7 +84,7 @@ mysqli_close($con);
 
 					<form method="Post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 						<section>
-							<textarea style="border:none; background-color: white; color: black; font-size:1.4rem; border-radius: 2rem;" name="promptresponse" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"></textarea>
+							<textarea style="border:none; background-color: white; color: black; font-size:1.4rem; border-radius: 2rem;" name="prompt_response" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"></textarea>
 						</section>
 						<br />
 						<input type="submit" name="Save" value="Save" style="border-radius:20px;">
