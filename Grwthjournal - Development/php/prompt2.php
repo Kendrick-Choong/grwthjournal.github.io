@@ -2,7 +2,7 @@
 /*  Application: Present prompt File
  *  Script Name: prompt2.php
  *  Description: This is a temporary static prompt page that displays the prompt "What is the number one thing bothering your right now and why?".
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 1/3/2021
  *  Author: Kenny Choong
 */
 

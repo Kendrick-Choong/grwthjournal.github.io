@@ -2,7 +2,7 @@
 /*  Application: User Dahboard File
  *  Script Name: userhome.php
  *  Description: This is the first page that users see after they login into our website and serves as the user dashboard where they can see all of their stats.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 1/3/2021
  *  Author: Kenny Choong
 */
 

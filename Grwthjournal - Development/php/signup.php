@@ -2,7 +2,7 @@
 /*  Application: Signup File
  *  Script Name: signup.php
  *  Description: This is the signup page where we will add new users to our database and check to see if they're already registered. They may add a name if they so choose.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 1/3/2021
  *  Author: Kenny Choong
 */
 

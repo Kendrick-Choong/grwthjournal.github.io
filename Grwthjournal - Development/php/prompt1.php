@@ -2,7 +2,7 @@
 /*  Application: Future Prompt File
  *  Script Name: prompt1.php
  *  Description: This is a temporary static prompt page that displays the prompt "What might a day of yours look like in 4 year?".
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 1/3/2021
  *  Author: Kenny Choong
 */
 

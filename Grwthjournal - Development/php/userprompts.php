@@ -2,7 +2,7 @@
 /*  Application: User Prompts File
  *  Script Name: userprompts.php
  *  Description: This is the first page that users see after they login into our website.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 1/3/2021
  *  Author: Kenny Choong
 */
 
