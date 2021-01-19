@@ -108,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 // Start a new session
                 session_start();
-                $_SESSION["preferred_name"] = $preferred_name;
+                $_SESSION["preferred_name"] = $_POST["preferred_name"];
 
                 // Redirect to login page
                 header("location: login.php");
