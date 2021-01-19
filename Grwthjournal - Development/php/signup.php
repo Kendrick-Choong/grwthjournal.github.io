@@ -112,7 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 // Redirect to login page
                 header("location: userhome.php");
-
+                
             } else{
                 echo "Something went wrong. Please try again later.";
             }
