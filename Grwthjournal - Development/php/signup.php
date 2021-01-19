@@ -111,7 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION["preferred_name"] = $_POST["preferred_name"];
 
                 // Redirect to login page
-                header("location: login.php");
+                header("location: userhome.php");
 
             } else{
                 echo "Something went wrong. Please try again later.";
