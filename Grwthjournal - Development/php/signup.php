@@ -106,6 +106,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
 
+                // Start a new session
+                session_start();
+                $_SESSION["preferred_name"] = $preferred_name;
+
                 // Redirect to login page
                 header("location: login.php");
 
