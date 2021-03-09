@@ -2,7 +2,7 @@
 /*  Application: Signup File
  *  Script Name: signup.php
  *  Description: This is the signup page where we will add new users to our database and check to see if they're already registered. They may add a name if they so choose.
- *  Last Change/Update: 1/3/2021
+ *  Last Change/Update: 3/9/2021
  *  Author: Kenny Choong
 */
 
@@ -111,8 +111,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION["preferred_name"] = $_POST["preferred_name"];
 
                 // Redirect to login page
-                header("location: userhome.php");
-                
+                header("location: dashboard.php");
+
             } else{
                 echo "Something went wrong. Please try again later.";
             }
@@ -155,7 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <li><a href="feedback.php">Provide Feedback</a></li>
       <li><a href="signup.php">Sign Up</a></li>
       <li><a href="login.php">Login</a></li>
-      <li><a href="userhome.php">User Dashboard</a></li>
+      <li><a href="dashboard.php">User Dashboard</a></li>
       <li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>

@@ -1,4 +1,10 @@
 <?php
+/*  Application: Dashboard Refresh
+*  Script Name: dashboardRefresh.php
+*  Description: This script is utilized to refresh the data in the prompt entry section of the dashboard without refreshing the entire page.
+*  Last Change/Update: 3/9/2021
+*  Author: Kenny Choong
+*/
 
 session_start();
 

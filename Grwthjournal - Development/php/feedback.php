@@ -2,7 +2,7 @@
 <!-- Application: Feedback Form for Grwth
 *  	 Script Name: feedback.php
 *  	 Description: This is a form that users can fill out to provide Grwth with product feedback.
-*  	 Last Change/Update: 1/3/2021
+*  	 Last Change/Update: 3/9/2021
 *  	 Author: Kenny Choong / Torin Johnson -->
 <html>
 	<head>
@@ -31,7 +31,7 @@
 					<li><a href="feedback.php">Provide Feedback</a></li>
 	        <li><a href="signup.php">Sign Up</a></li>
 	        <li><a href="login.php">Login</a></li>
-	        <li><a href="userhome.php">User Dashboard</a></li>
+	        <li><a href="dashboard.php">User Dashboard</a></li>
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>

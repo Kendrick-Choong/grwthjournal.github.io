@@ -2,7 +2,7 @@
 /*  Application: Prompt Edit File
  *  Script Name: promptEdit.php
  *  Description: This is a file that puts the user's desired prompt into a text area to be edited and resubmitted to the databse.
- *  Last Change/Update: 1/10/2021
+ *  Last Change/Update: 3/9/2021
  *  Author: Kenny Choong
 */
 
@@ -81,7 +81,7 @@ mysqli_close($con);
 				<li><a href="feedback.php">Provide Feedback</a></li>
         <li><a href="signup.php">Sign Up</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="userhome.php">User Dashboard</a></li>
+        <li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>

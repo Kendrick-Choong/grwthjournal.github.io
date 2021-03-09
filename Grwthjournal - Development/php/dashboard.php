@@ -1,10 +1,8 @@
 <?php
-//BIG COMMENT I think I got the graph part to work with the intervals. What I did was group the sql values by day so that takes care of the multiple entires on a single day. Then I did some date diff for the filters so that they only pull from the last 7 days for the day filter whereas the week one does it in the past 4 weeks. Also, I made a for loop so that the code loops through each different SQL statement and then assigns it to a new array. Then that array is imploded and sliced and concatenated within a variable that is then called by the graph as the data for that graph.
-
 /*  Application: Dashboard
 *  Script Name: dashboard.php
-*  Description: This script configures the database connection to just have all database privileges for database administrators.
-*  Last Change/Update: 3/4/2021
+*  Description: This script is the dashboard where the user will be able to see their stats and old entries as well as selecting new prompts for users to fill out.
+*  Last Change/Update: 3/9/2021
 *  Author: Kenny Choong
 */
 // Initialize the session
