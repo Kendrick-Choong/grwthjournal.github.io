@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="The Grwth Privacy Policy" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="./../assets/css/maintest.css" />
+		<link rel="stylesheet" href="./../assets/css/main.css" />
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
     	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
