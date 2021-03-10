@@ -117,7 +117,7 @@ a {
   -webkit-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
-  text-decoration: none; } */
+  text-decoration: none; }
   a:hover {
     text-decoration: none; }
 
@@ -138,7 +138,7 @@ header.special {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2rem;
-
+  
   }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2574,7 +2574,7 @@ body {
   line-height: 3.5rem;
   position: fixed;
   top: 0;
-  z-index: 10001;
+  z-index: 10001; 
   border-radius: 0 0 1.8rem 0;}
   #header > .logo {
     color: #0bb588;
@@ -2662,7 +2662,7 @@ body {
     /*, url("../../images/banner.jpg")*/
     /* background: linear-gradient(90.07deg, rgba(11, 106, 106, 0.84) 0.05%, rgba(16, 32, 32, 0.13) 99.94%), url(.jpg); */
     background:linear-gradient(43deg, #1190c2 0%, #12b3a0 74%);
-    border-radius: 0px 0px 110px 110px;
+    border-radius: 0px 0px 110px 110px; 
     margin-top:-4.5vw;
     background-position: center;
     background-repeat: no-repeat;
@@ -2838,7 +2838,7 @@ body {
       padding: 2rem; } }
   @media screen and (max-width: 480px) {
     #main .content {
-      padding: 1rem;
+      padding: 1rem; 
 	  margin-bottom: 0;} }
 
 /* Menu */
@@ -3176,8 +3176,8 @@ body #loginBody{
 }
 
 #dashImage{
-	border-radius:200px;
-	border: white solid .8rem;
+	border-radius:200px; 
+	border: white solid .8rem; 
 	box-shadow: 2px 2px 8px 2px rgba(43, 43, 43, 0.06);
 }
 
@@ -3411,8 +3411,7 @@ body #loginBody{
   font-weight: bold;
 }
 
-.closeWhy:hover,
-.closeWhy:focus {
+.closeWhy:hover, .closeWhy:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -3491,33 +3490,33 @@ body #loginBody{
   }
 
   #promptBox{
-    border:solid pink 3px;
-    background-color: white;
+    border:solid pink 3px; 
+    background-color: white; 
     color: black;
-    font-size:2vw;
+    font-size:2vw; 
     border-radius: 20rem;
   }
 
 .blob1{
-  width: 50%;
-  display:inline-flex;
-  float:right;
-  z-index: 10000;
+  width: 50%; 
+  display:inline-flex; 
+  float:right; 
+  z-index: 10000; 
   margin-top: -4vw;
   display: block;
 }
 
 .blob2{
-  width: 30%;
-  display:inline-flex;
-  float:left;
-  z-index: 10000;
+  width: 30%; 
+  display:inline-flex; 
+  float:left; 
+  z-index: 10000; 
   margin-top: 8vw;
 }
 
 .homeText1{
-  display:inline-flex;
-  font-size: 1.8vw;
+  display:inline-flex; 
+  font-size: 1.8vw; 
   margin: 0vw 5vw 0vw 14vw;
 }
 
@@ -3535,26 +3534,31 @@ font-size: 1.4vw;
 }
 
 .homeTitle2{
-  display:inline-flex;
-  float:left;
-  font-size: 2.4vw;
+  display:inline-flex; 
+  float:left; 
+  font-size: 2.4vw; 
   margin: 14vw 2vw 0vw 18vw;
 }
 
 .homeText2{
-  display:inline-flex;
-  font-size: 1.6vw;
+  display:inline-flex; 
+  font-size: 1.6vw; 
   margin: 0vw 6vw 0vw 18vw;
 }
 
 .homeText3{
-  display:inline-flex;
-  font-size: 1.6vw;
+  display:inline-flex; 
+  font-size: 1.6vw; 
   margin: 0vw 14vw 0vw 18vw;
 }
 
 .teamDescriptions{
   font-size: 1.3vw;
+}
+
+.teamImage{
+	width:70%; 
+	border-radius:200px;
 }
 
 
@@ -3574,14 +3578,14 @@ font-size: 1.4vw;
   .homeText1, .homeText2, .homeText3, .homeButton{
     font-size: 23px;
   }
-
+	
 	.surveyText{
 		font-size: 20px;
 	}
-
+	
 
   .homeText1, .homeText2, .homeText3, .homeButton, .homeTitle, .homeTitle2{
-
+    
   }
 
   .homeTitle{
@@ -3597,13 +3601,13 @@ font-size: 1.4vw;
     background-image: none;
     background-position: bottom;
     color: rgba(255, 255, 255, 0.733);
-    padding: 13vw 0 3vw 0 ;
+    padding: 13vw 0 3vw 0 ; 
   }
 
   #header > nav > a {
     font-size: 30px;
   }
-
+	
 	#header {
 /*    font-size: 1.8rem;*/
     width: 140px;
@@ -3612,7 +3616,7 @@ font-size: 1.4vw;
   .homePageTop{
     align-content: center;
   }
-
+  
 }
 
 @media (min-width: 500px) and (max-width: 900px){
@@ -3629,7 +3633,7 @@ font-size: 1.4vw;
 }
 
 @media (max-width: 496px) {
-
+	
 	#menuButt:after{
 		content: none;
 	}
@@ -3644,7 +3648,7 @@ font-size: 1.4vw;
 	body{
 /*		background:linear-gradient(43deg, #1190c2 0%, #12b3a0 74%);*/
 	}
-
+	
 	#cta{
 		padding-top: 35px;
 		background: linear-gradient(89.55deg, rgba(11, 105, 105, 0.87) 0.35%, rgba(16, 35, 35, 0.54) 99.61%);
@@ -3653,13 +3657,13 @@ font-size: 1.4vw;
 		margin-right: 10px;
 		margin-left: 10px;
 	}
-
+	
 	#heading{
 		height: 10rem;
-		border-radius: 0px 0px 25px 25px;
+		border-radius: 0px 0px 25px 25px; 
 		margin-top: -45px;
 	}
-
+	
 	#dashname{
   		margin-top:-16vw;
 	}
@@ -3668,15 +3672,15 @@ font-size: 1.4vw;
 		margin-top:-16vw;
 		width: 50%;
 	}
-
+	
 	h2{
 		font-size: 5vw;
 	}
-
+	
 	h3{
 		font-size: 4vw;
 	}
-
+	
 	.homeTitle{
     	font-size: 30px;
 		float: none;
@@ -3688,37 +3692,48 @@ font-size: 1.4vw;
 		font-size: 35px;
 		margin-bottom: 30px;
 	}
-
+	
 	.homeTitle2{
 		font-size: 30px;
 	}
-
+	
 	.getStartedButton .homeButton{
 
 		background-color: #1AB590;
 	}
-
+	
 	.homeText2{
 		margin-top: 25px;
 	}
-
+	
 	.homeText1, .homeText2, .homeText3, .getStartedButton, .homeTitle, .homeTitle2, .surveyText{
     	float: none;
 		margin-right: 0;
 		margin-left: 0;
   }
-
+	
 	.homePageTop div{
 		text-align: center;
   }
-
+	
 	.highlights .content {
 		margin-right: 10px;
 		margin-left: 10px;
+		padding-top: 10px;
 	}
-
+	
+	
+	.teamDescriptions{
+    font-size: 17px;
+  	}
+	
+	.imageBox .teamDescriptions{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
 	/*Graph Stuff */
-
+	
 	.graph{
 		width: 100%;
 		margin-right: 0;
@@ -3727,11 +3742,11 @@ font-size: 1.4vw;
   		padding: 2vw 0.5vw;
 		border-radius: 10px;
 	}
-
+	
 	.graphFilter{
 		width: 40%;
 	}
-
+	
 	#dayButton{
 		visibility: hidden;
 	}
@@ -3744,35 +3759,35 @@ font-size: 1.4vw;
 	#yearButton{
 		visibility: hidden;
 	}
-
+	
 	#dayButton:after{
 		content: 'D';
 		font-size: 3vw;
 		visibility: visible;
 	}
-
+	
 	#weekButton:after{
 		content: 'W';
 		font-size: 3vw;
 		visibility: visible;
 	}
-
+	
 	#monthButton:after{
 		content: 'M';
 		font-size: 3vw;
 		visibility: visible;
 	}
-
+	
 	#yearButton:after{
 		content: 'Y';
 		font-size: 3vw;
 		visibility: visible;
 	}
-
+	
 	#rightButton{
 		display: none;
 	}
-
+	
 /*New and Old Entry Section*/
 	.accordian{
 	  cursor:pointer;
@@ -3794,7 +3809,7 @@ font-size: 1.4vw;
 	  .subHeaderO{
 		width: 20%;
 	  }
-
+	
 	.loadEntriesL a p, loadEntriesR a p{
 		margin-top: 25px;
 		font-size: 14px;
@@ -3832,7 +3847,7 @@ font-size: 1.4vw;
 	  justify-content: center;
 /*
 	  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25));
-	   background-image:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);
+	   background-image:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%); 
 	  , url("../../images/banner.jpg")
 */
 	  background-position: center;
@@ -3873,9 +3888,9 @@ font-size: 1.4vw;
 		padding-left: 5px;
 		padding-right: 5px;
 		border-radius: 5px;
-
+		
 	}
-
+	
 	#L{
 		float: none;
 	}
@@ -3907,7 +3922,7 @@ font-size: 1.4vw;
 		text-decoration: none;
 		padding-left: 38%;
 	  }
-
+	
 	#writeNowOut{
 		display:inline-block;
 		font-size: 14px;
@@ -3917,8 +3932,8 @@ font-size: 1.4vw;
 		margin-top: 10px;
 		color: #0C8DCC;
 	}
-
-
+	
+	
 	/* Style the accordion panel. Note: hidden by default */
 	.panel {
 	  padding: 0 18px;
@@ -3931,7 +3946,7 @@ font-size: 1.4vw;
 	.active, .accordian:hover{
 		background-color: #EFEFEF;
 	}
-
+	
 	.accordion:after {
 	  content: '\02795'; /* Unicode character for "plus" sign (+) */
 	  font-size: 13px;
@@ -3989,7 +4004,7 @@ font-size: 1.4vw;
 	  text-decoration: none;
 	  cursor: pointer;
 	}
-
+	
 	#ideaButton{
 	  color: #0bb588;
 	  background-color: white;
@@ -4006,7 +4021,7 @@ font-size: 1.4vw;
 	  margin-right: auto;
 	  margin-top: 30px;
 	}
-
+	
 	.subHeaderO{
     width: 100%;
   }
@@ -4019,7 +4034,7 @@ font-size: 1.4vw;
 		padding-left: 5px;
 		padding-right: 5px;
 		border-radius: 5px;
-
+		
 	  box-shadow: 2px 2px 15px 2px rgba(43, 43, 43, 0.096);
 	  height: 100px;
 	  width: 90%;
@@ -4027,7 +4042,7 @@ font-size: 1.4vw;
 	  /* Add the below when adding pictures */
 	  /* padding-left: 1vw; */
 	}
-	  .oldEntries p{
+	  .oldEntries p{ 
 		text-align: center;
 		font-size: 14px;
 		font-weight: 600;
@@ -4067,8 +4082,8 @@ font-size: 1.4vw;
 		margin: 0;
 		padding-top: 2%;
 	  }
-
-
+	
+	
 	#footer .content section {
       width: 33%;
 		padding-left: 20px;
