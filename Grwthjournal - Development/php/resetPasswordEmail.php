@@ -2,7 +2,7 @@
 /*  Application: Password Reset Email File
  *  Script Name: passwordResetEmail.php
  *  Description: This file sends the email to the user so they can reset their password in case they lose it.
- *  Last Change/Update: 1/3/2021
+ *  Last Change/Update: 3/9/2021
 */
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -197,7 +197,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				<li><a href="feedback.php">Provide Feedback</a></li>
         <li><a href="signup.php">Sign Up</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="userhome.php">User Dashboard</a></li>
+        <li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>

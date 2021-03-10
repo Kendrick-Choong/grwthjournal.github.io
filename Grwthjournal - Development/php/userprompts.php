@@ -2,7 +2,7 @@
 /*  Application: User Prompts File
  *  Script Name: userprompts.php
  *  Description: This is the first page that users see after they login into our website.
- *  Last Change/Update: 1/10/2021
+ *  Last Change/Update: 3/9/2021
  *  Author: Kenny Choong
 */
 
@@ -44,7 +44,7 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
 				<li><a href="feedback.php">Provide Feedback</a></li>
         <li><a href="signup.php">Sign Up</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="userhome.php">User Dashboard</a></li>
+        <li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>

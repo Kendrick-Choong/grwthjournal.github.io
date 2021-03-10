@@ -2,7 +2,7 @@
 /*  Application: Grwth Feedback Insert File
 *  Script Name: GrwthFeedbackInsert.php
 *  Description: This file inserts the feedback responses from our feedback form.
-*  Last Change/Update: 1/3/2021
+*  Last Change/Update: 3/9/2021
 *  Author: Kenny Choong
 */
 
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<li><a href="feedback.php">Provide Feedback</a></li>
 	        <li><a href="signup.php">Sign Up</a></li>
 	        <li><a href="login.php">Login</a></li>
-	        <li><a href="userhome.php">User Dashboard</a></li>
+	        <li><a href="dashboard.php">User Dashboard</a></li>
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>

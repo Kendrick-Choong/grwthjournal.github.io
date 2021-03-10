@@ -2,7 +2,7 @@
 /*  Application: Password Reset File
  *  Script Name: passwordReset.php
  *  Description: This is the password reset file that will verify a user's new password adheres to our requirements and makes sure the link is valid.
- *  Last Change/Update: 1/3/2021
+ *  Last Change/Update: 3/9/2021
  *  Author: Kenny Choong
 */
 
@@ -148,7 +148,7 @@ if($error!=""){
       <li><a href="feedback.php">Provide Feedback</a></li>
       <li><a href="signup.php">Sign Up</a></li>
       <li><a href="login.php">Login</a></li>
-      <li><a href="userhome.php">User Dashboard</a></li>
+      <li><a href="dashboard.php">User Dashboard</a></li>
       <li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>
