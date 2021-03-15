@@ -150,7 +150,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 					<section id="dashname">
 						<img src="./../media/images/Mike.jpg" alt="Mike Liang" id="dashImage">
 					</section>
-					<h2 style="text-align: center;">Mike Liang</h2>
+					<h2 style="text-align: center;"><?php if(empty($_SESSION["preferred_name"])){
+                        echo "Your";
+                      } else {
+                        echo htmlspecialchars($_SESSION["preferred_name"])."'s";
+                      } ?> Dashboard</h2>
 					<section>
 
 						<!-- Graph Section -->
