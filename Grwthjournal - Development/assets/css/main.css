@@ -3561,6 +3561,21 @@ font-size: 1.4vw;
 	border-radius:200px;
 }
 
+.textArea1, .textArea2{ 
+	color: black; 
+	font-size:1.4rem; 
+}
+
+.textArea1{
+	background-color: none;
+	border-radius: 20vw;
+}
+
+.textArea2{
+	border:none;
+	background-color: white;
+	border-radius: 2vw;
+}
 
 
 
@@ -4082,6 +4097,20 @@ font-size: 1.4vw;
 		margin: 0;
 		padding-top: 2%;
 	  }
+	
+	.largeBack{
+ 	    background:linear-gradient(135deg, #2cadad 0%, #095551 74%);
+  		margin-top: -45px;
+	}
+	
+	.textArea1, .textArea2{
+		font-size: 14px;
+	}
+	
+	.textArea1{
+		margin-right: 5px;
+		margin-left: 5px;
+	}
 	
 	
 	#footer .content section {

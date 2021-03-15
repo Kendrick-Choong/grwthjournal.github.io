@@ -63,25 +63,20 @@ mysqli_close($con);
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="./../assets/css/main.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" id="loginBody">
 
 		<!-- Header -->
 		<header id="header">
-			<a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
 			<nav>
-				<a href="#menu">Menu</a>
+				<a href="#menu" id="menuButt"></a>
 			</nav>
 		</header>
 
 		<!-- Nav -->
 		<nav id="menu">
 			<ul class="links">
-        <li><a href="./../index.html">Home</a></li>
-        <li><a href="./../about.html">About</a></li>
+				<li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="feedback.php">Provide Feedback</a></li>
-        <li><a href="signup.php">Sign Up</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
@@ -89,57 +84,60 @@ mysqli_close($con);
 
 
 	<!-- Main -->
-		<section id="main" class="wrapper" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
-			<div class="inner">
-				<header>
-					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);"><?php echo $prompt_title?></h1>
-				</header>
-				<div class="content" style="background-color: none; color: black; font-size:1.4rem; border-radius: 2rem;">
+		<section class="largeBack">
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header>
+						<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);"><?php echo $prompt_title?></h1>
+					</header>
+					<div class="content textArea1" style="border-radius: 3vw">
 
-					<form method="Post" action="promptEditInsert.php">
-						<section>
-							<textarea style="border:none; background-color: white; color: black; font-size:1.4rem; border-radius: 2rem;" name="prompt_response" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"><?php echo $prompt_response; ?></textarea>
-						</section>
-						<br />
-						<input type="submit" name="Save" value="Save" style="border-radius:20px;">
-					</form>
-          </div>
-          </div>
-          </section>
+						<form method="Post" action="promptEditInsert.php">
+							<section>
+								<textarea class="textArea2" name="prompt_response" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"><?php echo $prompt_response; ?></textarea>
+							</section>
+							<br />
+							<input type="submit" name="Save" value="Save" style="border-radius:20px;">
+						</form>
+			  </div>
+			  </div>
+			  </section>
 
-          <!-- Footer -->
-          <footer id="footer">
-          <div class="inner">
-          <div class="content">
-            <section>
-              <h3>Your Privacy is Our Concern</h3>
-              <p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
-            </section>
-            <section>
-              <h4>Navigation</h4>
-              <ul class="alt">
-                <li><a href="./../index.html">Home</a></li>
-                <li><a href="./../about.html">About</a></li>
-                <li><a href="signup.php">Logout</a></li>
-  							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
-              </ul>
-            </section>
-            <!-- Icons for social media if we want to hyperlink our accounts -->
-  					<!--<section>
-  					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
-  					<h4>Follow Our Journey</h4>
-  					<ul class="plain">
-  						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-  						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-  						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-  					</ul>
-  				</section> -->
-            </div>
-    				<div class="copyright">
-    					&copy; grwthLLC
-    				</div>
-    			</div>
-    		</footer>
+			  <!-- Footer -->
+			  <footer id="footer">
+					<div class="inner">
+						<div class="content">
+							<section>
+							<!-- <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li> -->
+								<h3>Follow Us</h3>
+								<ul class="plain">
+									<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+									<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+									<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								</ul>
+							</section>
+
+							<section>
+								<h3>Navigation</h3>
+								<ul class="plain">
+									<li><a href="home.html">Home</a></li>
+									<li><a href="privacypolicy.html">Privacy Policy</a></li>
+									<li><a href="./php/signup.php">Sign Up</a></li>
+								</ul>
+							</section>
+
+							<section>
+								<h3>Your Privacy is Our Concern</h3>
+								<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+							</section>
+
+						</div>
+						<div class="copyright">
+							&copy; grwthLLC
+						</div>
+					</div>
+				</footer>
+			</section>
 
     		<!-- Scripts -->
         <script src="./../assets/js/jquery.min.js"></script>
