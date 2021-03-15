@@ -14,7 +14,7 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     exit;
 }
 
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $x = implode(array_slice($interval,0,1));
         $y = implode(array_slice($interval,1,1));
         $sql = "SELECT grwth_prompt.submitted_at, grwth_prompt.entry_id, AVG(grwth_prompt.sentiment_value)
-                    FROM grwth_prompt
+                    FROM ebdb.grwth_prompt
                     INNER JOIN grwth_login
                     ON grwth_prompt.user_id = grwth_login.user_id
                     WHERE grwth_login.user_id = ? and $x
