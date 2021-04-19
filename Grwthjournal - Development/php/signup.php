@@ -2,7 +2,7 @@
 /*  Application: Signup File
  *  Script Name: signup.php
  *  Description: This is the signup page where we will add new users to our database and check to see if they're already registered. They may add a name if they so choose.
- *  Last Change/Update: 3/9/2021
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
@@ -220,7 +220,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
 						</ul>
 					</section>
-		
+
 					<section>
 						<h3>Navigation</h3>
 						<ul class="plain">

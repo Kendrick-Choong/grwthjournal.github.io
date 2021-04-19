@@ -2,7 +2,7 @@
 /*  Application: Grwth Feedback Insert File
 *  Script Name: GrwthFeedbackInsert.php
 *  Description: This file inserts the feedback responses from our feedback form.
-*  Last Change/Update: 12/16/2020
+*  Last Change/Update: 4/19/2021
 *  Author: Kenny Choong
 */
 
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['submit'])) {
 
     // connecting to Database
-    require_once "configInsertAdmin.php";
+    require_once "configInsert.php";
 
     //Data from feedback form
     $prompt_quality = $_POST["prompt_quality"];

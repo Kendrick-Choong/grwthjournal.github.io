@@ -2,7 +2,7 @@
 /*  Application: Grwth Survey Insert File
  *  Script Name: GrwthSurveyInsert.php
  *  Description: This form inserts our survey data from our main html page about user's journaling habits.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 

@@ -2,7 +2,7 @@
 /*  Application: Configuration for Database Admin File
 *  Script Name: configInsertAdmin.php
 *  Description: This script configures the database connection to just have all database privileges for database administrators.
-*  Last Change/Update: 3/9/2021
+*  Last Change/Update: 4/19/2021
 *  Author: Kenny Choong
 */
 

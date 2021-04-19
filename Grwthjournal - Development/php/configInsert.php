@@ -2,7 +2,7 @@
 /* Application: Configuration for Inserting Data File
 *  Script Name: configInsert.php
 *  Description: This script configures the database connection to just be insert only for people who don't have accounts with Grwth and are using our intiial surveys.
-*  Last Change/Update: 3/9/2021
+*  Last Change/Update: 4/19/2021
 *  Author: Kenny Choong
 */
 

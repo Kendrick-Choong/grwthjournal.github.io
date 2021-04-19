@@ -2,7 +2,7 @@
 /*  Application: Edit Insert Prompt File
  *  Script Name: promptEditInsert.php
  *  Description: This is the insert file to update the selected prompt response from our users.
- *  Last Change/Update: 1/10/2021
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 

@@ -2,7 +2,7 @@
 /*  Application: User Logout File
  *  Script Name: logout.php
  *  Description: This file serves as a logout script that destroys the session a user is currently in so they cannot see their dashboard or use our product anymore.
- *  Last Change/Update: 3/9/2021
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 

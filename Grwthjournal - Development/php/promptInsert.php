@@ -1,8 +1,8 @@
 <?php
 /*  Application: Prompt Insert
  *  Script Name: promptInsert.php
- *  Description: This is a temporary static prompt page that displays the prompt "What might a day of yours look like in 4 year?".
- *  Last Change/Update: 4/16/2021
+ *  Description: This file will insert the prompt and the response into the database using SQL.
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 

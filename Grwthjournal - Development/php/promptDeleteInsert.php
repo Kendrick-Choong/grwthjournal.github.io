@@ -2,7 +2,7 @@
 /*  Application: Delete Prompt File
  *  Script Name: promptDeleteInsert.php
  *  Description: This is the file that will delete a prompt response from our database.
- *  Last Change/Update: 3/9/2021
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 

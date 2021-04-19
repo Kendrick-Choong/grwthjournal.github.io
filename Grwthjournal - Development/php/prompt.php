@@ -2,14 +2,14 @@
 /*  Application: Prompt File
  *  Script Name: prompt.php
  *  Description: This is a file that puts the user's desired prompt into a text area to be submitted to the databse.
- *  Last Change/Update: 4/15/2021
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 //Set variables
 $user_id = "";

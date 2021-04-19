@@ -2,7 +2,7 @@
 <!-- Application: Feedback Form for Grwth
 *  	 Script Name: feedback.php
 *  	 Description: This is a form that users can fill out to provide Grwth with product feedback.
-*  	 Last Change/Update: 12/16/2020
+*  	 Last Change/Update: 4/19/2021
 *  	 Author: Kenny Choong / Torin Johnson -->
 <html>
 	<head>

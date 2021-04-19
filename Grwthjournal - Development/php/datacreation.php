@@ -1,4 +1,11 @@
 <?php
+/*  Application: Data Creation
+*  Script Name: dataCreation.php
+*  Description: This script is utilized to create data to be injected into the database for function validation.
+*  Last Change/Update: 4/19/2021
+*  Author: Kenny Choong
+*/
+
 // Check if the user is already logged in, if yes then redirect him to welcome page
 require_once "configInsertAdmin.php";
 

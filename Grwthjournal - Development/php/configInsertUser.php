@@ -2,7 +2,7 @@
 /*  Application: Configuration for Grwth User File
 *  Script Name: configInsertUser.php
 *  Description: This is the login information for the user when they need to do stuff regarding the database. Users are defined as people who already have an account with Grwth.
-*  Last Change/Update: 3/9/2021
+*  Last Change/Update: 4/19/2021
 *  Author: Kenny Choong
 */
 

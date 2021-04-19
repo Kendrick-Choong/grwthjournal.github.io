@@ -2,8 +2,10 @@
 /*  Application: Password Reset Email File
  *  Script Name: passwordResetEmail.php
  *  Description: This file sends the email to the user so they can reset their password in case they lose it.
- *  Last Change/Update: 3/9/2021
+ *  Last Change/Update: 4/19/2021
 */
+
+//Defaults have not been changed from the tutorial this was grabbed from. If we want out own keys/verification, we'll need to edit this file.
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

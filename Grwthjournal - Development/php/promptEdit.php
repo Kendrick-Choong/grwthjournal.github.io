@@ -2,14 +2,14 @@
 /*  Application: Prompt Edit File
  *  Script Name: promptEdit.php
  *  Description: This is a file that puts the user's desired prompt into a text area to be edited and resubmitted to the databse.
- *  Last Change/Update: 1/10/2021
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-require_once "configInsertAdmin.php";
+require_once "configInsertUser.php";
 
 //Set variables
 $prompt_title = "";

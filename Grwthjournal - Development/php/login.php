@@ -2,7 +2,7 @@
 /*  Application: User Login File
  *  Script Name: login.php
  *  Description: This file serves as a login page for our users so they can use our product, see their dashboard, and edit their user data.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
