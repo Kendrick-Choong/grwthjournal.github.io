@@ -2,15 +2,15 @@
 /*  Application: Password Reset File
  *  Script Name: passwordReset.php
  *  Description: This is the password reset file that will verify a user's new password adheres to our requirements and makes sure the link is valid.
- *  Last Change/Update: 3/9/2021
+ *  Last Change/Update: 12/23/2020
  *  Author: Kenny Choong
-*/
+ */
 
 // Start session
 session_start();
 
 // Include config file ($link should already be in config file)
-require_once "configInsertUser.php";
+require_once "configInsertAdmin.php";
 
 $password = $confirm_password = "";
 $error = $password_err = $confirm_password_err = "";
@@ -33,7 +33,7 @@ if (isset($_GET["reset_key"]) && isset($_GET["email"]) && isset($_GET["action"])
          <p>The link is invalid/expired. Either you did not copy the correct link
          from the email, or you have already used the key in which case it is
          deactivated.</p>
-         <p><a href="http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/php/resetPasswordEmail.php">
+         <p><a href="http://127.0.0.1/edsa-Grwth/Grwthjournal/php/resetPasswordEmail.php">
          Click here</a> to reset password.</p>';
 
        } else {

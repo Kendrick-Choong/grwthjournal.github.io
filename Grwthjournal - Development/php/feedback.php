@@ -2,7 +2,7 @@
 <!-- Application: Feedback Form for Grwth
 *  	 Script Name: feedback.php
 *  	 Description: This is a form that users can fill out to provide Grwth with product feedback.
-*  	 Last Change/Update: 3/9/2021
+*  	 Last Change/Update: 12/16/2020
 *  	 Author: Kenny Choong / Torin Johnson -->
 <html>
 	<head>
@@ -218,7 +218,7 @@
 							$fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 							if (strpos($fullURL, "feedback=empty") == true) {
-								echo "<script>alert('Please answer all questions.')</script>";
+								echo '<script>alert("Please answer all questions.")</script>';
 							}
 						?>
 					</Survey>

@@ -1,40 +1,51 @@
 <?php
-/*  Application: Present prompt File
- *  Script Name: prompt2.php
- *  Description: This is a temporary static prompt page that displays the prompt "What is the number one thing bothering your right now and why?".
- *  Last Change/Update: 3/9/2021
+/*  Application: Prompt File
+ *  Script Name: prompt.php
+ *  Description: This is a file that puts the user's desired prompt into a text area to be submitted to the databse.
+ *  Last Change/Update: 4/15/2021
  *  Author: Kenny Choong
 */
 
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-require_once "configInsertUser.php";
+require_once "configInsertAdmin.php";
 
-$prompt_title = "What is the number one thing bothering your right now and why?";
-$prompt_response = "";
+//Set variables
 $user_id = "";
 
 //Check to see if the form is sending via POST method
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_GET["prompt_id"])) {
 
-    //Set variables to be equal to survey responses
-    $prompt_response = $_POST["prompt_response"];
+    //Set variables to be equal to survey responses and set a session variable for the selected prompt response.
     $user_id = $_SESSION["user_id"];
+    $prompt_id = $_GET["prompt_id"];
 
     //Create an SQL statement to be injected into the database
-    $sql = "INSERT INTO grwth_prompt(user_id,prompt_title,prompt_response)
-            VALUES ('$user_id','$prompt_title','$prompt_response')";
+    $sql = "SELECT grwth_prompt_name.prompt
+            FROM grwth_prompt_name
+            WHERE grwth_prompt_name.prompt_id = ?";
 
-    //Check to see if the query can run, if it can't throw an error, if it can, redirect to the userprompts page.
-    if(!mysqli_query($con,$sql)){
-      echo "There was an error submitting your response, please try again.";
-    } else {
-      header("Location: http://grwth-env.eba-qgk7pdim.us-west-2.elasticbeanstalk.com/php/userprompts.php");
-    }
+    if($stmt = mysqli_prepare($link, $sql)){
+
+      // Bind variables to the prepared statement as parameters
+      mysqli_stmt_bind_param($stmt, "s", $param_prompt_id);
+
+      //Set parameters
+      $param_prompt_id = $prompt_id;
+
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+
+          mysqli_stmt_bind_result($stmt, $col1);
+
+          mysqli_stmt_fetch($stmt);
+          $prompt_title = $col1;
+        }
+      }
+} else {
+  echo "It didn't work";
 }
-
-//Close the connection
 mysqli_close($con);
 ?>
 
@@ -77,16 +88,16 @@ mysqli_close($con);
 		<section id="main" class="wrapper" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
 			<div class="inner">
 				<header>
-					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);"><?php echo $prompt_title ?></h1>
+					<h1 style="text-align:center; font-size:3rem; color: ghostwhite; text-shadow: 0px 1px 1px rgb(146, 109, 46);"><?php echo $prompt_title;?></h1>
 				</header>
 				<div class="content" style="background-color: none; color: black; font-size:1.4rem; border-radius: 2rem;">
 
-					<form method="Post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+					<form method="Post" action="promptInsert.php?prompt_id=<?php echo $prompt_id;?>">
 						<section>
 							<textarea style="border:none; background-color: white; color: black; font-size:1.4rem; border-radius: 2rem;" name="prompt_response" rows="12" cols="50" maxlength="500" placeholder="Release your thoughts here"></textarea>
 						</section>
 						<br />
-						<input type="submit" name="Save" value="Save" style="border-radius:20px;">
+						<input type="submit" name="Submit" value="Submit" style="border-radius:20px;">
 					</form>
           </div>
           </div>

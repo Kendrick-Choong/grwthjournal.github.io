@@ -1,8 +1,10 @@
 <?php
+//BIG COMMENT I think I got the graph part to work with the intervals. What I did was group the sql values by day so that takes care of the multiple entires on a single day. Then I did some date diff for the filters so that they only pull from the last 7 days for the day filter whereas the week one does it in the past 4 weeks. Also, I made a for loop so that the code loops through each different SQL statement and then assigns it to a new array. Then that array is imploded and sliced and concatenated within a variable that is then called by the graph as the data for that graph.
+
 /*  Application: Dashboard
 *  Script Name: dashboard.php
-*  Description: This script is the dashboard where the user will be able to see their stats and old entries as well as selecting new prompts for users to fill out.
-*  Last Change/Update: 3/9/2021
+*  Description: This script configures the database connection to just have all database privileges for database administrators.
+*  Last Change/Update: 3/4/2021
 *  Author: Kenny Choong
 */
 // Initialize the session
@@ -14,7 +16,7 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     exit;
 }
 
-require_once "configInsertUser.php";
+require_once "configInsertAdmin.php";
 
 $link = mysqli_connect($db_server,$db_username,$db_password,$db_name);
 
@@ -53,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $x = implode(array_slice($interval,0,1));
         $y = implode(array_slice($interval,1,1));
         $sql = "SELECT grwth_prompt.submitted_at, grwth_prompt.entry_id, AVG(grwth_prompt.sentiment_value)
-                    FROM ebdb.grwth_prompt
+                    FROM grwth_prompt
                     INNER JOIN grwth_login
                     ON grwth_prompt.user_id = grwth_login.user_id
                     WHERE grwth_login.user_id = ? and $x
@@ -150,11 +152,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 					<section id="dashname">
 						<img src="./../media/images/Mike.jpg" alt="Mike Liang" id="dashImage">
 					</section>
-					<h2 style="text-align: center;"><?php if(empty($_SESSION["preferred_name"])){
+					<h2 style="text-align: center;">
+            <?php if(empty($_SESSION["preferred_name"])){
                         echo "Your";
                       } else {
                         echo htmlspecialchars($_SESSION["preferred_name"])."'s";
-                      } ?> Dashboard</h2>
+                      } ?> Dashboard
+          </h2>
 					<section>
 
 						<!-- Graph Section -->
@@ -194,33 +198,56 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 					<section class="subHeader accordian">
 						<p>New Entry</p>
 					</section>
-					<div class="panel">
-						<section class="newEntries" id="L">
-							<p id="whyPrompt">"What is the number one thing that bothers you right now & why?"</p>
-							<a href="./../index.html" class="logo icon fa-pencil" id="writeNowIn"> Write now</a>
-						</section>
-						<a href="./../index.html" class="logo icon fa-pencil" id="writeNowOut"> Write now</a>
 
+          <div class="panel">
+<?php
+//Set variables
+$prompt_title1 = "";
+$prompt_title2 = "";
+$prompt_id1 = "1";
+$prompt_id2 = "2";
+$counter = 0;
 
-						<!--Why Prompt Information-->
-						<div id="whyP" class="whyPrompt">
+//Maybe put this with the write buttons and have it be created there with the ids?
+//Check to see if the form is sending via POST method
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-							<!-- Modal content -->
-							<div class="whyPrompt-content">
-								<span class="closeWhy">&times;</span>
-								<p>It seems like you havn't been feeling like yourself</p>
-							</div>
+    //Set variables to be equal to survey responses and set a session variable for the selected prompt response.
+    $user_id = $_SESSION["user_id"];
 
-						</div>
+    //Create an SQL statement to be injected into the database
+    $sql = "SELECT grwth_prompt_name.prompt_id, grwth_prompt_name.prompt
+            FROM grwth_prompt_name
+            WHERE grwth_prompt_name.prompt_id = $prompt_id1 or $prompt_id2";
 
+    if($stmt = mysqli_prepare($link, $sql)){
 
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
 
-						<section class="newEntries" id="R">
-							<p>Free Write <br>
-							<em>A blank slate for you to write whatever's on your mind.</em></p>
-							<a href="./../index.html" class="logo icon fa-pencil" id="writeNowIn"> Write now</a>
-						</section>
-						<a href="./../index.html" class="logo icon fa-pencil" id="writeNowOut"> Write now</a>
+          mysqli_stmt_bind_result($stmt, $col1, $col2);
+
+          while(mysqli_stmt_fetch($stmt)){
+            $counter++;
+            if ($counter % 2 == 1){
+              $style = "L";
+            } else {
+              $style = "R";
+            }
+            echo
+            "<section class='newEntries' id=".$style.">
+  							<p id='whyPrompt'>".$col2."</p>
+  							<button type='button' id=".$col1." class='logo icon fa-pencil Write writeNowIn'>Write now</button>
+  						</section>";
+
+          }
+        }
+      }
+} else {
+  echo "It didn't work";
+}
+?>
+
 						<!--New Ideas Button-->
 						<section id="ibutton">
 							<button id="ideaButton" type="button" onclick="" class="logo icon fa-lightbulb-o">More Ideas</button>
@@ -284,7 +311,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo
             "<section class='oldEntries' id=".$style.">
               <!-- <img src='./../media/images/TreeBook.jpg'> -->
-              <h3>".$col1."</h1>
+              <h3>".$col1."</h3>
               <p>".$col2."</p>
               <h4>".date_format($col3, "F d, Y")."</h4>
               <button type='button' id=".$col4." class='Edit'>Edit</button>
@@ -304,6 +331,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 } else {
   echo "It's not working";
 }
+//Close the connection
+mysqli_close($con);
 ?>
             </section>
             <button type='button' class='promptRefreshMinus4' id='promptRefreshMinus4'> Load Less Entries</button>
@@ -584,6 +613,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       <script type="text/javascript">
         $(".Edit").click(function () {
             location.href = "promptEdit.php?entry_id="+this.id;
+        });
+      </script>
+
+      <script type="text/javascript">
+        $(".Write").click(function () {
+            location.href = "prompt.php?prompt_id="+this.id;
         });
       </script>
 
