@@ -2,7 +2,7 @@
 /*  Application: Grwth Survey Insert File
  *  Script Name: GrwthSurveyInsert.php
  *  Description: This form inserts our survey data from our main html page about user's journaling habits.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
@@ -18,7 +18,7 @@ function test_input($data) {
 }
 
 // This is where function to connect to the database will be included
-require_once "configInsert.php";
+require_once "configInsertAdmin.php";
 
 // Set script variables
 $we_have_input = false;
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       if(!mysqli_query($con,$sql)){
         echo "Not Inserted";
       } else {
-        header("Location: http://grwthjournal.co/index.html");
+        header("Location:  http://127.0.0.1/edsa-Grwth/index.html");
         mysqli_close($con);
         exit();
       }

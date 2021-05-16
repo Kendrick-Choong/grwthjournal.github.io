@@ -2,14 +2,14 @@
 /*  Application: Grwth Feedback Insert File
 *  Script Name: GrwthFeedbackInsert.php
 *  Description: This file inserts the feedback responses from our feedback form.
-*  Last Change/Update: 12/16/2020
+*  Last Change/Update: 4/19/2021
 *  Author: Kenny Choong
 */
 
 // Start session
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (isset($_POST["submit"])) {
+  if (isset($_POST['submit'])) {
 
     // connecting to Database
     require_once "configInsert.php";
@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //check if inputs are empty
     if (empty($prompt_quality) || empty($navigation_quality) || empty($understand_our_product) || empty($comfortable_with_product) || empty($enjoy_product) || empty($product_useful) || empty($improve_on) || empty($want_added)) {
-      header("Location: http://grwthjournal.co/php/feedback.php?feedback=empty");
+      header("Location: http://127.0.0.1/edsa-Grwth/php/feedback.php?feedback=empty");
       exit();
     }
 
     //Insert the survey data into the database
-    $sql = "INSERT INTO grwth_feedback(prompt_quality,navigation_quality,understand_our_product,comfortable_with_product,enjoy_product,product_useful,improve_on, want_added)
+    $sql = "INSERT INTO grwth_feedback(promptQuality,navigationQuality,understandOurProduct,comfortableWithProduct,enjoyProduct,productUseful,improveOn, wantAdded)
             VALUES ('$prompt_quality','$navigation_quality','$understand_our_product','$comfortable_with_product','$enjoy_product','$product_useful','$improve_on','$want_added')";
   }
 }
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<li><a href="feedback.php">Provide Feedback</a></li>
 	        <li><a href="signup.php">Sign Up</a></li>
 	        <li><a href="login.php">Login</a></li>
-	        <li><a href="userhome.php">User Dashboard</a></li>
+	        <li><a href="dashboard.php">User Dashboard</a></li>
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>

@@ -2,12 +2,11 @@
 <!-- Application: Feedback Form for Grwth
 *  	 Script Name: feedback.php
 *  	 Description: This is a form that users can fill out to provide Grwth with product feedback.
-*  	 Last Change/Update: 12/16/2020
+*  	 Last Change/Update: 4/19/2021
 *  	 Author: Kenny Choong / Torin Johnson -->
 <html>
 	<head>
 		<title>Feedback Survey</title>
-		<link rel="shortcut icon" type="image/jpg" href="./../media/images/Grwth-Small-Just-Logo.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -32,7 +31,7 @@
 					<li><a href="feedback.php">Provide Feedback</a></li>
 	        <li><a href="signup.php">Sign Up</a></li>
 	        <li><a href="login.php">Login</a></li>
-	        <li><a href="userhome.php">User Dashboard</a></li>
+	        <li><a href="dashboard.php">User Dashboard</a></li>
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</nav>
@@ -219,7 +218,7 @@
 							$fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 							if (strpos($fullURL, "feedback=empty") == true) {
-								echo "<script>alert('Please answer all questions.')</script>";
+								echo '<script>alert("Please answer all questions.")</script>';
 							}
 						?>
 					</Survey>

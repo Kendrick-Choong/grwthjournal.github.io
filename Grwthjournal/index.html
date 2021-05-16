@@ -3,29 +3,40 @@
 	Original Template: Industrious by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Homepage Template
 
 	Edited by: Torin Johnson tajohnson@mymail.mines.edu
 	For the webdomain: grwthjournal.co
+
+	Descrption: The grwth homepage, where a user first lands and can see everything about the product as well as get started
+
+	Outline: Header, Information on the product, Survey on journaling types, Footer
+
+	Modified: 3/10/2020
+
+
 -->
 <html>
 	<head>
 		<title>Grwth</title>
+		<link rel="shortcut icon" type="image/jpg" href="./media/images/Grwth-Small-Just-Logo.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Grwth is an online Journal which uses machine learning to create custom prompts and mental health insights for users" />
+		<meta name="keywords" content="Grwth, journaling, machine learning, custom prompts, custom journal" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
+			<nav>
+				<a href="#menu" id="menuButt"></a>
+			</nav>
+
+			<!-- <a href="index.html" class="logo icon fa-tree"><span class="label">Icon</span></a> -->
 			<!--<img class="logo" src="./images/plant.png" alt="Grwth Logo Picture"/>
 		<a class="logo" href="index.html">Grwth</a> -->
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
 		</header>
 
 		<!-- Nav -->
@@ -33,30 +44,44 @@
 			<ul class="links">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
-				<li><a href="./php/feedback.php">Provide Feedback</a></li>
 				<li><a href="./php/signup.php">Sign Up</a></li>
 				<li><a href="./php/login.php">Login</a></li>
-				<li><a href="./php/userhome.php">User Dashboard</a></li>
-				<li><a href="./php/logout.php">Logout</a></li>
 			</ul>
 		</nav>
 
-		<!-- Banner -->
-		<section id="banner">
-			<div class="inner">
-				<h1>Grwth</h1>
-				<p>It's not a journal, it's <em>your</em> journal</p>
+
+		<section class="homePageTop">
+			<div>
+				<!-- <h1 style="display:inline-flex; font-size: 5rem; margin: 200px 200px 50px 280px;">GRWTH</h1> -->
+				<h1 class="homeTitle"><image class="homeLogo" src="./media/images/GrwthLogo.jpg" /></h1>
+				<image src="./media/images/Vector (1).png" class = "blob1"/>
+				<p class="homeText1">It's not a journal, it's your journal</p>
+				<form action="./php/signup.php" class="getStartedButton">
+					<input type="submit" value="Get Started" class="homeButton"/>
+				</form>
 			</div>
-			<video autoplay loop muted speed=.1 playsinline src="./images/swirls.mp4"></video>
+		</section>
+
+		<section class="homePageTop">
+			<div>
+				<!-- <h1 style="display:inline-flex; font-size: 5rem; margin: 200px 200px 50px 280px;">GRWTH</h1> -->
+				<image src="./media/images/Vector (2).png" class="blob2"/>
+				<h2 class="homeTitle2">So Much More Than Journal</h2>
+				<p class="homeText2">
+				Using modern technology, <br>
+				Your journal will respond to your needs <br>
+				not just once but always
+				</p>
+				<p class="homeText3"> <br>
+				Stuff <br>
+				stuff<br>
+				stuff</p>
+			</div>
 		</section>
 
 		<!-- Highlights -->
 		<section class="wrapper">
 			<div class="inner">
-				<header class="special">
-					<h2>So Much More Than A Journal</h2>
-					<p>Using modern technology, your journal will respond to your needs, not just once, but always</p>
-				</header>
 				<div class="highlights">
 					<section>
 						<div class="content">
@@ -88,33 +113,6 @@
 							<p>Curious about your journey? Over time, the entries you write will show trends in behavior, thoughts, and emotions, so you can feel empowered by seeing what the model sees from your writing.</p>
 						</div>
 					</section>
-					<!--<section>
-					<div class="content">
-						<header>
-							<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-							<h3>Custom Recommendations</h3>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-					</div>
-				</section>
-				<section>
-					<div class="content">
-						<header>
-							<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-							<h3>More than Journaling</h3>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-					</div>
-				</section>
-				<section>
-					<div class="content">
-						<header>
-							<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-							<h3>Accumsan viverra</h3>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-					</div>
-				</section>-->
 				</div>
 			</div>
 		</section>
@@ -124,69 +122,59 @@
 		<section id="cta" class="wrapper">
 			<div class="inner">
 
-
-				<Survey>
+				<Survey class="Survey">
 					<form method="Post" action="./php/GrwthSurveyInsert.php">
 
 						<section class="Radio" id="q0">
-							<br>
-							<br>
-							<span>Ready to begin Your Adventure?</span>
-							<br>
-							<br>
 
-
-
+							<span class="surveyText">Ready to begin Your Adventure?</span>
+							<br>
+							<br>
+							
 							<!--Buttons that control this specific question-->
 							<button type="button" onclick="survChange(0,1);">Begin</button>
 
-							<br>
-							<br>
 
 						</section>
 
-
-
-						<section class="Text" id="q1">
+						<section class="Text" id="q1" style="margin-top: -3vw;">
 
 							<span>What type of journaling do you like?</span>
 							<br>
 							<br>
+
 							<input type="text" name="journal_type_like">
 							<br>
-							<br>
-
 							<!--Buttons that control this specific question-->
 							<button type="button" onclick="survChange(1,3);">Next</button>
 
-							<br>
-
 						</section>
 
-						<section class="Radio" id="q3">
+						<section class="Radio" id="q3" style="margin-top: -3vw;">
 							<span>How often do you journal?</span>
 							<br>
 							<br>
-
+				
 							<input type="radio" name="freq_journal" value=" Frequently" id="Frequently">
 							<label for="Frequently">Frequently</label>
+						
 
 							<input type="radio" name="freq_journal" value=" Often" id="Often">
 							<label for="Often">Often</label>
+						
 
 							<input type="radio" name="freq_journal" value=" Little to none" id="Little to none">
 							<label for="Little to none">Little to none</label>
+							<br>
+							<br>
 
-							<br>
-							<br>
-							<br>
+							
 
 							<!--Buttons that control this specific question -->
 							<button type="button" onclick="survChange(3,1);">Previous</button>
 							&nbsp
 							<button type="button" onclick="survChange(3,4);">Next</button>
-
-							<br>
+							
 
 						</section>
 
@@ -222,13 +210,12 @@
 						</section>
 						-->
 
-						<section class="Number" id="q4">
+						<section class="Number" id="q4" style="margin-top: -3vw;">
 							<label for="Journal number">How many journals have you done before?</label>
 							<br>
-
-							<input type="number" name="journal_number" id="Journalnumber" min = "0" style="color:black; border:none;border-radius:10px;">
+						
+							<input type="number" name="journal_number" id="Journalnumber" value="1" style="color:black; border:none;border-radius:10px; text-align: center; font-size: 1.4vw;">
 							<!--This is going to need some validation to make sure they can't enter a negative number or something absurdly high.-->
-							<br>
 							<br>
 							<br>
 
@@ -239,14 +226,13 @@
 
 						</section>
 
-						<section class="Range" id="q5">
+						<section class="Range" id="q5" style="margin-top: -3vw;">
 							<label for="comfort_level">How comfortable are you with journaling?</label>
 							<br>
 
 							<span>Super uncomfortable</span>
 							<input type="range" name="comfort_level" id="Comfort level" value="5" min="0" max="10" step="1" style="border-radius: 10px;">
 							<span>Super comfortable</span>
-							<br>
 							<br>
 							<br>
 
@@ -257,7 +243,7 @@
 
 						</section>
 
-						<section class="Range2" id="q6">
+						<section class="Range2" id="q6" style="margin-top: -3vw;">
 							<label for="comfort_level2">How comfortable are you with machine learning?</label>
 							<br>
 
@@ -265,7 +251,6 @@
 							<input type="range" name="comfort_level2" id="Comfort level2" value="5" min="0" max="10" step="1" style="border-radius: 10px;">
 
 							<span>Super comfortable</span>
-							<br>
 							<br>
 							<br>
 
@@ -276,9 +261,9 @@
 
 						</section>
 
-						<section class="Textarea" id="q7">
+						<section class="Textarea" id="q7" style="margin-top: -3vw;">
 							<label for="additional_comments">Please list any additional comments down here:</label>
-
+							<br>
 							<textarea id="Additional comments" name="additional_comments" rows="3" cols="50" maxlength="500" placeholder="Insert comments here"></textarea>
 							<br>
 
@@ -369,28 +354,30 @@
 		<footer id="footer">
 			<div class="inner">
 				<div class="content">
-					<section>
-						<h3>Your Privacy is Our Concern</h3>
-						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					<section class="footerSection">
+					<!-- <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li> -->
+						<h3>Follow Us</h3>
+						<ul class="plain">
+							<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+							<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+						</ul>
 					</section>
-					<section>
-						<h4>Navigation</h4>
-						<ul class="alt">
-							<li><a href="index.html">Home</a></li>
+		
+					<section class="footerSection">
+						<h3>Navigation</h3>
+						<ul class="plain">
 							<li><a href="about.html">About</a></li>
 							<li><a href="./php/signup.php">Sign Up</a></li>
 							<li><a href="privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
-					<!--<section>
-					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
-					<h4>Follow Our Journey</h4>
-					<ul class="plain">
-						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-					</ul>
-				</section> -->
+
+					<section class="footerSection">
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+
 				</div>
 				<div class="copyright">
 					&copy; grwthLLC

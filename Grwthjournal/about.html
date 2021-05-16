@@ -6,13 +6,20 @@
 
 	Edited version: Torin Johnson
 	For grwthjournal.co
+
+	Description: The about page, where information on the company and team can be found
+
+	Outline: Header, Origins description, Team Images and Description, Contact Information
+
+	Modified: 12/16/2020
 -->
 <html>
 	<head>
 		<title>About Us</title>
+		<link rel="shortcut icon" type="image/jpg" href="./media/images/Grwth-Small-Just-Logo.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
+		<meta name="description" content="The Grwth About Page" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -20,9 +27,9 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
+			<!-- <a href="index.html" class="logo icon fa-tree"><span class="label">Icon</span></a> -->
 			<nav>
-				<a href="#menu">Menu</a>
+				<a href="#menu" id="menuButt"></a>
 			</nav>
 		</header>
 
@@ -30,86 +37,79 @@
 		<nav id="menu">
 			<ul class="links">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="./php/feedback.php">Provide Feedback</a></li>
 				<li><a href="./php/signup.php">Sign Up</a></li>
 				<li><a href="./php/login.php">Login</a></li>
-				<li><a href="./php/userhome.php">User Dashboard</a></li>
-				<li><a href="./php/logout.php">Logout</a></li>
 			</ul>
 		</nav>
 
 		<!-- Heading -->
-		<div id="heading" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
+		<!-- <div id="heading" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
 			<h1>About Us</h1>
+		</div> -->
+
+		<!-- Heading -->
+		<div id="heading">
+			<h1>About Grwth</h1>
 		</div>
 
+		<!-- <section>
+			<div>
+				<h1 style="display:inline-flex; font-size: 5rem; margin: 200px 200px 50px 280px;">GRWTH</h1>
+				<h1 style="display:inline-block; margin: 4% 0% 0% 28%">So Much More Than Journal</h1>
+				</div>
+		</section> -->
+
+		
+
 		<!-- Main -->
-		<section id="main" class="wrapper">
+		<section class="wrapper">
 			<div class="inner">
-				<div class="content">
-					<header>
-						<h3>About Grwth</h3>
-					</header>
-					<p>Grwth was originally founded from the struggles of a close friend. They were facing a tough time in their life, affected severely by depression and anxiety. What got them out of this, was journaling. But it took time and a strong desire to overcome their struggle. This made them believe there could be a better solution to what their original problem was, knowing how to journal in a way that most positively impacted their mental health while also keeping them engaged. </p>
-					<p>This is where Grwth comes in. By using machine learning models with professional counseling and therapy based analyses to create structured prompts relative to a user’s needs, the guidance our friend desired to both keep them engaged and to support their mental health improvement was finally real.</p>
-					<hr />
-					<h3>About the Team</h3>
-					<!--<p>
-						Our current team of three spans a range of backgrounds and experiences.
-						Before Grwth, Mike was a tech consultant focused on leading & managing large scale enterprise software implementations at Fortune 500 and Global 2000 companies. As helping corporate conglomerates improve their margins and drive top-line growth did not translate to meaningful impact, he decided to make a career change into the world of startups.
-						Torin is a senior majoring in computer science at the Colorado School of Mines with previous venture investment experience at Rockies Venture Club. He is also the president of the entrepreneurship club on campus as well as a University Innovation Fellow with future plans for a masters in computer science with emphasis on machine learning.
-						Kenny is a business analytics sophomore at the University of Denver, also with plans for a masters - but in data science. Both Torin & Kenny have previous experience in mental health as they have held various positions as peer mentors & educators at their respective school’s counseling center and thus have first hand experience
-					</p>-->
-					<!--<p>Mike: Previous tech consultant, head of business operations</p>
-					<p>Torin: Current computer science student at the Colorado School of Mines, Machine Learning and front end web development</p>
-					<p>Kenny: Current Business Analytics student at Denver University, back-end development and data analytics</p>-->
-
-
-
-
+				<div class="content imageBox">
+					<p class="teamDescriptions">Grwth was originally founded from the struggles of a close friend. They were facing a tough time in their life, affected severely by depression and anxiety. What got them out of this, was journaling. But it took time and a strong desire to overcome their struggle. This made them believe there could be a better solution to what their original problem was, knowing how to journal in a way that most positively impacted their mental health while also keeping them engaged. </p>
+					<p class="teamDescriptions">This is where Grwth comes in. By using machine learning models with professional counseling and therapy based analyses to create structured prompts relative to a user’s needs, the guidance our friend desired to both keep them engaged and to support their mental health improvement was finally real.</p>
+					<br>
+					<br>
+					<br>
+					<h2 style="text-align: center;">About the Team</h2>
 					<div class="highlights">
 						<section>
-							<div class="content">
+							<div class="content imageBox">
 								<header>
 									<!--Make the href go to the video explaining how the product works-->
-									<img src="./media/images/Mike.jpg" alt="Mike Liang" style="width:60%; border-radius:200px;">
-									<h3>Mike Liang</h3>
+									<img src="./media/images/Mike.jpg" alt="Mike Liang" class="teamImage">
+									<h2>Mike Liang</h2>
 								</header>
-								<p>Head of Business Operations</p>
+								<p class="teamDescriptions">Machine Learning</p>
 							</div>
 						</section>
 						<section>
-							<div class="content">
+							<div class="content imageBox">
 								<header>
 									<!--Make the href go to the video explaining how the product works-->
-									<img src="./media/images/Torin.jpg" alt="Torin Johnson" style="width:60%; border-radius:200px;">
-									<h3>Torin Johnson</h3>
+									<img src="./media/images/Torin.jpg" alt="Torin Johnson" class="teamImage">
+									<h2>Torin Johnson</h2>
 								</header>
-								<p>Head of Machine Learning and Front-End Web Development</p>
+								<p class="teamDescriptions">Front-End Web Development</p>
 							</div>
 						</section>
 						<section>
-							<div class="content">
+							<div class="content imageBox">
 								<header>
 									<!--Make the href go to the video explaining how the product works-->
-									<img src="./media/images/Kenny.jpg" alt="Kendrick Choong" style="width:60%; border-radius:200px;">
-									<h3>Kendrick Choong</h3>
+									<img src="./media/images/Kenny.jpg" alt="Kendrick Choong" class="teamImage">
+									<h2>Kendrick Choong</h2>
 								</header>
-								<p>Database Administrator/ Head of Back-End Development</p>
+								<p class="teamDescriptions">Database Administrator/ Back-End Development</p>
 							</div>
 						</section>
 					</div>
-
-
-
-
-					<hr />
-					<h3>Contact Us</h3>
-					<a href="#" class="logo icon fa-envelope-o"><span class="label">Icon</span></a>
-					<p>Email: support@grwthjournal.co</p>
-					<a href="#" class="logo icon fa-phone"><span class="label">Icon</span></a>
-					<p>Phone: +1 (970)-640-8353</p>
+					<br>
+					<br>
+					<br>
+					<h2 style="text-align: center;">Contact Us</h2>
+					<p class="teamDescriptions" style="text-align: center;">Email: support@grwthjournal.co <a href="#" class="logo icon fa-envelope-o"><span class="label">Icon</span></a></p>
+					<!-- <a href="#" class="logo icon fa-phone"><span class="label">Icon</span></a> -->
+					<!-- <p>Phone: +1 (970)-640-####</p> -->
 				</div>
 			</div>
 		</section>
@@ -177,32 +177,34 @@
 					</div>
 				</section>-->
 
-		<!-- Footer -->
+				<!-- Footer -->
 		<footer id="footer">
 			<div class="inner">
 				<div class="content">
-					<section>
-						<h3>Your Privacy is Our Concern</h3>
-						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					<section class="footerSection">
+					<!-- <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li> -->
+						<h3>Follow Us</h3>
+						<ul class="plain">
+							<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+							<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+						</ul>
 					</section>
-					<section>
-						<h4>Navigation</h4>
-						<ul class="alt">
+		
+					<section class="footerSection">
+						<h3>Navigation</h3>
+						<ul class="plain">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
 							<li><a href="./php/signup.php">Sign Up</a></li>
 							<li><a href="privacypolicy.html">Privacy Policy</a></li>
 						</ul>
 					</section>
-					<!--<section>
-					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
-					<h4>Follow Our Journey</h4>
-					<ul class="plain">
-						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-					</ul>
-				</section> -->
+
+					<section class="footerSection">
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+
 				</div>
 				<div class="copyright">
 					&copy; grwthLLC

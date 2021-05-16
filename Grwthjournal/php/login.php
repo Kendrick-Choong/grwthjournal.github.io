@@ -2,7 +2,7 @@
 /*  Application: User Login File
  *  Script Name: login.php
  *  Description: This file serves as a login page for our users so they can use our product, see their dashboard, and edit their user data.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
@@ -10,11 +10,11 @@
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
-    header("location: userhome.php");
+    header("location: dashboard.php");
     exit;
 }
 // Include config file ($link should already be in config file)
-require_once "configInsertUser.php";
+require_once "configInsertAdmin.php";
 
 // Define variables and initialize with empty values
 $email = $password = "";
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["preferred_name"] = $preferred_name;
 
                             // Redirect user to welcome page
-                            header("location: userhome.php");
+                            header("location: dashboard.php");
 
                         } else{
 
@@ -134,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				<li><a href="feedback.php">Provide Feedback</a></li>
         <li><a href="signup.php">Sign Up</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="userhome.php">User Dashboard</a></li>
+        <li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>

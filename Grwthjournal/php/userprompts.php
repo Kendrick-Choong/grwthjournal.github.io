@@ -2,7 +2,7 @@
 /*  Application: User Prompts File
  *  Script Name: userprompts.php
  *  Description: This is the first page that users see after they login into our website.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
@@ -44,7 +44,7 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
 				<li><a href="feedback.php">Provide Feedback</a></li>
         <li><a href="signup.php">Sign Up</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="userhome.php">User Dashboard</a></li>
+        <li><a href="dashboard.php">User Dashboard</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $user_id = $_SESSION["user_id"];
 
     //Create an SQL statement
-    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at
+    $sql = "SELECT grwth_prompt.prompt_title, grwth_prompt.prompt_response, grwth_prompt.submitted_at, grwth_prompt.entry_id
             FROM grwth_prompt
             INNER JOIN grwth_login
             ON grwth_prompt.user_id = grwth_login.user_id
@@ -108,11 +108,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <th>Prompt</th>
 								<th>Response</th>
 								<th>Time</th>
+                <th>Action</th>
 							</tr>
-						</thead>";
+					  </thead>";
 
           // Store result
-          mysqli_stmt_bind_result($stmt, $col1, $col2, $col3);
+          mysqli_stmt_bind_result($stmt, $col1, $col2, $col3,$col4);
 
           //output table data
 					echo
@@ -124,12 +125,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 							<td>".$col1."</td>
 							<td>".$col2."</td>
               <td>".date_format($col3, "F d, Y")."</td>
+              <td>
+                <button type='button' id=".$col4." class='Edit'>Edit</button>
+                <button type='button' id=".$col4." class='Delete'>Delete</button>
+              </td>
 						</tr>";
 
           }
           echo
-						"</tbody>
-					</table>";
+					 "</tbody>
+				  </table>";
         } else {
           echo "0 results";
         }
@@ -188,6 +193,18 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		<script src="./../assets/js/breakpoints.min.js"></script>
 		<script src="./../assets/js/util.js"></script>
 		<script src="./../assets/js/main.js"></script>
+
+    <script type="text/javascript">
+      $(".Edit").click(function () {
+          location.href = "promptEdit.php?entry_id="+this.id;
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(".Delete").click(function () {
+          location.href = "promptDeleteInsert.php?entry_id="+this.id;
+      });
+    </script>
 
 	</body>
 </html>

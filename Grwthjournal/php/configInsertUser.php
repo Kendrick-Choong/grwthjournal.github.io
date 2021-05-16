@@ -2,15 +2,15 @@
 /*  Application: Configuration for Grwth User File
 *  Script Name: configInsertUser.php
 *  Description: This is the login information for the user when they need to do stuff regarding the database. Users are defined as people who already have an account with Grwth.
-*  Last Change/Update: 12/16/2020
+*  Last Change/Update: 4/19/2021
 *  Author: Kenny Choong
 */
 
 //Login Info
-$db_server = "localhost:3306";
-$db_username = "aismarth_user";
+$db_server = "aa1e6yxzujg6rwt.cpm1bav9vi9r.us-west-2.rds.amazonaws.com";
+$db_username = "Grwth_User";
 $db_password = "IPef058sTMPM";
-$db_name = "aismarth_grwth";
+$db_name = "ebdb";
 
 //Testing connection to server
 $con = mysqli_connect($db_server,$db_username,$db_password);
