@@ -7,6 +7,7 @@
 <html>
 	<head>
 		<title>Feedback Survey</title>
+		<link rel="shortcut icon" type="image/jpg" href="./../media/images/Grwth-Small-Just-Logo.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
