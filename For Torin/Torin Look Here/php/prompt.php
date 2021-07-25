@@ -24,7 +24,7 @@ if (isset($_GET["prompt_id"])) {
     //Create an SQL statement to be injected into the database
     $sql = "SELECT grwth_prompt_name.prompt
             FROM grwth_prompt_name
-            WHERE grwth_prompt_name.prompt_id = ?";
+            WHERE grwth_prompt_name.user_prompt_id = ?";
 
     if($stmt = mysqli_prepare($link, $sql)){
 
