@@ -55,7 +55,7 @@ if (isset($_GET['prompt_id'])) {
     if(!mysqli_query($con,$sql2)){
       echo "There was an error submitting your response, please try again.";
     } else {
-      header("Location:  http://127.0.0.1/edsa-Grwth/Grwthjournal/php/dashboard.php");
+      header("Location:  http://grwthjournal.us-west-2.elasticbeanstalk.com/php/dashboard.php");
     }
 }
 

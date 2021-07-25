@@ -631,5 +631,53 @@ mysqli_close($con);
 				  });
 				}
 			</script>
+
+      <script type="text/javascript">
+        $(".Edit").click(function () {
+            location.href = "promptEdit.php?entry_id="+this.id;
+        });
+      </script>
+
+      <script type="text/javascript">
+        $(".Write").click(function () {
+            location.href = "prompt.php?prompt_id="+this.id;
+        });
+      </script>
+
+      <script type="text/javascript">
+        var limitCountStart = 0;
+        $(document).ready(function() {
+            if (limitCountStart==0){
+              document.getElementById("promptRefreshMinus4").style.display = "none";
+            } else {
+              document.getElementById("promptRefreshMinus4").style.display = "block";
+            }
+            $(".promptRefreshPlus4").click(function() {
+              limitCountStart = limitCountStart + 4;
+              if (limitCountStart==0){
+                document.getElementById("promptRefreshMinus4").style.display = "none";
+              } else {
+                document.getElementById("promptRefreshMinus4").style.display = "block";
+              }
+              $('#oldPrompts').load("dashboardRefresh.php", {
+                  newLimitCountStart: limitCountStart
+              });
+            });
+        });
+        $(document).ready(function() {
+            $(".promptRefreshMinus4").click(function() {
+              if (limitCountStart == 4){
+                document.getElementById("promptRefreshMinus4").style.display = "none";
+              } else {
+                document.getElementById("promptRefreshMinus4").style.display = "block";
+              }
+              limitCountStart = limitCountStart - 4;
+              $('#oldPrompts').load("dashboardRefresh.php", {
+                  newLimitCountStart: limitCountStart
+              });
+            });
+        });
+      </script>
+
 	</body>
 </html>

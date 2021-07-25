@@ -24,7 +24,7 @@ if (isset($_GET["entry_id"])) {
   if(!mysqli_query($con,$sql)){
     echo "There was an error submitting your response, please try again.";
   } else {
-    header("Location:  http://127.0.0.1/edsa-Grwth/Grwthjournal/php/userprompts.php");
+    header("Location:  http://grwthjournal.us-west-2.elasticbeanstalk.com/php/dashboard.php");
   }
 }
 

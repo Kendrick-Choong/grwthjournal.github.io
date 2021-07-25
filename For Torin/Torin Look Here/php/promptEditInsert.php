@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(!mysqli_query($con,$sql)){
     echo "There was an error submitting your response, please try again.";
   } else {
-    header("Location:  http://127.0.0.1/edsa-Grwthjournal/php/dashboard.php");
+    header("Location:  http://grwthjournal.us-west-2.elasticbeanstalk.com/php/dashboard.php");
   }
 }
 
