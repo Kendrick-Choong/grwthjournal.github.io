@@ -243,10 +243,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
               $style = "R";
             }
             echo
-            "<section class='newEntries' id=".$style.">
-  							<p>".$col2."</p>
-  							<button type='button' id=".$col1." class='logo icon fa-pencil Write writeNowIn'>Write now</button>
-  						</section>";
+            "<section class='oldEntries' id=".$style.">
+  				<p style='min-height:5.5vw; margin-top:2vw;'>".$col2."</p>
+  				<button type='button' id=".$col1." class='logo icon fa-pencil'>Write now</button>
+  			</section>";
 
           }
         }
@@ -268,7 +268,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 						<section class="subHeaderO accordian">
 							<p>Previous Entries</p>
 						</section>
-						<div class="panel">
+<!--						<div class="panel">-->
 
 <!-- Start of the journal entry population portion -->
 <?php
@@ -320,7 +320,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             "<section class='oldEntries' id=".$style.">
               <!-- <img src='./../media/images/TreeBook.jpg'> -->
               <h3>".$col1."</h3>
-              <p>".$col2."</p>
+              <p class='breakLong'>".$col2."</p>
               <h4>".date_format($col3, "F d, Y")."</h4>
               <button type='button' id=".$col4." class='Edit'>Edit</button>
             </section>";
@@ -343,10 +343,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 mysqli_close($con);
 ?>
             </section>
-            <button type='button' class='promptRefreshMinus4' id='promptRefreshMinus4'> Load Less Entries</button>
-            <button type='button' class='promptRefreshPlus4' id='promptRefreshPlus4'> Load More Entries</button>
-            </div>
+<!--            </div>-->
           </section>
+				<section class='center'>
+            	<button type='button' class='promptRefreshMinus4' id='promptRefreshMinus4'> Load Less Entries</button>
+            	<button type='button' class='promptRefreshPlus4' id='promptRefreshPlus4'> Load More Entries</button>
+			</section>
         </section>
 
 

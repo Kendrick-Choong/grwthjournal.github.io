@@ -2,7 +2,7 @@
 /*  Application: User Login File
  *  Script Name: login.php
  *  Description: This file serves as a login page for our users so they can use our product, see their dashboard, and edit their user data.
- *  Last Change/Update: 12/16/2020
+ *  Last Change/Update: 4/19/2021
  *  Author: Kenny Choong
 */
 
@@ -106,26 +106,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Login</title>
-        <link rel="shortcut icon" type="image/jpg" href="./../media/images/Grwth-Small-Just-Logo.png"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-        <link rel="stylesheet" href="./../assets/css/main.css" />
-        <!-- <link rel="stylesheet" href="main.css" /> -->
+		<link rel="stylesheet" href="./../assets/css/main.css" />
 	</head>
 	<body class="is-preload" id="loginBody">
-    <!-- id="loginBody" -->
 
 		<!-- Header -->
 		<header id="header">
+			<a href="./../index.html" class="logo icon fa-tree"><span class="label">Icon</span></a>
 			<nav>
-				<a href="#menu" id="menuButt"></a>
+				<a href="#menu">Menu</a>
 			</nav>
 		</header>
 
@@ -134,7 +131,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			<ul class="links">
         <li><a href="./../index.html">Home</a></li>
         <li><a href="./../about.html">About</a></li>
+				<li><a href="feedback.php">Provide Feedback</a></li>
         <li><a href="signup.php">Sign Up</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="dashboard.php">User Dashboard</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
 
@@ -143,76 +144,73 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		<h1>Login</h1>
 	</div> -->
 		<!-- Main -->
-        <section class="largeBack">
-		    <section id="main" class="wrapper">
-                <div class="inner">
-                    <div class="content signupBox" id="logBox">
+		<section id="main" class="wrapper" style="background:linear-gradient(135deg, #1190c2 0%, #12b3a0 74%);">
+			<div class="inner">
+				<div class="content" style="margin: 0 10%; border-radius:20px;">
 
-                        <!--<img src="./images/plant.png" class="plant">-->
-                        <h1>Login</h1>
-                <p>Please fill in your credentials to login.</p>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                    <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                        <label>Email</label>
-                        <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-                        <span class="help-block"><?php echo $email_err; ?></span>
-                    </div>
-                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                        <label>Password</label>
-                        <input type="password" name="password" class="form-control">
-                        <span class="help-block"><?php echo $password_err; ?></span>
-                    </div>
-                    <div class="form-group">
-                    <br>
-                        <input type="submit" class="btn btn-primary" value="Login">
-                    </div>
-                    <br>
-                    <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
-
-                            <a href="./../progress.html">Lost Your Password?</a><br>
-                        </form>
-
-
-                    </div>
+					<!--<img src="./images/plant.png" class="plant">-->
+					<h1>Login</h1>
+            <p>Please fill in your credentials to login.</p>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
+                    <span class="help-block"><?php echo $email_err; ?></span>
                 </div>
-            </section>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <div class="inner">
-                    <div class="content">
-                        <section>
-                        <!-- <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li> -->
-                            <h3>Follow Us</h3>
-                            <ul class="plain">
-                                <li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-                                <li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-                                <li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-                            </ul>
-                        </section>
-            
-                        <section>
-                            <h3>Navigation</h3>
-                            <ul class="plain">
-                                <li><a href="home.html">Home</a></li>
-                                <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                                <li><a href="./php/signup.php">Sign Up</a></li>
-                            </ul>
-                        </section>
-    
-                        <section>
-                            <h3>Your Privacy is Our Concern</h3>
-                            <p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
-                        </section>
-    
-                    </div>
-                    <div class="copyright">
-                        &copy; grwthLLC
-                    </div>
+                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control">
+                    <span class="help-block"><?php echo $password_err; ?></span>
                 </div>
-            </footer>
-        </section>
-                
+                <div class="form-group">
+				<br>
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </div>
+				<br>
+                <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+
+						<a href="resetPasswordEmail.php">Lost Your Password?</a><br>
+					</form>
+
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+					<section>
+						<h4>Navigation</h4>
+						<ul class="alt">
+              <li><a href="./../index.html">Home</a></li>
+              <li><a href="./../about.html">About</a></li>
+              <li><a href="signup.php">Logout</a></li>
+							<li><a href="./../privacypolicy.html">Privacy Policy</a></li>
+						</ul>
+					</section>
+					<!-- Icons for social media if we want to hyperlink our accounts -->
+					<!--<section>
+					<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+					<h4>Follow Our Journey</h4>
+					<ul class="plain">
+						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+					</ul>
+				</section> -->
+				</div>
+				<div class="copyright">
+					&copy; grwthLLC
+				</div>
+			</div>
+		</footer>
+
 		<!-- Scripts -->
 		<script src="./../assets/js/jquery.min.js"></script>
 		<script src="./../assets/js/browser.min.js"></script>
