@@ -7,10 +7,10 @@
 */
 
 //Login Info
-$db_server = "127.0.0.1";
-$db_username = "root";
-$db_password = "";
-$db_name = "test_database";
+$db_server = "aayrjjfyhyv1ui.cpm1bav9vi9r.us-west-2.rds.amazonaws.com";
+$db_username = "GrwthAdmin";
+$db_password = "ZD4LL2JpfbCYXvU";
+$db_name = "ebdb";
 
 //Testing connection to server
 $con = mysqli_connect($db_server,$db_username,$db_password);
