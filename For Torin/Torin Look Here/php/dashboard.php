@@ -245,7 +245,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo
             "<section class='oldEntries' id=".$style.">
   				<p style='min-height:5.5vw; margin-top:2vw;'>".$col2."</p>
-  				<button type='button' id=".$col1." class='logo icon fa-pencil'>Write now</button>
+  				<button type='button' id=".$col1." class='logo icon fa-pencil Write'>Write now</button>
   			</section>";
 
           }
