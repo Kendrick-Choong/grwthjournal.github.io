@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			<div class="inner">
 				<div class="content">
 					<section id="dashname">
-						<img src="./../media/images/Mike.jpg" alt="Mike Liang" id="dashImage">
+						<img src="./../media/images/dog.jpg" alt="User Image" id="dashImage">
 					</section>
 					<h2 style="text-align: center;">
             <?php if(empty($_SESSION["preferred_name"])){
