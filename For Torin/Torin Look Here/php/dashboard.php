@@ -204,8 +204,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 //Set variables
 $prompt_title1 = "";
 $prompt_title2 = "";
+$prompt_id1 = 1;
+$prompt_id2 = 2;
+//Taking out the randomization for the pilot (Add back in for later interations)
+/*
 $prompt_id1 = rand(1,5);
 $prompt_id2 = rand(1,5);
+
 
 if ($prompt_id1 == $prompt_id2){
   if($prompt_id1 == 5){
@@ -213,6 +218,7 @@ if ($prompt_id1 == $prompt_id2){
   }
   $prompt_id2 = $prompt_id1 + 1;
 }
+*/
 
 $counter = 0;
 
