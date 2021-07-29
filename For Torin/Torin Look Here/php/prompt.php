@@ -20,7 +20,7 @@ if (isset($_GET["prompt_id"])) {
     //Set variables to be equal to survey responses and set a session variable for the selected prompt response.
     $user_id = $_SESSION["user_id"];
     $prompt_id = $_GET["prompt_id"];
-
+    echo $user_id;
     //Create an SQL statement to be injected into the database
     $sql = "SELECT grwth_prompt_name.prompt
             FROM grwth_prompt_name
