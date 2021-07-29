@@ -20,19 +20,13 @@ if (isset($_GET["prompt_id"])) {
     //Set variables to be equal to survey responses and set a session variable for the selected prompt response.
     $user_id = $_SESSION["user_id"];
     $prompt_id = $_GET["prompt_id"];
-    echo $user_id;
+
     //Create an SQL statement to be injected into the database
     $sql = "SELECT grwth_prompt_name.prompt
             FROM grwth_prompt_name
-            WHERE grwth_prompt_name.user_prompt_id = ?";
+            WHERE grwth_prompt_name.user_id = $user_id and grwth_prompt_name.user_prompt_id = $prompt_id";
 
     if($stmt = mysqli_prepare($link, $sql)){
-
-      // Bind variables to the prepared statement as parameters
-      mysqli_stmt_bind_param($stmt, "s", $param_prompt_id);
-
-      //Set parameters
-      $param_prompt_id = $prompt_id;
 
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
