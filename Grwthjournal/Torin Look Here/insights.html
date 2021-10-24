@@ -1,0 +1,595 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Base Template
+	Original template: Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+	Edited version: Torin Johnson
+	For grwthjournal.co
+
+	Description: The user insights, formatted using HTML and CSS
+
+	Modified: January 2021
+
+-->
+<html>
+	<head>
+		<title>Insights and Analytics</title>
+		<link rel="shortcut icon" type="image/jpg" href="./media/images/Grwth-Small-Just-Logo.png"/>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="The Grwth Privacy Policy" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="./php/feedback.php">Provide Feedback</a></li>
+				<li><a href="./php/userhome.php">User Dashboard</a></li>
+				<li><a href="./php/logout.php">Logout</a></li>
+			</ul>
+		</nav>
+
+		<!-- Heading -->
+		<div id="heading">
+		</div>
+
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<div class="content">
+					<section id="dashname">
+						<img src="./media/images/Mike.jpg" alt="Mike Liang" style="border-radius:200px; border: white solid .8rem; box-shadow: 2px 2px 8px 2px rgba(43, 43, 43, 0.06);">
+					</section>
+					<h2 style="text-align: center;">Mike Liang</h2>
+					<section>
+
+						<!-- Graph Section -->
+
+						<section class="graph">
+							<h3>Your Stats For the Week</h3>
+							<section class="graphFilter">
+
+								<!-- For filtering, we need to take into account how formatting requires different database returns/ parsing -->
+								<button id="dayButton" type="button" onclick="graphFilter(1);">Day</button>
+								<button id="weekButton" type="button" onclick="graphFilter(2);">Week</button>
+								<button id="monthButton" type="button" onclick="graphFilter(3);">Month</button>
+								<button id="yearButton" type="button" onclick="graphFilter(4);">Year</button>
+
+								<!-- Eventually a specific date filter will go here. 
+									This will consist of a form, where the inputs are two text boxes, 
+									and the submit goes into a php query which returns a day version of the graph with new data from the database -->
+							</section>
+
+							<!-- Where the graph element is located. This gets destroyed and remade each time a new graph is loaded -->
+							<section id = "graphParent">
+								<canvas id="canvas"></canvas>
+							</section>
+
+							<!-- Button links to the radar graphs -->
+							<button id="rightButton" type="button" onclick="">Insights & Analytics</button>
+
+						</section>
+
+					</section>
+
+
+					<!--New entry section-->
+					<section class="subHeader">
+						<p>New Entry</p>
+					</section>
+					<section class="newEntries" style="float:left">
+						<p id="whyPrompt">"What is the number one thing that bothers you right now & why?"</p>
+						<a href="index.html" class="logo icon fa-pencil"> Write now</a>
+					</section>
+
+
+
+
+					<!--Why Prompt Information-->
+					<div id="whyP" class="whyPrompt">
+
+						<!-- Modal content -->
+						<div class="whyPrompt-content">
+							<span class="closeWhy">&times;</span>
+							<p>It seems like you havn't been feeling like yourself</p>
+						</div>
+					
+					</div>
+
+
+
+					<section class="newEntries" style="float:right">
+						<p>Free Write <br>
+						<em>A blank slate for you to write whatever's on your mind.</em></p>
+						<a href="index.html" class="logo icon fa-pencil"> Write now</a>
+					</section>
+					<!--New Ideas Button-->
+					<section id="ibutton">
+						<button id="ideaButton" type="button" onclick="" class="logo icon fa-lightbulb-o">More &nbsp;&nbsp; Ideas</button>
+					</section>
+
+					<!--Old Entries Section-->
+					<section class="oldEntriesBox">
+						<section class="subHeaderO">
+							<p>Previous Entries</p>
+						</section>
+
+
+						<section id="entries1">
+							<section class="oldEntries" style="float:left">
+								<!-- <img src="media/images/TreeBook.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Response goes here?"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:right">
+								<!-- <img src="media/images/Mike.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Response goes here?"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:left">
+								<!-- <img src="media/images/plant.png"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Response goes here?"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:right">
+								<!-- <img src="media/images/whitetree.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Response goes here?"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+
+							<section class="loadEntriesL">
+								<a onclick="loadMore('entries1', 'entries2')"><p>Load More Entries</p></a>
+							</section>
+
+						</section>
+
+
+						<!-- ------------------------------------------------------------- -->
+
+
+						<section id="entries2">
+							<section class="oldEntries" style="float:left">
+								<!-- <img src="media/images/TreeBook.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 2"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:right">
+								<!-- <img src="media/images/Mike.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 2"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:left">
+								<!-- <img src="media/images/plant.png"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 2"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:right">
+								<!-- <img src="media/images/whitetree.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 2"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+
+							<section class="loadEntriesL">
+								<a onclick="loadMore('entries2', 'entries3')"><p>Load More Entries</p></a>
+							</section>
+
+							<section class="loadEntriesR" style="float:right; bottom: 0; margin-top: 2vw;">
+								<a onclick="loadMore('entries2', 'entries1')"><p>Previous Entries</p></a>
+							</section>
+						</section>
+
+
+						<!-- ------------------------------------------------------------- -->
+
+
+						<section id="entries3">
+							<section class="oldEntries" style="float:left">
+								<!-- <img src="media/images/TreeBook.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 3"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:right">
+								<!-- <img src="media/images/Mike.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 3"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:left">
+								<!-- <img src="media/images/plant.png"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 3"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+		
+							<section class="oldEntries" style="float:right">
+								<!-- <img src="media/images/whitetree.jpg"> -->
+								<h3>Prompt Goes Here</h1>
+								<p>"Entries 3"</p>
+								<h4>date goes here</h4>
+								<a href="index.html" class="logo icon fa-book-o"> Read</a>
+							</section>
+
+							<section class="loadEntriesR">
+								<a onclick="loadMore('entries3', 'entries2')"><p>Previous Entries</p></a>
+							</section>
+						</section>
+
+					</section>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+					<!-- <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li> -->
+						<h3>Follow Our Journey</h3>
+						<ul class="plain">
+							<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+							<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+							<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+						</ul>
+					</section>
+		
+					<section>
+						<h3>Navigation</h3>
+						<ul class="plain">
+							<li><a href="about.html">About</a></li>
+							<li><a href="./php/signup.php">Sign Up</a></li>
+							<li><a href="privacypolicy.html">Privacy Policy</a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Your Privacy is Our Concern</h3>
+						<p>At Grwth, no human will <em>ever</em> see or use your individual data, and the machines will only use it (with your permission) to create custom repsonses for your benefit. If opted in, your data will be aggregated with thousands of other peoples to see large scale trends in population segments.</p>
+					</section>
+
+				</div>
+				<div class="copyright">
+					&copy; grwthLLC
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Scripts for chart.js -->
+		<script src="assets/js/Chart.js-2.9.4/dist/Moment.js"></script>
+		<script src="assets/js/Chart.js-2.9.4/dist/Chart.js"></script>
+		<script src="assets/js/Chart.js-2.9.4/dist/Chart.min.js"></script>
+
+		<!-- Graph Script -->
+		
+
+		<script>
+
+			function loadMore(curr, next){
+				document.getElementById(curr).style.display = "none";
+				document.getElementById(next).style.display = "block";
+			}
+
+
+				var unit = 'day'
+				var data = [{
+							x: "01/17/2021", y: 3
+						}, {
+							x: "01/18/2021", y: 2
+						}, {
+							x: "01/19/2021", y: 6
+						}, {
+							x: "01/20/2021", y: 8
+						}, {
+							x: "01/21/2021", y: 3
+						}, {
+							x: "01/22/2021", y: 5
+						}, {
+							x: "01/23/2021", y: 8
+						}]
+
+				var config = {
+					type:    'line',
+					data:    {
+						datasets: [
+							{
+								label: "Overall Entry Sentiment",
+								lineTension: 0,
+								pointRadius: 7,
+								hitRadius: 10,
+								hoverRadius: 5,
+								pointBackgroundColor: 'rgba(255, 255, 255, 1)',
+								data: data,
+								fill: false,
+								borderColor: 'rgba(255,100,200,1)'
+							}
+						]
+					},
+					options: {
+						bezierCurve: false,
+						responsive: true,
+						legend:{
+							display: false
+						},
+						title:      {
+							display: false,
+							text:    "Your Stats For the Week"
+						},
+						scales:     {
+							xAxes: [{
+								type:       "time",
+								time:       {
+									unit: unit,
+									displayFormats:{
+										day: 'MMM Do',
+										week: 'MMM Do',
+										month: 'MMM YY',
+										year: 'YYYY'
+									}
+								},
+								fontstyle: 'bold',
+								scaleLabel: {
+									display:     false,
+									labelString: 'Date'
+								},
+								gridLines: {
+								color: "rgba(0, 0, 0, 0)",
+								},
+								ticks:{
+									fontSize: 14,
+									padding: 0,
+									fontColor: '#000'
+								}
+							}],
+							yAxes: [{
+								scaleLabel: {
+									display:     false,
+									labelString: 'value'
+								},
+								gridLines: {
+								color: "rgba(0, 0, 0, 0)",
+								},
+								ticks:{
+									max: 10,
+									min: 0,
+									fontSize: 16,
+									padding: 0,
+									fontColor: '#000'
+								}
+							}]
+						}
+					}
+				};
+
+				// Getting points at a clicked location, can be used to make pop ups based upon associated data
+				// canvas.onclick = function (evt) {
+				//     var points = chart.getPointsAtEvent(evt);
+				//     alert(chart.datasets[0].points.indexOf(points[0]));
+				// };
+
+			function removeElement(elementId) {
+				// Removes an element from the document
+				var element = document.getElementById(elementId);
+				element.parentNode.removeChild(element);
+			}
+
+			function addElement(parentId, elementTag, elementId, html) {
+				// Adds an element to the document
+				var p = document.getElementById(parentId);
+				var newElement = document.createElement(elementTag);
+				newElement.setAttribute('id', elementId);
+				newElement.innerHTML = html;
+				p.appendChild(newElement);
+			}
+
+			//Filters the graph to display different data
+			function graphFilter(x){
+
+				if (x == 1){
+					document.getElementById("dayButton").style.color = "black";
+					document.getElementById("weekButton").style.color = "gray";
+					document.getElementById("monthButton").style.color = "gray";
+					document.getElementById("yearButton").style.color = "gray";
+
+					unit = 'day'
+					data = [{
+									x: "01/17/2021", y: 3
+								}, {
+									x: "01/18/2021", y: 2
+								}, {
+									x: "01/19/2021", y: 6
+								}, {
+									x: "01/20/2021", y: 8
+								}, {
+									x: "01/21/2021", y: 3
+								}, {
+									x: "01/22/2021", y: 5
+								}, {
+									x: "01/23/2021", y: 8
+								}]
+
+					config.data.datasets[0].data = data;
+					config.options.scales.xAxes[0].time.unit = unit;
+
+					removeElement("canvas");
+					addElement("graphParent", "canvas", "canvas", "");
+
+								
+				}
+				else if (x == 2){
+					document.getElementById("dayButton").style.color = "gray";
+					document.getElementById("weekButton").style.color = "black";
+					document.getElementById("monthButton").style.color = "gray";
+					document.getElementById("yearButton").style.color = "gray";
+
+					unit = 'week'
+
+					data = 
+							[{
+								x: "01/17/2021", y: 2
+							}, {
+								x: "01/24/2021", y: 7
+							}, {
+								x: "01/31/2021", y: 2
+							}, {
+								x: "02/07/2021", y: 2
+							}, {
+								x: "02/14/2021", y: 8
+							}, {
+								x: "02/21/2021", y: 9
+							}, {
+								x: "02/28/2021", y: 2
+							}]
+
+					config.data.datasets[0].data = data;
+					config.options.scales.xAxes[0].time.unit = unit;
+					
+					removeElement("canvas");
+					addElement("graphParent", "canvas", "canvas", "");
+					
+				}
+				else if (x == 3){
+					document.getElementById("dayButton").style.color = "gray";
+					document.getElementById("weekButton").style.color = "gray";
+					document.getElementById("monthButton").style.color = "black";
+					document.getElementById("yearButton").style.color = "gray";
+
+					unit = 'month'
+
+					data = 
+						[{
+							x: "January 2021", y: 2
+						}, {
+							x: "February 2021", y: 4
+						}, {
+							x: "March 2021", y: 3
+						}, {
+							x: "April 2021", y: 7
+						}, {
+							x: "May 2021", y: 9
+						}, {
+							x: "June 2021", y: 8
+						}, {
+							x: "July 2021", y: 3
+						}]
+					
+					config.data.datasets[0].data = data;
+					config.options.scales.xAxes[0].time.unit = unit;
+
+					removeElement("canvas");
+					addElement("graphParent", "canvas", "canvas", "");
+
+				}
+				else{
+					document.getElementById("dayButton").style.color = "gray";
+					document.getElementById("weekButton").style.color = "gray";
+					document.getElementById("monthButton").style.color = "gray";
+					document.getElementById("yearButton").style.color = "black";
+
+					unit = 'year'
+
+					data = 
+						[{
+							x: "2021", y: 5
+						}, {
+							x: "2022", y: 4
+						}, {
+							x: "2023", y: 2
+						}, {
+							x: "2024", y: 7
+						}, {
+							x: "2025", y: 5
+						}, {
+							x: "2026", y: 7
+						}, {
+							x: "2027", y: 7
+						}]
+
+					config.data.datasets[0].data = data;
+					config.options.scales.xAxes[0].time.unit = unit;
+
+					removeElement("canvas");
+					addElement("graphParent", "canvas", "canvas", "");
+					
+
+				}
+				var ctx       = document.getElementById("canvas").getContext("2d");
+				window.myLine = new Chart(ctx, config);
+			};
+
+
+
+			window.onload = function () {
+				graphFilter(1)
+			};
+			</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
